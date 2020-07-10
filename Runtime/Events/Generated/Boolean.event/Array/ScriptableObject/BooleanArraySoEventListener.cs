@@ -2,9 +2,9 @@ using UnityEngine;
 using UnityEngine.Events;
 using System;
 
-namespace TobiasUN.Core.Events
+namespace HexUN.Events
 {
-   [AddComponentMenu("TobiasUN/Core/Events/BooleanArray/BooleanArraySoEventListener")]
+   [AddComponentMenu("HexUN/Core/Events/BooleanArray/BooleanArraySoEventListener")]
    public class BooleanArraySoEventListener : ScriptableObjectEventListener<Boolean[], BooleanArraySoEvent, BooleanArrayUnityEvent>
    {
    }

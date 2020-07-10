@@ -6,7 +6,7 @@ using TobiasCSStandard.Core;
 using TobiasCSStandard.Reflection;
 using UnityEditor;
 
-namespace TobiasUN.Core.EditorElements
+namespace HexUN.EditorElements
 {
     /// <summary>
     /// An interactable list where a type can be selected

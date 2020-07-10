@@ -3,7 +3,7 @@ using TobiasCSStandard.Core;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace TobiasUN.Core.Events
+namespace HexUN.Events
 {
     [System.Serializable]
     public class ReliableEvent<TType, TUnityEvent> : IEvent<TType>

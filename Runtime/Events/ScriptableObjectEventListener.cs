@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace TobiasUN.Core.Events
+namespace HexUN.Events
 {
     /// <summary>
     /// Can be added as a component to any game object ot listen to events. 

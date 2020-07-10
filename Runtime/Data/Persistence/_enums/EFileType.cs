@@ -1,4 +1,4 @@
-﻿namespace TobiasUN.Core.Data
+﻿namespace HexUN.Data
 {
     /// <summary>
     /// Used to organize files of various common types. 

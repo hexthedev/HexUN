@@ -1,7 +1,7 @@
-﻿using TobiasUN.Core.MonoB;
+﻿using HexUN.MonoB;
 using UnityEngine;
 
-namespace TobiasUN.Core.App
+namespace HexUN.App
 {
     /// <summary>
     /// Holds the resources required by the scene and provides options on

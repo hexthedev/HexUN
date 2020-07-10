@@ -1,53 +1,53 @@
 {
   "Tokens": [
     {
-      "Path": "Dependencies/TobiasUN/Core/Runtime/Events/Generated/Boolean.event",
+      "Path": "Dependencies/HexUN/Core/Runtime/Events/Generated/Boolean.event",
       "Type": "Boolean",
-      "Namespace": "TobiasUN.Core.Events",
-      "MenuPath": "TobiasUN/Core/Events",
+      "Namespace": "HexUN.Core.Events",
+      "MenuPath": "HexUN/Core/Events",
       "EventTypeNamespace": "System"
     },
     {
-      "Path": "Dependencies/TobiasUN/Core/Runtime/Events/Generated/Int32.event",
+      "Path": "Dependencies/HexUN/Core/Runtime/Events/Generated/Int32.event",
       "Type": "Int32",
-      "Namespace": "TobiasUN.Core.Events",
-      "MenuPath": "TobiasUN/Core/Events",
+      "Namespace": "HexUN.Core.Events",
+      "MenuPath": "HexUN/Core/Events",
       "EventTypeNamespace": "System"
     },
     {
-      "Path": "Dependencies/TobiasUN/Core/Runtime/Events/Generated/Single.event",
+      "Path": "Dependencies/HexUN/Core/Runtime/Events/Generated/Single.event",
       "Type": "Single",
-      "Namespace": "TobiasUN.Core.Events",
-      "MenuPath": "TobiasUN/Core/Events",
+      "Namespace": "HexUN.Core.Events",
+      "MenuPath": "HexUN/Core/Events",
       "EventTypeNamespace": "System"
     },
     {
-      "Path": "Dependencies/TobiasUN/Core/Runtime/Events/Generated/object.event",
+      "Path": "Dependencies/HexUN/Core/Runtime/Events/Generated/object.event",
       "Type": "object",
-      "Namespace": "TobiasUN.Core.Events",
-      "MenuPath": "TobiasUN/Core/Events",
+      "Namespace": "HexUN.Core.Events",
+      "MenuPath": "HexUN/Core/Events",
       "EventTypeNamespace": "System"
     },
     {
-      "Path": "Dependencies/TobiasUN/Core/Runtime/Events/Generated/Object.event",
+      "Path": "Dependencies/HexUN/Core/Runtime/Events/Generated/Object.event",
       "Type": "object",
-      "Namespace": "TobiasUN.Core.Events",
-      "MenuPath": "TobiasUN/Core/Events",
+      "Namespace": "HexUN.Core.Events",
+      "MenuPath": "HexUN/Core/Events",
       "EventTypeNamespace": "System"
     },
     {
-      "Path": "Dependencies/TobiasUN/Core/Runtime/Events/Generated/Vector2.event",
+      "Path": "Dependencies/HexUN/Core/Runtime/Events/Generated/Vector2.event",
       "Type": "Vector2",
-      "Namespace": "TobiasUN.Core.Events",
-      "MenuPath": "TobiasUN/Core/Events",
+      "Namespace": "HexUN.Core.Events",
+      "MenuPath": "HexUN/Core/Events",
       "EventTypeNamespace": "UnityEngine"
     },
     {
-      "Path": "Dependencies/TobiasUN/Core/Runtime/Physics2D/_events/SForce2D.event",
+      "Path": "Dependencies/HexUN/Core/Runtime/Physics2D/_events/SForce2D.event",
       "Type": "SForce2D",
-      "Namespace": "TobiasUN.Core.Physics2D",
-      "MenuPath": "TobiasUN/Physics2D/Events",
-      "EventTypeNamespace": "TobiasUN.Core.Physics2D"
+      "Namespace": "HexUN.Core.Physics2D",
+      "MenuPath": "HexUN/Physics2D/Events",
+      "EventTypeNamespace": "HexUN.Core.Physics2D"
     }
   ]
 }   

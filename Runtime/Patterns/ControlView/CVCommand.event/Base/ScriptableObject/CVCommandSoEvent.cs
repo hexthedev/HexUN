@@ -1,9 +1,9 @@
 using UnityEngine;
-using TobiasUN.Core.Events;
+using HexUN.Events;
 
-namespace TobiasUN.Core.Patterns
+namespace HexUN.Patterns
 {
-   [CreateAssetMenu(fileName = "CVCommandSoEvent", menuName = "TobiasUN/Core/Patterns/CVCommand")]
+   [CreateAssetMenu(fileName = "CVCommandSoEvent", menuName = "HexUN.Patterns/CVCommand")]
    public class CVCommandSoEvent : ScriptableObjectEvent<CVCommand>
    {
    }

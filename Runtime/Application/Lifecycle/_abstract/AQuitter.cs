@@ -1,6 +1,6 @@
-﻿using TobiasUN.Core.MonoB;
+﻿using HexUN.MonoB;
 
-namespace TobiasUN.Core.App
+namespace HexUN.App
 {
     /// <summary>
     /// Base class that handles tracking of the quitting event on a MonBehviour.

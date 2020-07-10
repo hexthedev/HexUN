@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TobiasUN.Core.Patterns
+namespace HexUN.Patterns
 {
     /// <summary>
     /// Generation flow for data that is managed by a control

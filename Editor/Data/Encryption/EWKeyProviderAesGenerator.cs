@@ -1,10 +1,10 @@
 using System.Security.Cryptography;
 using System.Text;
 using TobiasCSStandard.Data.Generation.CSharp;
-using TobiasUN.Core.EditorElements;
+using HexUN.EditorElements;
 using UnityEditor;
 
-namespace TobiasUN.Core.Data
+namespace HexUN.Data
 {
     public class EWKeyProviderAesGenerator : EditorWindow
     {
@@ -14,7 +14,7 @@ namespace TobiasUN.Core.Data
         private AesManaged _aes; 
 
         private EESaveFileButton _saveFileButton;
-        private string _namespace = "TobiasUN.Generated";
+        private string _namespace = "HexUN.Generated";
         private EECustomString _fileName;
 
 

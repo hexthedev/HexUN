@@ -1,6 +1,6 @@
 ﻿using UnityEditor;
 
-namespace TobiasUN.Core.Debugging
+namespace HexUN.Debugging
 {
     [CanEditMultipleObjects]
     public abstract class ADevModeManagerEditor : Editor

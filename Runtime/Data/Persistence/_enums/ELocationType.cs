@@ -1,6 +1,6 @@
 ﻿using TobiasCSStandard.Data.Persistence;
 
-namespace TobiasUN.Core.Data
+namespace HexUN.Data
 {
     /// <summary>
     /// Enumeration containing label locations that map to common paths in unity projects

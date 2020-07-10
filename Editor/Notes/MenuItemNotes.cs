@@ -1,7 +1,7 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-namespace TobiasUN.Core.Notes
+namespace HexUN.Notes
 {
     public class MenuItemNotes : MonoBehaviour
     {

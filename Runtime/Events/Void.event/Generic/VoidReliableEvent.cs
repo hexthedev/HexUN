@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using Event = TobiasCSStandard.Core.Event;
 
-namespace TobiasUN.Core.Events
+namespace HexUN.Events
 {
    [System.Serializable]
    public class VoidReliableEvent : IEvent

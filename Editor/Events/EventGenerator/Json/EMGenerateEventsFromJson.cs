@@ -1,14 +1,14 @@
 ﻿using System;
 using TobiasCSStandard.Data.Persistence;
-using TobiasUN.Core.Data;
+using HexUN.Data;
 using UnityEditor;
 using UnityEngine;
 
-namespace TobiasUN.Core.Events
+namespace HexUN.Events
 {
     public static class EMEventGeneratorJson
     {
-        [MenuItem("Assets/TobiasUN/GenerateEventsJson", false, 20)]
+        [MenuItem("Assets/HexUN/GenerateEventsJson", false, 20)]
         public static void EMGenerateEventsJson(MenuCommand command)
         {
             UnityEngine.Object obj = Selection.activeObject;
@@ -49,7 +49,7 @@ namespace TobiasUN.Core.Events
             EditorUtility.ClearProgressBar();
         }
         
-        [MenuItem("Assets/TobiasUN/GenerateEventsJson", true)]
+        [MenuItem("Assets/HexUN/GenerateEventsJson", true)]
         public static bool EMGenerateEventsJsonValidator()
         {
             TextAsset asset = Selection.activeObject as TextAsset;

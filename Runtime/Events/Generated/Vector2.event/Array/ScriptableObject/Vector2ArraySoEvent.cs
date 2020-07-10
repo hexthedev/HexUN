@@ -1,8 +1,8 @@
 using UnityEngine;
 
-namespace TobiasUN.Core.Events
+namespace HexUN.Events
 {
-   [CreateAssetMenu(fileName = "Vector2ArraySoEvent", menuName = "TobiasUN/Core/Events/Vector2Array")]
+   [CreateAssetMenu(fileName = "Vector2ArraySoEvent", menuName = "HexUN/Core/Events/Vector2Array")]
    public class Vector2ArraySoEvent : ScriptableObjectEvent<Vector2[]>
    {
    }

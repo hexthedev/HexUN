@@ -1,11 +1,11 @@
 {
   "Tokens": [
     {
-      "Path": "Dependencies/TobiasUN/Core/Runtime/Patterns/ControlView/CVCommand.event",
+      "Path": "Dependencies/HexUN/Core/Runtime/Patterns/ControlView/CVCommand.event",
       "Type": "CVCommand",
-      "Namespace": "TobiasUN.Core.Patterns",
-      "MenuPath": "TobiasUN/Core/Patterns",
-      "EventTypeNamespace": "TobiasUN.Core.Patterns"
+      "Namespace": "HexUN.Patterns",
+      "MenuPath": "HexUN.Patterns",
+      "EventTypeNamespace": "HexUN.Patterns"
     }
   ]
 }   

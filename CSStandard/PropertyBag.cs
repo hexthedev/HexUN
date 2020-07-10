@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace TobiasUN.CSStandard
+namespace HexUN.CSStandard
 {
     /// <summary>
     /// Property bags allow for generic data to stored with some key

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace TobiasUN.Core.App
+namespace HexUN.App
 {
     public class AppQuitter : MonoBehaviour
     {

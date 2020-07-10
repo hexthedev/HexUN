@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace TobiasUN.Core.Events
+namespace HexUN.Events
 {
     /// <summary>
     /// Represents a collection of events that need generating

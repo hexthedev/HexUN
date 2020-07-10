@@ -2,11 +2,11 @@
 using System.Reflection;
 using TobiasCSStandard.Core;
 using TobiasCSStandard.Reflection;
-using TobiasUN.Core.App;
+using HexUN.App;
 using UnityEditor;
 using UnityEngine;
 
-namespace TobiasUN.Core.EditorElements
+namespace HexUN.EditorElements
 { 
     /// <summary>
     /// Example InteractableList

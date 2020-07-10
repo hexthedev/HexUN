@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace TobiasUN.Core.Design
+namespace HexUN.Design
 {
     /// <summary>
     /// The color to pull from a color scheme

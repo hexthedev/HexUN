@@ -2,7 +2,7 @@
 using TobiasCSStandard.Core;
 using UnityEngine;
 
-namespace TobiasUN.Core.Events
+namespace HexUN.Events
 {
     /// <summary>
     /// An event defined by a scriptable object

@@ -1,8 +1,8 @@
-using TobiasUN.Core.Events;
+using HexUN.Events;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace TobiasUN.Core.Patterns
+namespace HexUN.Patterns
 {
    [System.Serializable]
    public class CVCommandArrayUnityEvent : UnityEvent<CVCommand[]>

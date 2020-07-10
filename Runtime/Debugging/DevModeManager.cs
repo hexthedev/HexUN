@@ -1,7 +1,7 @@
-﻿using TobiasUN.Core.MonoB;
+﻿using HexUN.MonoB;
 using UnityEngine;
 
-namespace TobiasUN.Core.Debugging
+namespace HexUN.Debugging
 {
     /// <summary>
     /// Handles putting gameobjects in dev mode

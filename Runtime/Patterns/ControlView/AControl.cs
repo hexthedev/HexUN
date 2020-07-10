@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using TobiasUN.Core.MonoB;
-using TobiasUN.Core.Work;
+using HexUN.MonoB;
+using HexUN.Work;
 
-namespace TobiasUN.Core.Patterns
+namespace HexUN.Patterns
 {
     /// <summary>
     /// Provides base class functionality for Controls in the Control

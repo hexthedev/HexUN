@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TobiasUN.Core.Utilities
+namespace HexUN.Core.Utilities
 {
     /// <summary>
     /// Holds a variable. This variable can be set externally.

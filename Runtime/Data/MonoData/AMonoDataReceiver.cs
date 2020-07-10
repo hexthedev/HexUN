@@ -1,8 +1,8 @@
 ﻿using TobiasCSStandard.Core;
-using TobiasUN.Core.MonoB;
+using HexUN.MonoB;
 using UnityEngine;
 
-namespace TobiasUN.Core.Data.MonoData
+namespace HexUN.Data
 {
     /// <summary>
     /// <para>

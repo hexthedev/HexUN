@@ -1,9 +1,9 @@
 ﻿using System.Collections;
-using TobiasUN.Core.MonoB;
+using HexUN.MonoB;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace TobiasUN.Core.App
+namespace HexUN.App
 {
     /// <summary>
     /// Loads scenes

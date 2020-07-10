@@ -1,9 +1,9 @@
 using UnityEngine;
 using System;
 
-namespace TobiasUN.Core.Events
+namespace HexUN.Events
 {
-   [CreateAssetMenu(fileName = "ObjectSoEvent", menuName = "TobiasUN/Core/Events/Object")]
+   [CreateAssetMenu(fileName = "ObjectSoEvent", menuName = "HexUN/Core/Events/Object")]
    public class ObjectSoEvent : ScriptableObjectEvent<object>
    {
    }

@@ -1,7 +1,7 @@
 ﻿using System;
-using TobiasUN.Core.MonoB;
+using HexUN.MonoB;
 
-namespace TobiasUN.Core.Parallel
+namespace HexUN.Parallel
 {
     /// <summary>
     /// When perform is called, registers action to be performed ASAP on main thread

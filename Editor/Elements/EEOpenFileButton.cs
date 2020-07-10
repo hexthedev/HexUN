@@ -2,9 +2,9 @@
 using UnityEngine;
 using UnityEditor;
 using TobiasCSStandard.Data.Persistence;
-using TobiasUN.Core.Data;
+using HexUN.Data;
 
-namespace TobiasUN.Core.EditorElements
+namespace HexUN.EditorElements
 {
     /// <summary>
     /// Editor Element containing render functions for buttons

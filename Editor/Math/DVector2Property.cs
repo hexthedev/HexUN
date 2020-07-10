@@ -1,8 +1,9 @@
 ﻿
+using HexUN.Math;
 using UnityEditor;
 using UnityEngine;
 
-namespace TobiasUN.Core.Math
+namespace HexUN.Math
 {
     [CustomPropertyDrawer(typeof(DVector2))]
     public class DVector2Property : PropertyDrawer

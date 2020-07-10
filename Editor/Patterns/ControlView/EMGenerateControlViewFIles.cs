@@ -4,14 +4,14 @@ using TobiasCSStandard.Data.Persistence;
 using UnityEditor;
 using UnityEngine;
 
-namespace TobiasUN.Core.Patterns
+namespace HexUN.Patterns
 {
     /// <summary>
     /// Menu items for generating ControlViewPatternFiles
     /// </summary>
     public static class EMGenerateControlViewFiles
     {
-        [MenuItem("Assets/TobiasUN/Patterns/GenerateControlView", false, 20)]
+        [MenuItem("Assets/HexUN/Patterns/GenerateControlView", false, 20)]
         public static void EMGenerateControlView(MenuCommand menuCommand)
         {
             UnityEngine.Object obj = Selection.activeObject;
@@ -52,7 +52,7 @@ namespace TobiasUN.Core.Patterns
             EditorUtility.ClearProgressBar();
         }
 
-        [MenuItem("Assets/TobiasUN/Patterns/GenerateControlView", true)]
+        [MenuItem("Assets/HexUN/Patterns/GenerateControlView", true)]
         public static bool EMGenerateControlViewValidator()
         {
             TextAsset asset = Selection.activeObject as TextAsset;

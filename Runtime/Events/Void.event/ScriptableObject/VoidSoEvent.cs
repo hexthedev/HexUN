@@ -2,9 +2,9 @@ using UnityEngine;
 using TobiasCSStandard.Core;
 using Event = TobiasCSStandard.Core.Event;
 
-namespace TobiasUN.Core.Events
+namespace HexUN.Events
 {
-   [CreateAssetMenu(fileName = "VoidEvent", menuName = "TobiasUN/Core/Events/Void")]
+   [CreateAssetMenu(fileName = "VoidEvent", menuName = "HexUN/Core/Events/Void")]
    public class VoidSoEvent : ScriptableObject
     {
         private Event _event = new Event();

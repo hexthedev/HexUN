@@ -1,7 +1,7 @@
 ﻿using System;
 using TobiasCSStandard.Core;
 
-namespace TobiasUN.CSStandard.StateMachine
+namespace HexUN.CSStandard.StateMachine
 {
     /// <summary>
     /// A StateMachine is a simple class that maintains a reference to 

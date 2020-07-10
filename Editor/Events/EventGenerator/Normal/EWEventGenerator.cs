@@ -2,12 +2,12 @@ using System;
 using TobiasCSStandard.Core;
 using TobiasCSStandard.Data.Persistence;
 using TobiasCSStandard.Reflection;
-using TobiasUN.Core.Design;
-using TobiasUN.Core.EditorElements;
+using HexUN.Design;
+using HexUN.EditorElements;
 using UnityEditor;
 using UnityEngine;
 
-namespace TobiasUN.Core.Events
+namespace HexUN.Events
 {
     public class EWEventGenerator : EditorWindow
     {

@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace TobiasUN.Core.Utilities
+namespace HexUN.Core.Utilities
 {
     /// <summary>
     /// Utilites for Canvases in Unity

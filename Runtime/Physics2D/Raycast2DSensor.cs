@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-namespace TobiasUN.Core.Physics2D
+namespace HexUN.Physics2D
 {
     /// <summary>
     /// Performs a raycast from a point for a distance when 

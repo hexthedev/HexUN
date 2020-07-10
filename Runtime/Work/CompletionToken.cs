@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TobiasCSStandard.Core;
 using UnityEngine;
 
-namespace TobiasUN.Core.Work
+namespace HexUN.Work
 {
     /// <summary>
     /// A completion token provides an event subscriber that can be used to subscribe

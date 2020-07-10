@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace TobiasUN.Core.Work
+namespace HexUN.Work
 {
     /// <summary>
     /// The state of some object. Normally used to determine if an

@@ -2,7 +2,7 @@
 
 using Event = TobiasCSStandard.Core.Event;
 
-namespace TobiasUN.CSStandard.StateMachine
+namespace HexUN.CSStandard.StateMachine
 {
     /// <summary>
     /// A state is a single state that operates over an environment.

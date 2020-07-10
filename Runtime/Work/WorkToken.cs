@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace TobiasUN.Core.Work
+namespace HexUN.Work
 {
     /// <summary>
     /// A work token is used to track the work status of listeners, when a pattern requires that

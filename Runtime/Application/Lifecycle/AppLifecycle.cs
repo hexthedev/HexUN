@@ -1,10 +1,10 @@
 ﻿using System;
 using TobiasCSStandard.Core;
-using TobiasUN.Core.MonoB;
+using HexUN.MonoB;
 using UnityEngine;
 using Event = TobiasCSStandard.Core.Event;
 
-namespace TobiasUN.Core.App
+namespace HexUN.App
 {
     /// <summary>
     /// Allows functions to be statically subscribed to application events.

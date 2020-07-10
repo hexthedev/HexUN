@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-namespace TobiasUN.Core.EditorElements
+namespace HexUN.EditorElements
 {
     /// <summary>
     /// Editor Element containing render functions for buttons

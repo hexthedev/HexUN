@@ -1,6 +1,6 @@
-using TobiasUN.Core.Events;
+using HexUN.Events;
 
-namespace TobiasUN.Core.Patterns
+namespace HexUN.Patterns
 {
    [System.Serializable]
    public class CVCommandArrayReliableEvent : ReliableEvent<CVCommand[], CVCommandArrayUnityEvent>

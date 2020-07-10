@@ -1,7 +1,7 @@
-﻿using TobiasUN.Core.MonoB;
+﻿using HexUN.MonoB;
 using UnityEngine;
 
-namespace TobiasUN.Core.App
+namespace HexUN.App
 {
     /// <summary>
     /// Loads initial scenes of the application

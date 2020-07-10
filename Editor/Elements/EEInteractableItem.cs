@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEditor;
 using System.Linq;
 
-namespace TobiasUN.Core.EditorElements
+namespace HexUN.EditorElements
 {
     /// <summary>
     /// Editor Element containing render functions for buttons

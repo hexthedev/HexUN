@@ -1,6 +1,6 @@
 ﻿using TobiasCSStandard.Core;
 
-namespace TobiasUN.Core.Events
+namespace HexUN.Events
 {
     public class EventGenerationArgs
     {

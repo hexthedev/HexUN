@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace TobiasUN.Core.Physics2D
+namespace HexUN.Physics2D
 {
     /// <summary>
     /// Represents a force applied to an object

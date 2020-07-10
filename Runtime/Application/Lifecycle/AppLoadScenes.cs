@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace TobiasUN.Core.App
+namespace HexUN.App
 {
-    [CreateAssetMenu(fileName = "AppLoadScenes", menuName = "TobiasUN/Core/App/AppLoadScenes") ]
+    [CreateAssetMenu(fileName = "AppLoadScenes", menuName = "HexUN/Core/App/AppLoadScenes") ]
     public class AppLoadScenes : ScriptableObject
     {
         public string LoadingScreen;

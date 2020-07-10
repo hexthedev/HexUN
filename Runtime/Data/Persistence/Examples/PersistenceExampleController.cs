@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace TobiasUN.Core.Data
+namespace HexUN.Data
 {
     public class PersistenceExampleController : MonoBehaviour
     {

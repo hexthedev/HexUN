@@ -2,7 +2,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace TobiasUN.Core.EditorElements
+namespace HexUN.EditorElements
 {
     /// <summary>
     /// An interactable list where a type can be selected

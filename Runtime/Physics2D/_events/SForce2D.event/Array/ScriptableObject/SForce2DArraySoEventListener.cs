@@ -1,10 +1,10 @@
-using TobiasUN.Core.Events;
+using HexUN.Events;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace TobiasUN.Core.Physics2D
+namespace HexUN.Physics2D
 {
-   [AddComponentMenu("TobiasUN/Physics2D/Events/SForce2DArray/SForce2DArraySoEventListener")]
+   [AddComponentMenu("HexUN/Physics2D/Events/SForce2DArray/SForce2DArraySoEventListener")]
    public class SForce2DArraySoEventListener : ScriptableObjectEventListener<SForce2D[], SForce2DArraySoEvent, SForce2DArrayUnityEvent>
    {
    }

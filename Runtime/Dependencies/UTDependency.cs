@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace TobiasUN.Core.Dependencies
+namespace HexUN.Deps
 {
     /// <summary>
     /// Contains useful functions for managing dependencies in Unity

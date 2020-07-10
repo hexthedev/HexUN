@@ -1,6 +1,6 @@
-﻿using TobiasUN.CSStandard;
+﻿using HexUN.CSStandard;
 
-namespace TobiasUN.Core.Utilities
+namespace HexUN.Core.Utilities
 {
     /// <summary>
     /// Simple property bag that uses strings as the key for generic object storage

@@ -1,8 +1,8 @@
 ﻿using System;
-using TobiasUN.Core.Work;
+using HexUN.Work;
 using UnityEngine;
 
-namespace TobiasUN.Core.Patterns
+namespace HexUN.Patterns
 {
     /// <summary>
     /// A command that comes from a Control calls in a ControlView command pattern

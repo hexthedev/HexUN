@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using TobiasCSStandard.Core;
 using UnityEngine;
 
-namespace TobiasUN.Core.Math
+namespace HexUN.Math
 {
     /// <summary>
     /// Serializable version of a DVector2

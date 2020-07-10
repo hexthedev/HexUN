@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using TobiasCSStandard.Core;
-using TobiasUN.Core.Events;
 using UnityEngine;
 
-namespace TobiasUN.Core.MonoB
+namespace HexUN.MonoB
 {
     /// <summary>
     /// Adds useful functionality to a monebehaviour that makes it easier to manage certain

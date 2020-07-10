@@ -1,4 +1,4 @@
-﻿namespace TobiasUN.Core.Data
+﻿namespace HexUN.Data
 {
     /// <summary>
     /// Manages path to a central folder used to store configuration files.

@@ -1,9 +1,9 @@
 using UnityEngine;
 using System;
 
-namespace TobiasUN.Core.Events
+namespace HexUN.Events
 {
-   [CreateAssetMenu(fileName = "Int32ArraySoEvent", menuName = "TobiasUN/Core/Events/Int32Array")]
+   [CreateAssetMenu(fileName = "Int32ArraySoEvent", menuName = "HexUN/Core/Events/Int32Array")]
    public class Int32ArraySoEvent : ScriptableObjectEvent<Int32[]>
    {
    }

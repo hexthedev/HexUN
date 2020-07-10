@@ -2,7 +2,7 @@
 
 using Event = TobiasCSStandard.Core.Event;
 
-namespace TobiasUN.Core.MonoB
+namespace HexUN.MonoB
 {
     /// <summary>
     /// Global access point for Unity Engine functions that can be accessed

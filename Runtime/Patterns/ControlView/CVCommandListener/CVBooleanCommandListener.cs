@@ -1,9 +1,9 @@
 ﻿using System;
-using TobiasUN.Core.Events;
+using HexUN.Events;
 using UnityEngine;
 
-namespace TobiasUN.Core.Patterns
+namespace HexUN.Patterns
 {
-    [AddComponentMenu("TobiasUN/Core/Patterns/CommandView/CommandListener/CVBooleanCommandListener")]
+    [AddComponentMenu("HexUN.Patterns/CommandView/CommandListener/CVBooleanCommandListener")]
     public class CVBooleanCommandListener : CVCommandListener<Boolean, BooleanUnityEvent> {}
 }

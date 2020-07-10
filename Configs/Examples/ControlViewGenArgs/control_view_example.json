@@ -3,7 +3,7 @@
     "TobiasCSStandard.Core",
     "TobiasCSStandard.Games"
   ],
-  "Namespace": "TobiasUN.Systems.Grid",
+  "Namespace": "HexUN.Systems.Grid",
   "Name": "HexGrid2",
   "Data": [
     "Generate",

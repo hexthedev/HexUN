@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace TobiasUN.Core.Physics3D
+namespace HexUN.Physics3D
 {
     /// <summary>
     /// Good way to pause rigidbody

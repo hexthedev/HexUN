@@ -1,10 +1,10 @@
-﻿using TobiasUN.Core.MonoB;
-using TobiasUN.Core;
+﻿using HexUN.MonoB;
+using HexUN.Core;
 using UnityEngine;
 using TobiasCSStandard.Core;
 using Event = TobiasCSStandard.Core.Event;
 
-namespace TobiasUN.Core.Temporal
+namespace HexUN.Temporal
 {
     /// <summary>
     /// Invokes an OnTickEvent on an interval.

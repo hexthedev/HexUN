@@ -1,9 +1,9 @@
 using UnityEngine;
 using System;
 
-namespace TobiasUN.Core.Events
+namespace HexUN.Events
 {
-   [CreateAssetMenu(fileName = "BooleanSoEvent", menuName = "TobiasUN/Core/Events/Boolean")]
+   [CreateAssetMenu(fileName = "BooleanSoEvent", menuName = "HexUN/Core/Events/Boolean")]
    public class BooleanSoEvent : ScriptableObjectEvent<Boolean>
    {
    }

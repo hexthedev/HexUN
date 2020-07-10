@@ -1,13 +1,13 @@
 ﻿using System;
 using UnityEngine;
 
-namespace TobiasUN.Core.Design
+namespace HexUN.Design
 {
     /// <summary>
     /// Provides game color infomation, which groups a color
     /// to a few useful alternatives that can be used by many objects
     /// </summary>
-    [CreateAssetMenu(fileName = "GameColorScheme", menuName = "TobiasUN/UI/GameColorScheme")]
+    [CreateAssetMenu(fileName = "GameColorScheme", menuName = "HexUN/UI/GameColorScheme")]
     [Serializable]
     public class GameColorScheme : ScriptableObject
     {

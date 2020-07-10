@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
-using TobiasUN.Core.Data;
+using HexUN.Data;
 
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
 
-namespace TobiasUN.Core.Utilities
+namespace HexUN.Core.Utilities
 {
     public static class UTScriptableObject
     {

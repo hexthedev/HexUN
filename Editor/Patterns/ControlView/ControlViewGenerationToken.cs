@@ -2,12 +2,12 @@
 using System.Linq;
 using System.Text;
 using TobiasCSStandard.Data.Generation.CSharp;
-using TobiasUN.Core.Data;
-using TobiasUN.Core;
+using HexUN.Data;
+using HexUN.Core;
 using TobiasCSStandard.Core;
 using System.Collections.Generic;
 
-namespace TobiasUN.Core.Patterns
+namespace HexUN.Patterns
 {
     [Serializable]
     public class ControlViewGenerationToken
@@ -78,7 +78,7 @@ namespace TobiasUN.Core.Patterns
         {
             using (GTFile f = new GTFile(sb, path.Path.AddStep($"{ProviderInterfaceName}.cs"), Encoding.Default))
             {
-                List<string> usings = new List<string>() { "TobiasUN.Core.Patterns" };
+                List<string> usings = new List<string>() { "HexUN.Patterns" };
                 usings.AddRange(Namespaces);
 
                 f.Generate_Usings<GTUsings>().SetRequired(usings.Distinct().ToArray());
@@ -164,9 +164,9 @@ namespace TobiasUN.Core.Patterns
                 List<string> usings = new List<string>
                 {
                     "UnityEngine",
-                    "TobiasUN.Core.MonoB",
-                    "TobiasUN.Core.Patterns",
-                    "TobiasUN.Core.Events"
+                    "HexUN.Core.MonoB",
+                    "HexUN.Patterns",
+                    "HexUN.Core.Events"
                 };
 
                 usings.AddRange(Namespaces);
@@ -249,9 +249,9 @@ namespace TobiasUN.Core.Patterns
                 List<string> usings = new List<string>
                 {
                     "UnityEngine",
-                    "TobiasUN.Core.MonoB",
-                    "TobiasUN.Core.Patterns",
-                    "TobiasUN.Core.Dependencies"
+                    "HexUN.Core.MonoB",
+                    "HexUN.Patterns",
+                    "HexUN.Core.Dependencies"
                 };
 
                 usings.AddRange(Namespaces);
@@ -332,10 +332,10 @@ namespace TobiasUN.Core.Patterns
                 List<string> usings = new List<string>
                 {
                     "UnityEngine",
-                    "TobiasUN.Core.MonoB",
-                    "TobiasUN.Core.Dependencies",
-                    "TobiasUN.Core.Patterns",
-                    "TobiasUN.Core.Events"
+                    "HexUN.Core.MonoB",
+                    "HexUN.Core.Dependencies",
+                    "HexUN.Patterns",
+                    "HexUN.Core.Events"
                 };
 
                 usings.AddRange(Namespaces);

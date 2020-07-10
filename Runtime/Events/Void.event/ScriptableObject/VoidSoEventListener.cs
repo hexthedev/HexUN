@@ -1,12 +1,12 @@
 using UnityEngine;
 using UnityEngine.Events;
 using System;
-using TobiasUN.Core.MonoB;
+using HexUN.MonoB;
 using TobiasCSStandard.Core;
 
-namespace TobiasUN.Core.Events
+namespace HexUN.Events
 {
-   [AddComponentMenu("TobiasUN/Core/Events/Void/VoidSoEventListener")]
+   [AddComponentMenu("HexUN/Core/Events/Void/VoidSoEventListener")]
    public class VoidSoEventListener : MonoBehaviour
    {
         [SerializeField]

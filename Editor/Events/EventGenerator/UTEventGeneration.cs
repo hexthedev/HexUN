@@ -4,7 +4,7 @@ using System.Text;
 using TobiasCSStandard.Data.Generation.CSharp;
 using TobiasCSStandard.Data.Persistence;
 
-namespace TobiasUN.Core.Events
+namespace HexUN.Events
 {
     /// <summary>
     /// COntains all utility function used to genrated events
@@ -51,7 +51,7 @@ namespace TobiasUN.Core.Events
                 {
                     List<string> usings = new List<string>();
 
-                    usings.Add("TobiasUN.Core.Events");
+                    usings.Add("HexUN.Core.Events");
                     usings.Add("UnityEngine");
                     usings.Add("UnityEngine.Events");
                     if (args.EvtTypeNamespace != null) usings.Add(args.EvtTypeNamespace);
@@ -85,7 +85,7 @@ namespace TobiasUN.Core.Events
                 {
                     List<string> usings = new List<string>();
 
-                    usings.Add("TobiasUN.Core.Events");
+                    usings.Add("HexUN.Core.Events");
                     if (args.EvtTypeNamespace != null) usings.Add(args.EvtTypeNamespace);
 
                     us.Add_Usings(usings.Where(u => u != args.EvtNamespace).Distinct().ToArray());
@@ -117,7 +117,7 @@ namespace TobiasUN.Core.Events
             //        List<string> usings = new List<string>();
 
             //        usings.Add("UnityEngine");
-            //        usings.Add("TobiasUN.Core.Events");
+            //        usings.Add("HexUN.Core.Events");
             //        if (args.EvtTypeNamespace != null) usings.Add(args.EvtTypeNamespace);
 
             //        us.Add_Usings(usings.Where(u => u != args.EvtNamespace).Distinct().ToArray());
@@ -162,7 +162,7 @@ namespace TobiasUN.Core.Events
                     List<string> usings = new List<string>();
 
                     usings.Add("UnityEngine");
-                    usings.Add("TobiasUN.Core.Events");
+                    usings.Add("HexUN.Core.Events");
                     if (args.EvtTypeNamespace != null) usings.Add(args.EvtTypeNamespace);
 
                     us.Add_Usings(usings.Where(u => u != args.EvtNamespace).Distinct().ToArray());
@@ -201,7 +201,7 @@ namespace TobiasUN.Core.Events
                 {
                     List<string> usings = new List<string>();
 
-                    usings.Add("TobiasUN.Core.Events");
+                    usings.Add("HexUN.Core.Events");
                     usings.Add("UnityEngine");
                     usings.Add("UnityEngine.Events");
                     if (args.EvtTypeNamespace != null) usings.Add(args.EvtTypeNamespace);

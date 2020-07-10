@@ -1,7 +1,7 @@
-﻿using TobiasUN.Core.App;
+﻿using HexUN.App;
 using UnityEngine;
 
-namespace TobiasUN.Core.MonoB
+namespace HexUN.MonoB
 {
     /// <summary>
     /// Implementation of Singleton for MonBehavious that insures only a single instance

@@ -1,7 +1,7 @@
 ﻿using UnityEditor;
-using TobiasUN.Core.Debugging;
+using HexUN.Debugging;
 
-namespace TobiasUN.Core.Debugging
+namespace HexUN.Debugging
 {
     [CustomEditor(typeof(DevModeManager))]
     [CanEditMultipleObjects]

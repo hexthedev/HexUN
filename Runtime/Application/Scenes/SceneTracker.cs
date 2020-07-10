@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
-using TobiasUN.Core.MonoB;
-using TobiasUN.Core.Work;
+using HexUN.MonoB;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace TobiasUN.Core.App
+namespace HexUN.App
 {
     /// <summary>
     /// Scene manager is a singleton that tracks the loaded scenes and knows what needs unloading

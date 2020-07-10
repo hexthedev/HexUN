@@ -1,7 +1,7 @@
 ﻿using TobiasCSStandard.Data.Persistence;
 using UnityEngine;
 
-namespace TobiasUN.Core.Data
+namespace HexUN.Data
 {
     /// <summary>
     /// Class that holds a class and calculates important information about it that

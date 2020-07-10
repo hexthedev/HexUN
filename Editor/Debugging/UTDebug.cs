@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-namespace TobiasUN.Core.Debugging
+namespace HexUN.Debugging
 {
 
 

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace TobiasUN.Core.Temporal
+namespace HexUN.Temporal
 {
     /// <summary>
     /// This class can be ticked witha float delta representing tick proportion, 

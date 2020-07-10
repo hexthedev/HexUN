@@ -1,11 +1,9 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using TobiasCSStandard.Data.Persistence;
-using TobiasUN.Core.Design;
 using UnityEditor;
 using UnityEngine;
 
-namespace TobiasUN.Core.EditorElements
+namespace HexUN.EditorElements
 {
     /// <summary>
     /// An interactable list where a type can be selected

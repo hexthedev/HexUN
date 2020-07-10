@@ -1,10 +1,10 @@
-using TobiasUN.Core.Events;
+using HexUN.Events;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace TobiasUN.Core.Patterns
+namespace HexUN.Patterns
 {
-   [AddComponentMenu("TobiasUN/Core/Patterns/CVCommand/CVCommandSoEventListener")]
+   [AddComponentMenu("HexUN.Patterns/CVCommand/CVCommandSoEventListener")]
    public class CVCommandSoEventListener : ScriptableObjectEventListener<CVCommand, CVCommandSoEvent, CVCommandUnityEvent>
    {
    }

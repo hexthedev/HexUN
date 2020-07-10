@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using System;
 
-namespace TobiasUN.Core.Events
+namespace HexUN.Events
 {
    [System.Serializable]
    public class ObjectUnityEvent : UnityEvent<object>

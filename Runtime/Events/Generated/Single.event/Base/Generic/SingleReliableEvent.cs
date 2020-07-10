@@ -1,6 +1,6 @@
 using System;
 
-namespace TobiasUN.Core.Events
+namespace HexUN.Events
 {
    [System.Serializable]
    public class SingleReliableEvent : ReliableEvent<Single, SingleUnityEvent>

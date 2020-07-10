@@ -1,9 +1,9 @@
 ﻿using TobiasCSStandard.Core;
-using TobiasUN.Core.MonoB;
+using HexUN.MonoB;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace TobiasUN.Core.Patterns
+namespace HexUN.Patterns
 {
     /// <summary>
     /// Can be added as a component to any game object ot listen to events. 

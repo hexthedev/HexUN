@@ -1,25 +1,25 @@
 {
   "Tokens": [
     {
-      "Path": "Dependencies/TobiasUN/Systems/Runtime/Grid/Hex/_events/EHexState.event",
+      "Path": "Dependencies/HexUN/Systems/Runtime/Grid/Hex/_events/EHexState.event",
       "Type": "EHexState",
-      "Namespace": "TobiasUN.Systems.Grid",
-      "MenuPath": "TobiasUN/Systems/Grid/Hex/Events",
-      "EventTypeNamespace": "TobiasUN.Systems.Grid"
+      "Namespace": "HexUN.Systems.Grid",
+      "MenuPath": "HexUN/Systems/Grid/Hex/Events",
+      "EventTypeNamespace": "HexUN.Systems.Grid"
     },
     {
-      "Path": "Dependencies/TobiasUN/Systems/Runtime/Grid/Hex/_events/SHexCoordinate.event",
+      "Path": "Dependencies/HexUN/Systems/Runtime/Grid/Hex/_events/SHexCoordinate.event",
       "Type": "SHexCoordinate",
-      "Namespace": "TobiasUN.Systems.Grid",
-      "MenuPath": "TobiasUN/Systems/Grid/Hex/Events",
+      "Namespace": "HexUN.Systems.Grid",
+      "MenuPath": "HexUN/Systems/Grid/Hex/Events",
       "EventTypeNamespace": "TobiasCSStandard.Games"
     },
     {
-      "Path": "Dependencies/TobiasUN/Systems/Runtime/Grid/Hex/_events/SHexStateArgs.event",
+      "Path": "Dependencies/HexUN/Systems/Runtime/Grid/Hex/_events/SHexStateArgs.event",
       "Type": "SHexStateArgs",
-      "Namespace": "TobiasUN.Systems.Grid",
-      "MenuPath": "TobiasUN/Systems/Grid/Hex/Events",
-      "EventTypeNamespace": "TobiasUN.Systems.Grid"
+      "Namespace": "HexUN.Systems.Grid",
+      "MenuPath": "HexUN/Systems/Grid/Hex/Events",
+      "EventTypeNamespace": "HexUN.Systems.Grid"
     }
   ]
 }   

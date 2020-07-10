@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using TobiasCSStandard.Core;
 using UnityEngine;
 
-namespace TobiasUN.Core.MonoB
+namespace HexUN.MonoB
 {
     /// <summary>
     /// Adds useful functionality to any Monobehaviours that follows the inferface dependency pattern
-    /// used commonly in TobiasUN Control and Views. Allows to
+    /// used commonly in HexUN Control and Views. Allows to
     /// </summary>
     public abstract class MonoDependent : MonoEnhanced
     {

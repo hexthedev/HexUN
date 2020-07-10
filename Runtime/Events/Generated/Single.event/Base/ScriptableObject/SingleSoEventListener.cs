@@ -2,9 +2,9 @@ using UnityEngine;
 using UnityEngine.Events;
 using System;
 
-namespace TobiasUN.Core.Events
+namespace HexUN.Events
 {
-   [AddComponentMenu("TobiasUN/Core/Events/Single/SingleSoEventListener")]
+   [AddComponentMenu("HexUN/Core/Events/Single/SingleSoEventListener")]
    public class SingleSoEventListener : ScriptableObjectEventListener<Single, SingleSoEvent, SingleUnityEvent>
    {
    }
