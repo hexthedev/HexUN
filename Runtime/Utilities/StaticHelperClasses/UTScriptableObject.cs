@@ -5,7 +5,7 @@ using HexUN.Data;
 using UnityEditor;
 #endif
 
-namespace HexUN.Core.Utilities
+namespace HexUN.Utilities
 {
     public static class UTScriptableObject
     {

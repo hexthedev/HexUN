@@ -4,7 +4,7 @@ using System;
 
 namespace HexUN.Events
 {
-   [AddComponentMenu("HexUN/Core/Events/ObjectArray/ObjectArraySoEventListener")]
+   [AddComponentMenu("HexUN/Events/ObjectArray/ObjectArraySoEventListener")]
    public class ObjectArraySoEventListener : ScriptableObjectEventListener<object[], ObjectArraySoEvent, ObjectArrayUnityEvent>
    {
    }

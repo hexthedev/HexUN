@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HexUN.Core.Utilities
+namespace HexUN.Utilities
 {
     /// <summary>
     /// Holds a variable. This variable can be set externally.

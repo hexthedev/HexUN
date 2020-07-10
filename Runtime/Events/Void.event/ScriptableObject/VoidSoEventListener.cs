@@ -6,7 +6,7 @@ using TobiasCSStandard.Core;
 
 namespace HexUN.Events
 {
-   [AddComponentMenu("HexUN/Core/Events/Void/VoidSoEventListener")]
+   [AddComponentMenu("HexUN/Events/Void/VoidSoEventListener")]
    public class VoidSoEventListener : MonoBehaviour
    {
         [SerializeField]

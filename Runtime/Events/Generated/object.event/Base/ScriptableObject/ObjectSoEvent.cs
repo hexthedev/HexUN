@@ -3,7 +3,7 @@ using System;
 
 namespace HexUN.Events
 {
-   [CreateAssetMenu(fileName = "ObjectSoEvent", menuName = "HexUN/Core/Events/Object")]
+   [CreateAssetMenu(fileName = "ObjectSoEvent", menuName = "HexUN/Events/Object")]
    public class ObjectSoEvent : ScriptableObjectEvent<object>
    {
    }

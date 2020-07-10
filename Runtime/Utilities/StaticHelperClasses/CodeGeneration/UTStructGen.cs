@@ -1,7 +1,7 @@
 ﻿using TobiasCSStandard.Core;
 using TobiasCSStandard.Data.Generation.CSharp;
 
-namespace HexUN.Core.Utilities
+namespace HexUN.Utilities
 {
     public static class UTStructGen
     {

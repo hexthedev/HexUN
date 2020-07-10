@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace HexUN.App
 {
-    [CreateAssetMenu(fileName = "AppLoadScenes", menuName = "HexUN/Core/App/AppLoadScenes") ]
+    [CreateAssetMenu(fileName = "AppLoadScenes", menuName = "HexUN/App/AppLoadScenes") ]
     public class AppLoadScenes : ScriptableObject
     {
         public string LoadingScreen;

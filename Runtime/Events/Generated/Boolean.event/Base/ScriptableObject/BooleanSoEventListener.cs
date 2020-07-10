@@ -4,7 +4,7 @@ using System;
 
 namespace HexUN.Events
 {
-   [AddComponentMenu("HexUN/Core/Events/Boolean/BooleanSoEventListener")]
+   [AddComponentMenu("HexUN/Events/Boolean/BooleanSoEventListener")]
    public class BooleanSoEventListener : ScriptableObjectEventListener<Boolean, BooleanSoEvent, BooleanUnityEvent>
    {
    }

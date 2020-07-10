@@ -1,6 +1,6 @@
 ﻿using HexUN.CSStandard;
 
-namespace HexUN.Core.Utilities
+namespace HexUN.Utilities
 {
     /// <summary>
     /// Simple property bag that uses strings as the key for generic object storage
