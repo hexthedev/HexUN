@@ -1,0 +1,22 @@
+{
+  "Namespaces": [
+    "TobiasCSStandard.Core",
+    "TobiasCSStandard.Games"
+  ],
+  "Namespace": "TobiasUN.Systems.Grid",
+  "Name": "HexGrid2",
+  "Data": [
+    "Generate",
+    "DestroyGrid",
+    "HexState"
+  ],
+  "Commands": [
+    {
+      "Name": "Generate",
+      "Paras": "SHexCoordinate[] hexes"
+    },
+    {
+      "Name": "DestroyGrid"
+    }
+  ]
+}
