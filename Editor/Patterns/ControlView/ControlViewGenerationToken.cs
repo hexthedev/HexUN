@@ -3,7 +3,6 @@ using System.Linq;
 using System.Text;
 using TobiasCSStandard.Data.Generation.CSharp;
 using HexUN.Data;
-using HexUN.Core;
 using TobiasCSStandard.Core;
 using System.Collections.Generic;
 
