@@ -51,7 +51,7 @@ namespace HexUN.Events
                 {
                     List<string> usings = new List<string>();
 
-                    usings.Add("HexUN.Core.Events");
+                    usings.Add("HexUN.Events");
                     usings.Add("UnityEngine");
                     usings.Add("UnityEngine.Events");
                     if (args.EvtTypeNamespace != null) usings.Add(args.EvtTypeNamespace);
@@ -85,7 +85,7 @@ namespace HexUN.Events
                 {
                     List<string> usings = new List<string>();
 
-                    usings.Add("HexUN.Core.Events");
+                    usings.Add("HexUN.Events");
                     if (args.EvtTypeNamespace != null) usings.Add(args.EvtTypeNamespace);
 
                     us.Add_Usings(usings.Where(u => u != args.EvtNamespace).Distinct().ToArray());
@@ -117,7 +117,7 @@ namespace HexUN.Events
             //        List<string> usings = new List<string>();
 
             //        usings.Add("UnityEngine");
-            //        usings.Add("HexUN.Core.Events");
+            //        usings.Add("HexUN.Events");
             //        if (args.EvtTypeNamespace != null) usings.Add(args.EvtTypeNamespace);
 
             //        us.Add_Usings(usings.Where(u => u != args.EvtNamespace).Distinct().ToArray());
@@ -162,7 +162,7 @@ namespace HexUN.Events
                     List<string> usings = new List<string>();
 
                     usings.Add("UnityEngine");
-                    usings.Add("HexUN.Core.Events");
+                    usings.Add("HexUN.Events");
                     if (args.EvtTypeNamespace != null) usings.Add(args.EvtTypeNamespace);
 
                     us.Add_Usings(usings.Where(u => u != args.EvtNamespace).Distinct().ToArray());
@@ -201,7 +201,7 @@ namespace HexUN.Events
                 {
                     List<string> usings = new List<string>();
 
-                    usings.Add("HexUN.Core.Events");
+                    usings.Add("HexUN.Events");
                     usings.Add("UnityEngine");
                     usings.Add("UnityEngine.Events");
                     if (args.EvtTypeNamespace != null) usings.Add(args.EvtTypeNamespace);
