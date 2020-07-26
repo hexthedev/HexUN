@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using TobiasCSStandard.Mathematics;
+using HexCS.Mathematics;
 using HexUN.MonoB;
 using UnityEngine;
 
@@ -63,11 +63,11 @@ namespace HexUN.Animation
             if (args.Interpolations.Length == 0) yield break;
 
             int interCount = args.Interpolations.Length;
-            TobiasCSStandard.Mathematics.Interpolation[] interpolations = new TobiasCSStandard.Mathematics.Interpolation[interCount];
+            HexCS.Mathematics.Interpolation[] interpolations = new HexCS.Mathematics.Interpolation[interCount];
 
             for(int i = 0; i< interCount; i++)
             {
-                interpolations[i] = new TobiasCSStandard.Mathematics.Interpolation(
+                interpolations[i] = new HexCS.Mathematics.Interpolation(
                     args.Interpolations[i].Start,
                     args.Interpolations[i].End,
                     args.Duration,

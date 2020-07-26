@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using TobiasCSStandard.Data.Generation.CSharp;
-using TobiasCSStandard.Data.Persistence;
+using Hex.Paths;
+using HexCS.Data.Generation.CSharp;
 
 namespace HexUN.Events
 {

@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using System;
 using HexUN.MonoB;
-using TobiasCSStandard.Core;
+using HexCS.Core;
 
 namespace HexUN.Events
 {

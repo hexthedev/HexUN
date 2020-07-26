@@ -1,7 +1,7 @@
 {
   "Namespaces": [
-    "TobiasCSStandard.Core",
-    "TobiasCSStandard.Games"
+    "HexCS.Core",
+    "HexCS.Games"
   ],
   "Namespace": "HexUN.Systems.Grid",
   "Name": "HexGrid2",

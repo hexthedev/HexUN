@@ -1,6 +1,6 @@
-﻿using TobiasCSStandard.Core;
+﻿using HexCS.Core;
 
-using Event = TobiasCSStandard.Core.Event;
+using Event = HexCS.Core.Event;
 
 namespace HexUN.MonoB
 {

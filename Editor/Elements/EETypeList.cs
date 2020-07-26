@@ -2,8 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using TobiasCSStandard.Core;
-using TobiasCSStandard.Reflection;
+using HexCS.Core;
+using HexCS.Reflection;
 using UnityEditor;
 
 namespace HexUN.EditorElements

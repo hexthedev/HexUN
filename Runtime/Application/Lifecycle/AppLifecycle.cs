@@ -1,8 +1,8 @@
 ﻿using System;
-using TobiasCSStandard.Core;
+using HexCS.Core;
 using HexUN.MonoB;
 using UnityEngine;
-using Event = TobiasCSStandard.Core.Event;
+using Event = HexCS.Core.Event;
 
 namespace HexUN.App
 {

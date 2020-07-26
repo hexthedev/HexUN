@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq;
 using System.Text;
-using TobiasCSStandard.Data.Generation.CSharp;
+using HexCS.Data.Generation.CSharp;
 using HexUN.Data;
-using TobiasCSStandard.Core;
+using HexCS.Core;
 using System.Collections.Generic;
 
 namespace HexUN.Patterns

@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using TobiasCSStandard.Mathematics;
+using HexCS.Mathematics;
 using UnityEngine;
 
 namespace HexUN.Animation

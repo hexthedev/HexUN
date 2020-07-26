@@ -1,7 +1,8 @@
 using System;
-using TobiasCSStandard.Core;
-using TobiasCSStandard.Data.Persistence;
-using TobiasCSStandard.Reflection;
+using Hex.Paths;
+using HexCS.Core;
+using HexCS.Data.Persistence;
+using HexCS.Reflection;
 using HexUN.Design;
 using HexUN.EditorElements;
 using UnityEditor;

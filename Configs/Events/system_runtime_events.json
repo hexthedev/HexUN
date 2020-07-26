@@ -12,7 +12,7 @@
       "Type": "SHexCoordinate",
       "Namespace": "HexUN.Systems.Grid",
       "MenuPath": "HexUN/Systems/Grid/Hex/Events",
-      "EventTypeNamespace": "TobiasCSStandard.Games"
+      "EventTypeNamespace": "HexCS.Games"
     },
     {
       "Path": "Dependencies/HexUN/Systems/Runtime/Grid/Hex/_events/SHexStateArgs.event",

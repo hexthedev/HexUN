@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Reflection;
-using TobiasCSStandard.Core;
-using TobiasCSStandard.Reflection;
+using HexCS.Core;
+using HexCS.Reflection;
 using HexUN.App;
 using UnityEditor;
 using UnityEngine;

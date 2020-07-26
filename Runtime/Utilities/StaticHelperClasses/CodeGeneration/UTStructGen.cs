@@ -1,5 +1,5 @@
-﻿using TobiasCSStandard.Core;
-using TobiasCSStandard.Data.Generation.CSharp;
+﻿using HexCS.Core;
+using HexCS.Data.Generation.CSharp;
 
 namespace HexUN.Utilities
 {

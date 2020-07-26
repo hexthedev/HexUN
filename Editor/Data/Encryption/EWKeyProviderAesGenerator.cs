@@ -1,6 +1,6 @@
 using System.Security.Cryptography;
 using System.Text;
-using TobiasCSStandard.Data.Generation.CSharp;
+using HexCS.Data.Generation.CSharp;
 using HexUN.EditorElements;
 using UnityEditor;
 
@@ -72,7 +72,7 @@ namespace HexUN.Data
             {
                 using (GTUsings u = f.Generate_Usings<GTUsings>())
                 {
-                    u.SetRequired("TobiasCSStandard.Encryption");
+                    u.SetRequired("HexCS.Encryption");
                 }
 
                 using (GTNamespace n = f.Generate_Namespace<GTNamespace>())

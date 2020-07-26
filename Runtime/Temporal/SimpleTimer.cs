@@ -1,7 +1,7 @@
 ﻿using HexUN.MonoB;
 using UnityEngine;
-using TobiasCSStandard.Core;
-using Event = TobiasCSStandard.Core.Event;
+using HexCS.Core;
+using Event = HexCS.Core.Event;
 
 namespace HexUN.Temporal
 {
