@@ -4,13 +4,13 @@ using Event = HexCS.Core.Event;
 
 namespace HexUN.Animation
 {
-    public class Vector3InterpolationToken : IVector3InterpolationToken
+    public class Vector3InterpolationToken : IInterpolationToken<Vector3>
     {
         private Event _onInterpolationEnd = new Event();
         private Event _onInterpolationCanceled = new Event();
         private Event<Vector3> _onInterpolation= new Event<Vector3>();
 
-        private IInterpolationToken tok;
+        private IInterpolationToken<float[]> tok;
 
         #region API
         /// <inheritdoc />
@@ -24,7 +24,7 @@ namespace HexUN.Animation
 
         public void Cancel() => tok?.Cancel();
 
-        public static Vector3InterpolationToken FromInterpolationToken(IInterpolationToken t)
+        public static Vector3InterpolationToken FromInterpolationToken(IInterpolationToken<float[]> t)
         {
             Vector3InterpolationToken inst = new Vector3InterpolationToken();
 

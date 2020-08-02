@@ -44,7 +44,7 @@ namespace HexUN.Animation
         /// <param name="duration"></param>
         /// <param name="ease"></param>
         /// <returns></returns>
-        public IInterpolationToken StartInterpolation(int id, float duration, params SInterpolation[] interpolations)
+        public IInterpolationToken<float[]> StartInterpolation(int id, float duration, params SInterpolation[] interpolations)
         {
             if (_interpolationCancelationTokens.TryGetValue(id, out InterpolationRequest args))
             {

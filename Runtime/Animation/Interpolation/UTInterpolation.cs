@@ -17,7 +17,7 @@ namespace HexUN.Animation
         /// <param name="duration"></param>
         /// <param name="ease"></param>
         /// <returns></returns>
-        public static IVector3InterpolationToken InterpolateVector3(int id, Vector3 from, Vector3 to, float duration, EEasingFunction ease)
+        public static IInterpolationToken<Vector3> InterpolateVector3(int id, Vector3 from, Vector3 to, float duration, EEasingFunction ease)
         {
             SInterpolation[] interp = new SInterpolation[] 
             {
@@ -26,9 +26,24 @@ namespace HexUN.Animation
                 new SInterpolation(from.z, to.z, ease)
             };
 
-            IInterpolationToken t = InterpolationManager.Instance.StartInterpolation(id, duration, interp);
+            IInterpolationToken<float[]> t = InterpolationManager.Instance.StartInterpolation(id, duration, interp);
 
             return Vector3InterpolationToken.FromInterpolationToken(t);
+        }
+
+        /// <summary>
+        /// Interpolate a vector3 path
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="duration"></param>
+        /// <param name="ease"></param>
+        /// <param name="path"></param>
+        /// <returns></returns>
+        public static IInterpolationToken<Vector3> InterpolateVector3Path(int id, float duration, EEasingFunction ease, params Vector3[] path)
+        {
+            PathInterpolation<Vector3> pathInterp = new PathInterpolation<Vector3>(id, duration, ease, InterpolateVector3, path);
+            pathInterp.StartPathInterpolation();
+            return pathInterp;
         }
     }
 }
