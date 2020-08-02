@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace HexUN.Physics2D
@@ -16,22 +17,26 @@ namespace HexUN.Physics2D
         [SerializeField]
         Vector3 _ray = default;
 
+        [SerializeField]
+        ContactFilter2D _filter;
+
         private bool _sensedThisFrame = false;
-        private RaycastHit2D _lastResult;
+        private List<RaycastHit2D> _lastResult = new List<RaycastHit2D>();
 
 #if UNITY_EDITOR
         private bool _sensedThisFrameGizmos = false;
 #endif
 
-        public RaycastHit2D Sense()
+        public RaycastHit2D[] Sense()
         {
             if (!_sensedThisFrame) SenseThisFrame();
-            return _lastResult;
+            return _lastResult.ToArray();
         }
 
         private void SenseThisFrame()
         {
-            _lastResult = UnityEngine.Physics2D.Raycast(transform.position + _offset, _ray, _ray.magnitude);
+            _lastResult.Clear();
+            UnityEngine.Physics2D.Raycast(transform.position + _offset, _ray, _filter, _lastResult, _ray.magnitude);
             _sensedThisFrame = true;
             StartCoroutine(SensedThisFrame());
 #if UNITY_EDITOR
@@ -58,8 +63,8 @@ namespace HexUN.Physics2D
         [ContextMenu("Sense")]
         public void CMSense()
         {
-            RaycastHit2D h = Sense();
-            Debug.Log($"Sensor on {gameObject} sensed {h.collider}");
+            RaycastHit2D[] h = Sense();
+            Debug.Log($"Sensor on {gameObject} sensed {h.Length} colliders");
         }
 #endif
     }
