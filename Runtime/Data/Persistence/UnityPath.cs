@@ -186,6 +186,18 @@ namespace HexUN.Data
         {
             Path = path;
         }
+
+        /// <summary>
+        /// Returns ths last step of the path with or without extension
+        /// </summary>
+        /// <param name="withExtension"></param>
+        /// <returns></returns>
+        public string GetLastStep(bool withExtension = false)
+        {
+            string last = Path.GetEndStep();
+            if (withExtension) return last;
+            return last.Substring(0, last.IndexOf('.'));
+        }
         #endregion
 
         #region Public Instance API
