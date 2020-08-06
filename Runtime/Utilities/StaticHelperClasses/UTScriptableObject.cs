@@ -17,7 +17,7 @@ namespace HexUN.Utilities
         public static T CreateAsset<T>(string name, UnityPath directory, bool autoRefresh = true) where T : ScriptableObject
         {
             T asset = ScriptableObject.CreateInstance<T>();
-            AssetDatabase.CreateAsset(asset, directory.AssetRelativePath.AddStep($"{name}.asset"));
+            AssetDatabase.CreateAsset(asset, directory.AssetDatabaseAssetPath.AddStep($"{name}.asset"));
             AssetDatabase.SaveAssets();
             if (autoRefresh)
             {
