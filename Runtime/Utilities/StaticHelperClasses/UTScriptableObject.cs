@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using HexUN.Data;
+using System;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -12,19 +13,48 @@ namespace HexUN.Utilities
 
 #if UNITY_EDITOR
         /// <summary>
-        //	This makes it easy to create, name and place unique new ScriptableObject asset files.
+        ///	This makes it easy to create, name and place unique new ScriptableObject asset files.
+        /// The path should point to the indented file dir/path/soname. The .asset extension should be
+        /// included in the path. The change will not show up in the editor without a call to AssetDatabase.Refresh()
         /// </summary>
-        public static T CreateAsset<T>(string name, UnityPath directory, bool autoRefresh = true) where T : ScriptableObject
+        public static TSo CreateSoAsset<TSo>(UnityPath path) where TSo : ScriptableObject
         {
-            T asset = ScriptableObject.CreateInstance<T>();
-            AssetDatabase.CreateAsset(asset, directory.AssetRelativePath.AddStep($"{name}.asset"));
+            TSo asset = ScriptableObject.CreateInstance<TSo>();
+            AssetDatabase.CreateAsset(asset, path.AssetDatabaseAssetPath);
             AssetDatabase.SaveAssets();
-            if (autoRefresh)
-            {
-                AssetDatabase.Refresh();
-            }
-
             return asset;
+        }
+
+        /// <summary>
+        /// Attempts to load an SoAsset. If not found, creates it. Path should include the .asset extension.
+        /// The change will not show up in the editor without a call to AssetDatabase.Refresh()
+        /// </summary>
+        /// <typeparam name="TSo"></typeparam>
+        /// <param name="path"></param>
+        /// <param name="autoRefesh"></param>
+        /// <returns></returns>
+        public static TSo LoadOrCreateSoAsset<TSo>(UnityPath path)
+            where TSo: ScriptableObject
+        {
+            TSo obj = AssetDatabase.LoadAssetAtPath<TSo>(path.AssetDatabaseAssetPath);
+            if (obj == null) obj = CreateSoAsset<TSo>(path);
+
+            return obj;
+        }
+
+        /// <summary>
+        /// This function is really a function contructor for a common pattern. This function 1) Attempts
+        /// to load a So at a location. 2) if the so dosen't exist at the location, creates it. 3) Calls the
+        /// populator on the So and the pop object, with the intention that the data in the pop object
+        /// is used to populate the So. 4) Returns the So. 
+        /// </summary>
+        /// <returns></returns>
+        public static TSo PopulateOrCreateAssetFrom<TSo, TPopulator>(UnityPath path, TPopulator pop, Action<TSo, TPopulator> populator)
+            where TSo : ScriptableObject
+        {
+            TSo obj = LoadOrCreateSoAsset<TSo>(path);
+            populator(obj, pop);
+            return obj;
         }
 #endif
     }

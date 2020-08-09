@@ -34,7 +34,7 @@ namespace HexUN.EditorElements
             );
 
 
-            _list = new EETypeList(new Assembly[] { typeof(int).Assembly, typeof(UTArray).Assembly, typeof(AppLifecycle).Assembly }, 2, test);
+            _list = new EETypeList(new Assembly[] { typeof(int).Assembly, typeof(UTArray).Assembly, typeof(AppManager).Assembly }, 2, test);
         }
 
         private void OnGUI()

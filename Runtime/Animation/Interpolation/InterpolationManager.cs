@@ -19,7 +19,7 @@ namespace HexUN.Animation
         private Dictionary<int, Coroutine> _interpolationCoroutines = new Dictionary<int, Coroutine>();
 
         private Dictionary<int, InterpolationRequest> _interpolationCancelationTokens = new Dictionary<int, InterpolationRequest>();
-
+        
         #region API
         /// <summary>
         /// Returns a unique id that can be retrieved and cached by an
@@ -31,10 +31,12 @@ namespace HexUN.Animation
             int id = _id;
             _id++;
             return id;
-        } 
+        }
 
         /// <summary>
-        /// Start an interpolation from start to end for the given duration. 
+        /// Start an interpolation from start to end for the given duration. On inteprolation 
+        /// retursn an array of size interpolations, providing an interpolation float for each.
+        /// INTERPOLATION IS CURRENTLY EFFECTED BY TIME SCALE
         /// </summary>
         /// <param name="id"></param>
         /// <param name="start"></param>
@@ -42,7 +44,7 @@ namespace HexUN.Animation
         /// <param name="duration"></param>
         /// <param name="ease"></param>
         /// <returns></returns>
-        public IInterpolationToken StartInterpolation(int id, float duration, params SInterpolation[] interpolations)
+        public IInterpolationToken<float[]> StartInterpolation(int id, float duration, params SInterpolation[] interpolations)
         {
             if (_interpolationCancelationTokens.TryGetValue(id, out InterpolationRequest args))
             {
@@ -106,7 +108,6 @@ namespace HexUN.Animation
                 {
                     value[i] = interpolations[i].Interpolate(time);
                 }
-
                 return value;
             }
         }

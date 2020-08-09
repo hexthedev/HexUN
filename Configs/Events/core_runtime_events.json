@@ -22,15 +22,15 @@
       "EventTypeNamespace": "System"
     },
     {
-      "Path": "Dependencies/HexUN/Core/Runtime/Events/Generated/object.event",
+      "Path": "Dependencies/HexUN/Core/Runtime/Events/Generated/Object.event",
       "Type": "object",
       "Namespace": "HexUN.Core.Events",
       "MenuPath": "HexUN/Core/Events",
       "EventTypeNamespace": "System"
     },
     {
-      "Path": "Dependencies/HexUN/Core/Runtime/Events/Generated/Object.event",
-      "Type": "object",
+      "Path": "Dependencies/HexUN/Core/Runtime/Events/Generated/String.event",
+      "Type": "String",
       "Namespace": "HexUN.Core.Events",
       "MenuPath": "HexUN/Core/Events",
       "EventTypeNamespace": "System"

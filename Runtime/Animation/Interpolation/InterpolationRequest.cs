@@ -6,7 +6,7 @@ namespace HexUN.Animation
     /// <summary>
     /// Token used to track an instance of an interpolation
     /// </summary>
-    public class InterpolationRequest : IInterpolationToken
+    public class InterpolationRequest : IInterpolationToken<float[]>
     {
         /// <summary>
         /// The identifier for the interpolation

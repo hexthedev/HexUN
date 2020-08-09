@@ -25,6 +25,9 @@ namespace HexUN.Data
         private bool _assetRelativePathInitalized = false;
         private PathString _assetRelativePath = null;
 
+        private bool _assetDatabaseAssetPathInitialized = false;
+        private PathString _assetDatabaseAssetPath = null;
+
         private string _resourceApiCompatiblePath = null;
 
         #region Public Static Fields and Properties
@@ -45,7 +48,7 @@ namespace HexUN.Data
         {
             get
             {
-                if (_projectPath == null) _projectPath = _assetsPath.Path.RelativeTo(cAssetsFolderName);
+                if (_projectPath == null) _projectPath = AssetsPath.Path.RemoveStep();
                 return _projectPath;
             }
         }
@@ -53,7 +56,7 @@ namespace HexUN.Data
         /// <summary>
         /// The name of the project root folder
         /// </summary>
-        public static string ProjectFolderName => _projectPath.Path.GetEndStep();
+        public static string ProjectFolderName => ProjectPath.Path.GetEndStep();
 
         /// <summary>
         /// Path to the /Assets folder
@@ -120,6 +123,26 @@ namespace HexUN.Data
             }
         }
 
+        /// <summary>
+        /// Asset database "Asset Path" version of the path. This is a project relative path including the extension. see: https://docs.unity3d.com/ScriptReference/AssetDatabase.LoadAssetAtPath.html as example. Null if does not exist. 
+        /// </summary>
+        public PathString AssetDatabaseAssetPath
+        {
+            get
+            {
+                if (!_assetRelativePathInitalized)
+                {
+                    if (AbsolutePath.ContainsStep(ProjectFolderName))
+                    {
+                        _assetDatabaseAssetPath = AbsolutePath.RelativeTo(ProjectFolderName);
+                    }
+
+                    _assetRelativePathInitalized = true;
+                }
+
+                return _assetDatabaseAssetPath;
+            }
+        }
 
         /// <summary>
         /// Asset relative version of the path. Null if does not exist
@@ -130,9 +153,9 @@ namespace HexUN.Data
             {
                 if (!_assetRelativePathInitalized)
                 {
-                    if (Path.ContainsStep(cAssetsFolderName))
+                    if (AbsolutePath.ContainsStep(cAssetsFolderName))
                     {
-                        _assetRelativePath = Path.RelativeTo(cAssetsFolderName);
+                        _assetRelativePath = AbsolutePath.RelativeTo(cAssetsFolderName);
                     }
 
                     _assetRelativePathInitalized = true;
@@ -162,6 +185,18 @@ namespace HexUN.Data
         public UnityPath(PathString path)
         {
             Path = path;
+        }
+
+        /// <summary>
+        /// Returns ths last step of the path with or without extension
+        /// </summary>
+        /// <param name="withExtension"></param>
+        /// <returns></returns>
+        public string GetLastStep(bool withExtension = false)
+        {
+            string last = Path.GetEndStep();
+            if (withExtension) return last;
+            return last.Substring(0, last.IndexOf('.'));
         }
         #endregion
 

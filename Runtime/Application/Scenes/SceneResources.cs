@@ -1,4 +1,5 @@
 ﻿using HexUN.MonoB;
+using UnityEditor;
 using UnityEngine;
 
 namespace HexUN.App
@@ -15,6 +16,7 @@ namespace HexUN.App
 
         private bool _isActive = false;
 
+        private GameObject[] _instances = null;
 
         protected override void MonoAwake()
         {
@@ -22,7 +24,7 @@ namespace HexUN.App
 
             if (!_isActive)
             {
-                if (!AppLifecycle.IsBootstrapped) InstantiateResources();
+                if (!AppManager.IsBootstrapped) InstantiateResources();
                 _isActive = true;
             }
         }
@@ -30,7 +32,7 @@ namespace HexUN.App
         /// <inheritdoc />
         protected void OnValidate()
         {
-            if (!_isActive)
+            if (!_isActive && gameObject.activeInHierarchy)
             {
                 if (!Application.isPlaying)
                 {
@@ -40,13 +42,33 @@ namespace HexUN.App
             }
         }
 
+        protected override void OnDestroy() => ClearInstanceCache();
+
         private void InstantiateResources()
         {
             if (_resources == null) return;
-            foreach (GameObject ob in _resources)
+            ClearInstanceCache();
+
+            _instances = new GameObject[_resources.Length];
+
+            for(int i = 0; i<_resources.Length; i++)
             {
-                GameObject inst = Instantiate(ob, transform);
-                inst.hideFlags = HideFlags.DontSave;
+#if UNITY_EDITOR
+                GameObject inst = (GameObject)PrefabUtility.InstantiatePrefab(_resources[i], transform);
+                inst.hideFlags = HideFlags.DontSaveInEditor | HideFlags.DontSaveInBuild;
+                _instances[i] = inst;
+#endif
+            }
+        }
+
+        private void ClearInstanceCache()
+        {
+            if (_instances != null)
+            {
+                foreach (GameObject instance in _instances)
+                {
+                    DestroyImmediate(instance);
+                }
             }
         }
     }
