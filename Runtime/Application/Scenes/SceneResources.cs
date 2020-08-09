@@ -22,7 +22,7 @@ namespace HexUN.App
 
             if (!_isActive)
             {
-                if (!AppLifecycle.IsBootstrapped) InstantiateResources();
+                if (!AppManager.IsBootstrapped) InstantiateResources();
                 _isActive = true;
             }
         }
@@ -45,7 +45,7 @@ namespace HexUN.App
             if (_resources == null) return;
             foreach (GameObject ob in _resources)
             {
-                GameObject inst = Instantiate(ob, transform);
+                GameObject inst = Instantiate(ob);
                 inst.hideFlags = HideFlags.DontSave;
             }
         }
