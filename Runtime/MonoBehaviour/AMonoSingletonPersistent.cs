@@ -48,7 +48,7 @@ namespace HexUN.MonoB
                 // block used to catch other threads creating singleton
                 if (_instantiating)
                 {
-                    Debug.LogWarning("Attempting to instantiate singleton, but _instantiation attempts indicate another thread is instantiating");
+                    //Debug.LogWarning("Attempting to instantiate singleton, but _instantiation attempts indicate another thread is instantiating");
                     return false;
                 }
                 _instantiating = true;
