@@ -16,7 +16,7 @@ namespace HexUN.App
 
         public void LoadScene()
         {
-            if (_tasks != null) return;
+            if (_tasks == null) return;
             SceneLoadManager.Instance.QueueTasks(_tasks.LoadTasks);
         }
     }

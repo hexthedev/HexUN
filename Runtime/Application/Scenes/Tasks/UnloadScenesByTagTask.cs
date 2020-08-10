@@ -24,7 +24,8 @@ namespace HexUN.App
             }
 
             // Remove the scenes that are being unloaded
-            foreach (SceneToken rem in currentScenes.Where(e => e.Tag == Tag)) currentScenes.Remove(rem);
+            SceneToken[] remove = currentScenes.Where(e => e.Tag == Tag).ToArray();
+            foreach (SceneToken rem in remove) currentScenes.Remove(rem);
 
             return true;
         }
