@@ -13,7 +13,7 @@ namespace HexUN.Utilities
         /// parent. Modifies the provided transform
         /// </summary>
         /// <param name="trans"></param>
-        public static void TransStretch(this RectTransform trans)
+        public static void RectStretch(this RectTransform trans)
         {
             trans.localPosition = Vector3.zero;
             trans.localRotation = Quaternion.identity;
