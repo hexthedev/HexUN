@@ -18,7 +18,7 @@ namespace HexUN.MonoB
             ResolveDependencies();
             EventBindings.ClearAndUnsubscribeAll();
             ResolveEventBindings(EventBindings);
-#if TOBIAS_DEBUG
+#if HEXDB
             LogInfo<MonoDependent>($"Awake complete. Dependencies and EventBindings resolved");
 #endif
         }

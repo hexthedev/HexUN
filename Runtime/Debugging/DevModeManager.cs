@@ -18,23 +18,7 @@ namespace HexUN.Debugging
 
         protected virtual void OnValidate()
         {
-            HideFlags flag = _devmode ? 
-                HideFlags.None : 
-                HideFlags.HideInHierarchy | HideFlags.HideInInspector;
-
-            foreach (Transform trans in transform)
-            {
-                if (trans == transform) continue;
-                trans.hideFlags = flag;
-            }
-
-            if(_devMonobehaviours != null)
-            {
-                foreach(MonoBehaviour mb in _devMonobehaviours)
-                {
-                    if(mb != null) mb.hideFlags = flag;
-                }
-            }
+            UTDevModeManagment.SetDevMode(_devmode, transform, _devMonobehaviours);
         }
     }
 }

@@ -14,7 +14,7 @@ namespace HexUN.MonoB
     /// </summary>
     public abstract class MonoEnhanced : MonoBehaviour
     {
-#if TOBIAS_DEBUG
+#if HEXDB
         [SerializeField]
         [Header("Debug(MonoEnhanced)")]
         protected ObjectSoEvent Log = null;
@@ -76,7 +76,7 @@ namespace HexUN.MonoB
         /// </summary>
         protected virtual void MonoStart() {}
 
-#if TOBIAS_DEBUG
+#if HEXDB
         protected void LogInfo<T>(string message)
         {
             if (Log != null)
@@ -146,7 +146,7 @@ namespace HexUN.MonoB
             foreach (Action<object> o in _callAfterAwake) o(this);
             _callAfterAwake.Clear();
 
-#if TOBIAS_DEBUG
+#if HEXDB
             LogInfo<MonoEnhanced>("Awale called, after awake functions have been performed");
 #endif
         }
