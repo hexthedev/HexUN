@@ -26,6 +26,19 @@ namespace HexUN.Utilities
         }
 
         /// <summary>
+        ///	This makes it easy to create, name and place unique new ScriptableObject asset files using the type name.
+        /// The path should point to the indented file dir/path/soname. The .asset extension should be
+        /// included in the path. The change will not show up in the editor without a call to AssetDatabase.Refresh()
+        /// </summary>
+        public static ScriptableObject CreateSoAsset(UnityPath path, string type)
+        {
+            ScriptableObject asset = ScriptableObject.CreateInstance(type);
+            AssetDatabase.CreateAsset(asset, path.AssetDatabaseAssetPath);
+            AssetDatabase.SaveAssets();
+            return asset;
+        }
+
+        /// <summary>
         /// Attempts to load an SoAsset. If not found, creates it. Path should include the .asset extension.
         /// The change will not show up in the editor without a call to AssetDatabase.Refresh()
         /// </summary>
@@ -38,6 +51,22 @@ namespace HexUN.Utilities
         {
             TSo obj = AssetDatabase.LoadAssetAtPath<TSo>(path.AssetDatabaseAssetPath);
             if (obj == null) obj = CreateSoAsset<TSo>(path);
+
+            return obj;
+        }
+
+        /// <summary>
+        /// Attempts to load an SoAsset. If not found, creates it. Path should include the .asset extension.
+        /// The change will not show up in the editor without a call to AssetDatabase.Refresh()
+        /// </summary>
+        /// <typeparam name="TSo"></typeparam>
+        /// <param name="path"></param>
+        /// <param name="autoRefesh"></param>
+        /// <returns></returns>
+        public static ScriptableObject LoadOrCreateSoAsset(UnityPath path, string type)
+        {
+            ScriptableObject obj = AssetDatabase.LoadAssetAtPath<ScriptableObject>(path.AssetDatabaseAssetPath);
+            if (obj == null) obj = CreateSoAsset(path, type);
 
             return obj;
         }
