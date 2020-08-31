@@ -18,7 +18,7 @@ namespace HexUN.EditorElements
         string _pathChosen;
 
         // Add menu item named "My Window" to the Window menu
-        [MenuItem("Tobias/Examples/Elements/SaveFileButton")]
+        [MenuItem("Hex/Examples/Elements/SaveFileButton")]
         public static void ShowWindow()
         {
             //Show existing window instance. If one doesn't exist, make one.

@@ -29,7 +29,7 @@ namespace HexUN.Events
         private EECustomString _menuPath;
 
         // Add menu named "My Window" to the Window menu
-        [MenuItem("Tobias/Events/EventGenerator")]
+        [MenuItem("Hex/Events/EventGenerator")]
         private static void CreateWindow()
         {
             // Get existing open window or if none, make a new one:
