@@ -1,13 +1,10 @@
 ﻿using Hex.Paths;
-using HexCS.Data.Persistence;
 using UnityEngine;
 
 namespace HexUN.Data
 {
     /// <summary>
-    /// Class that holds a class and calculates important information about it that
-    /// allow it to be used with Unitys APIs. 
-    /// 
+    /// Class that holds a path and eases path manipualtion to work with Unity APIs.
     /// The reason I made this is because different APIs require different path types. 
     /// Absolute, Resource Relative, Asset Relative etc. 
     /// </summary>
@@ -70,6 +67,9 @@ namespace HexUN.Data
             }
         }
 
+        /// <summary>
+        /// Path to the persistent data path of the platform. 
+        /// </summary>
         public static UnityPath PersistentDataPath
         {
             get
