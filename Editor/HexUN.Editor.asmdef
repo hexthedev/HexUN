@@ -1,7 +1,8 @@
 {
     "name": "HexUN.Editor",
     "references": [
-        "GUID:f5eab7ae485a28e4f9fdd568c21c4a83"
+        "GUID:f5eab7ae485a28e4f9fdd568c21c4a83",
+        "GUID:b3f49edfedc855a48aa1a9e5d3cba438"
     ],
     "includePlatforms": [
         "Editor"
