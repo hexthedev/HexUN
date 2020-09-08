@@ -80,7 +80,7 @@ namespace HexUN.MonoB
         /// Add a pui data to the data
         /// </summary>
         /// <param name="data"></param>
-        public void AddData(ScriptableObject data)
+        public void AddData(object data)
         {
             if (_data == null) _data = new List<object>();
             _data.Add(data);
@@ -90,7 +90,7 @@ namespace HexUN.MonoB
         /// Remove a pui data from data
         /// </summary>
         /// <param name="data"></param>
-        public void RemoveData(ScriptableObject data) => _data?.Remove(data);
+        public void RemoveData(object data) => _data?.Remove(data);
 
         /// <summary>
         /// Clear the pui data cache
