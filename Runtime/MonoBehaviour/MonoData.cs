@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using HexUN.Render;
 
 namespace HexUN.MonoB
 {
@@ -19,13 +18,11 @@ namespace HexUN.MonoB
         /// All pui data. Pui data can be any type. The puiSoData is only used to allow
         /// adding pui data in editor.
         /// </summary>
-        protected List<object> _data;
+        protected List<object> _data = new List<object>();
 
         protected override void MonoAwake()
         {
             base.MonoAwake();
-
-            _data = new List<object>();
             if (_genericSoData != null) _data.AddRange(_genericSoData);
         }
         #endregion
@@ -63,9 +60,9 @@ namespace HexUN.MonoB
         /// <typeparam name="T"></typeparam>
         /// <param name="data"></param>
         /// <returns></returns>
-        public void TryGetAllData<T>(out List<T> data)
+        public List<T> GetAllData<T>()
         {
-            data = new List<T>();
+            List<T> data = new List<T>();
 
             foreach (object obj in _data)
             {
@@ -74,6 +71,8 @@ namespace HexUN.MonoB
                     data.Add((T)obj);
                 }
             }
+
+            return data;
         }
 
         /// <summary>
@@ -96,6 +95,29 @@ namespace HexUN.MonoB
         /// Clear the pui data cache
         /// </summary>
         public void ClearData() => _data?.Clear();
+
+#if UNITY_EDITOR
+        /// <summary>
+        /// Performs a get all data assuming that Awake has not been called. Only works in editor
+        /// </summary>
+        public List<T> GetAllDataEditor<T>()
+        {
+            List<object> objList = new List<object>(_data);
+            objList.AddRange(_genericSoData);
+
+            List<T> data = new List<T>();
+
+            foreach (object obj in objList)
+            {
+                if (obj is T)
+                {
+                    data.Add((T)obj);
+                }
+            }
+
+            return data;
+        }
+#endif
         #endregion
     }
 }
