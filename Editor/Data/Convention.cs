@@ -11,7 +11,7 @@ namespace HexUN.Data
         {
             get
             {
-                UnityPath conventionPath = "Assets/Data/Yaml/config/convention.yaml";
+                UnityPath conventionPath = "Assets/Data/Yaml/Config/Convention.yaml";
 
                 if (!conventionPath.AbsolutePath.TryAsFileInfo(out FileInfo file)) return null;
                 if (!file.Exists) return null;
@@ -32,7 +32,7 @@ namespace HexUN.Data
 
     public class ConventionArgs
     {
-        public string location;
-        public string convention;
+        public string Location;
+        public string Convention;
     }
 }

@@ -32,6 +32,7 @@ namespace HexUN.Utilities
         /// </summary>
         public static ScriptableObject CreateSoAsset(UnityPath path, string type)
         {
+            path.Path.CreateIfNotExistsDirectory();
             ScriptableObject asset = ScriptableObject.CreateInstance(type);
             AssetDatabase.CreateAsset(asset, path.AssetDatabaseAssetPath);
             AssetDatabase.SaveAssets();
