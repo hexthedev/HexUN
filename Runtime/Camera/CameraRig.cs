@@ -9,7 +9,7 @@ namespace RoboArena
     /// </summary>
     public class CameraRig : AMonoSingletonScene<CameraRig>
     {
-        private const string cCameraSceneName = "CameraScene";
+        private const string cCameraSceneName = "CameraResource";
         
         private Camera _managedCam;
         private Scene _cameraScene;
