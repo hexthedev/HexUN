@@ -20,7 +20,9 @@ namespace HexUN.App
             foreach (SceneToken t in currentScenes.Where(e => e.Tag == Tag))
             {
                 AsyncOperation asyncLoad = SceneManager.UnloadSceneAsync(t.Name);
-                currentTasks.Add(asyncLoad);
+
+                if (asyncLoad == null) Debug.LogWarning($"Attempting to perform UnloadSceneAsync on scene {t.Name} resulted in null operation");
+                else currentTasks.Add(asyncLoad);
             }
 
             // Remove the scenes that are being unloaded

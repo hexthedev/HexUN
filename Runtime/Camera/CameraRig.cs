@@ -1,27 +1,53 @@
 ﻿using HexUN.MonoB;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace RoboArena
 {
+    /// <summary>
+    /// Automatically takes control of the main camera on start. When Destoryed, puts the camera back in it's own scene.
+    /// </summary>
     public class CameraRig : AMonoSingletonScene<CameraRig>
     {
-        [SerializeField]
-        [Tooltip("Where to put camera on destroy. If null, takes the parent of the camera before it was reparented to the rig")]
-        private Transform _onDestroyParent = null;
-
+        private const string cCameraSceneName = "CameraScene";
+        
         private Camera _managedCam;
+        private Scene _cameraScene;
 
         private void Start()
         {
             _managedCam = Camera.main;
-            if (_onDestroyParent == null) _onDestroyParent = _managedCam.transform.parent;
+
+            bool isCameraSceneCreated = false;
+            for(int i = 0; i<SceneManager.sceneCount; i++)
+            {
+                if(SceneManager.GetSceneAt(i).name == cCameraSceneName)
+                {
+                    isCameraSceneCreated = true;
+                    break;
+                }
+            }
+
+            if (!isCameraSceneCreated) _cameraScene = SceneManager.CreateScene(cCameraSceneName);
+            else _cameraScene = SceneManager.GetSceneByName(cCameraSceneName);
+
             _managedCam.transform.SetParent(transform, false);
+        }
+
+        [ContextMenu("Button")]
+        public void Cam()
+        {
+            GameObject[] ob = GameObject.FindGameObjectsWithTag("EditorOnly");
+            //Start();
+
+
         }
 
         protected override void OnDestroy()
         {
             base.OnDestroy();
-            if(_onDestroyParent != null && _managedCam != null) _managedCam.transform.SetParent(null);
+            _managedCam.transform.parent = null;
+            SceneManager.MoveGameObjectToScene(_managedCam.gameObject, _cameraScene);
         }
     }
 }
