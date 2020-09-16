@@ -7,7 +7,7 @@ namespace HexUN.CSStandard.StateMachine
     /// A StateMachine is a simple class that maintains a reference to 
     /// the current state in a state machine flow. The state machine flow
     /// is represented by an enum, where the enum is the identity of a state.
-    /// This is used to easily communicate with other systemss about the 
+    /// This is used to easily communicate with other systems about the 
     /// current state and allows decoupling of the state from the implementation
     /// of the state.
     /// 
