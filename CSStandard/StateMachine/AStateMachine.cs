@@ -17,10 +17,13 @@ namespace HexUN.CSStandard.StateMachine
     {
         private EnumDicitonary<TStatesEnum, AState<TStatesEnum, TEnvironment>> _stateMapping;
 
+        private TStatesEnum _currentStateEnum;
         private AState<TStatesEnum, TEnvironment> _currentState;
-        private EventBinding _onCurrentStateChangeBinding;
+        //private EventBinding _onCurrentStateChangeBinding;
 
         private TEnvironment _environment;
+
+        private Event<TStatesEnum> _onStateChange = new Event<TStatesEnum>();
 
         #region API
         /// <summary>
@@ -31,7 +34,21 @@ namespace HexUN.CSStandard.StateMachine
         /// <summary>
         /// The current state the machine is in
         /// </summary>
-        public TStatesEnum CurrentState { get; private set; }
+        public TStatesEnum CurrentState
+        {
+            get => _currentStateEnum;
+            private set
+            {
+                _currentStateEnum = value;
+                _onStateChange.Invoke(value);
+            }
+        }
+
+
+        /// <summary>
+        /// Invoked whenever the state changes
+        /// </summary>
+        public IEventSubscriber<TStatesEnum> OnStateChange => _onStateChange;
 
         /// <summary>
         /// Initalize the state machine. Will not initalize again if already initalized.
@@ -64,28 +81,26 @@ namespace HexUN.CSStandard.StateMachine
 
         private void ChangeState(TStatesEnum state)
         {
-            if(_onCurrentStateChangeBinding != null)
-            {
-                _onCurrentStateChangeBinding.UnSubscribe();
-                _onCurrentStateChangeBinding = null;
-            }
+            // --- DIDNT AGREE WITH CODE, WILL THIS BREAK SOMETHING ---
+            //if(_onCurrentStateChangeBinding != null)
+            //{
+            //    _onCurrentStateChangeBinding.UnSubscribe();
+            //    _onCurrentStateChangeBinding = null;
+            //}
 
             _currentState = _stateMapping[state];
             if (_currentState == null) throw new ArgumentException("Attempting to change to a null state in state machine. This is not allowed.");
 
-            _onCurrentStateChangeBinding = _currentState.OnChangeState.Subscribe(HandleOnChangeState);
+            //_onCurrentStateChangeBinding = _currentState.OnChangeState.Subscribe(HandleOnChangeState);
             _currentState.ClearState();
+            CurrentState = state;
 
-            if(_currentState.IntializeState(_environment, out TStatesEnum nextState))
+            if (_currentState.IntializeState(_environment, out TStatesEnum nextState))
             {
                 ChangeState(nextState);    
             }
-            else
-            {
-                CurrentState = state;
-            }
 
-            void HandleOnChangeState() => ChangeState(state);
+            //void HandleOnChangeState() => ChangeState(state);
         }
     }
 }

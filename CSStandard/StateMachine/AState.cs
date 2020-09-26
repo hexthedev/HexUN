@@ -11,12 +11,13 @@ namespace HexUN.CSStandard.StateMachine
     /// </summary>
     public abstract class AState<TStatesEnum, TEnvrionment>
     {
-        private Event _onChangeState = new Event();
+        // --- COMMENTED OUT CAUSE I DONT AGREE WITH MY CODE, WILL IT BREAK SOMETHING? ---
+        //private Event _onChangeState = new Event();
 
-        /// <summary>
-        /// Emited when the state has changed
-        /// </summary>
-        public IEventSubscriber OnChangeState => _onChangeState;
+        ///// <summary>
+        ///// Emited when the state has changed
+        ///// </summary>
+        //public IEventSubscriber OnChangeState => _onChangeState;
 
         /// <summary>
         /// Is the state initialized
