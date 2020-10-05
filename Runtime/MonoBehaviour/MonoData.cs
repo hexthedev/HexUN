@@ -76,12 +76,21 @@ namespace HexUN.MonoB
         }
 
         /// <summary>
-        /// Add a pui data to the data
+        /// Add a pui data to the data. Will override old data of the same type of exists
         /// </summary>
         /// <param name="data"></param>
-        public void AddData(object data)
+        public void AddData(object data, bool removeOthersOfType = true)
         {
             if (_data == null) _data = new List<object>();
+
+            if (removeOthersOfType)
+            {
+                for(int i = _data.Count - 1; i>=0; i--)
+                {
+                    if (Data[i].GetType() == data.GetType()) _data.RemoveAt(i);
+                }
+            }
+
             _data.Add(data);
         }
 

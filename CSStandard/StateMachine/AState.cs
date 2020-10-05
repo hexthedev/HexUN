@@ -1,8 +1,4 @@
-﻿using HexCS.Core;
-
-using Event = HexCS.Core.Event;
-
-namespace HexUN.CSStandard.StateMachine
+﻿namespace HexUN.CSStandard.StateMachine
 {
     /// <summary>
     /// A state is a single state that operates over an environment.
@@ -11,14 +7,6 @@ namespace HexUN.CSStandard.StateMachine
     /// </summary>
     public abstract class AState<TStatesEnum, TEnvrionment>
     {
-        // --- COMMENTED OUT CAUSE I DONT AGREE WITH MY CODE, WILL IT BREAK SOMETHING? ---
-        //private Event _onChangeState = new Event();
-
-        ///// <summary>
-        ///// Emited when the state has changed
-        ///// </summary>
-        //public IEventSubscriber OnChangeState => _onChangeState;
-
         /// <summary>
         /// Is the state initialized
         /// </summary>
