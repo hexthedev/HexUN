@@ -17,7 +17,7 @@ namespace HexUN.Events
             EventGenerationTokens tokens = JsonUtility.FromJson<EventGenerationTokens>(asset.text);
 
             PathString path = AssetDatabase.GetAssetPath(obj.GetInstanceID());
-            PathString folder = path.RemoveStep();
+            PathString folder = path.RemoveAtEnd();
 
             for (int i = 0; i < tokens.Tokens.Length; i++)
             {

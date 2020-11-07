@@ -45,7 +45,7 @@ namespace HexUN.Data
         {
             get
             {
-                if (_projectPath == null) _projectPath = AssetsPath.Path.RemoveStep();
+                if (_projectPath == null) _projectPath = AssetsPath.Path.RemoveAtEnd();
                 return _projectPath;
             }
         }
@@ -53,7 +53,7 @@ namespace HexUN.Data
         /// <summary>
         /// The name of the project root folder
         /// </summary>
-        public static string ProjectFolderName => ProjectPath.Path.GetEndStep();
+        public static string ProjectFolderName => ProjectPath.Path.End;
 
         /// <summary>
         /// Path to the /Assets folder
@@ -95,7 +95,7 @@ namespace HexUN.Data
             {
                 if (!_resourceRelativePathInitalized)
                 {
-                    if (Path.ContainsStep(cResourcesFolderName))
+                    if (Path.Contains(cResourcesFolderName))
                     {
                         _resourceRelativePath = Path.RelativeTo(cResourcesFolderName);
                     }
@@ -132,7 +132,7 @@ namespace HexUN.Data
             {
                 if (!_assetRelativePathInitalized)
                 {
-                    if (AbsolutePath.ContainsStep(ProjectFolderName))
+                    if (AbsolutePath.Contains(ProjectFolderName))
                     {
                         _assetDatabaseAssetPath = AbsolutePath.RelativeTo(ProjectFolderName);
                     }
@@ -153,7 +153,7 @@ namespace HexUN.Data
             {
                 if (!_assetRelativePathInitalized)
                 {
-                    if (AbsolutePath.ContainsStep(cAssetsFolderName))
+                    if (AbsolutePath.Contains(cAssetsFolderName))
                     {
                         _assetRelativePath = AbsolutePath.RelativeTo(cAssetsFolderName);
                     }
@@ -194,7 +194,7 @@ namespace HexUN.Data
         /// <returns></returns>
         public string GetLastStep(bool withExtension = false)
         {
-            string last = Path.GetEndStep();
+            string last = Path.End;
             if (withExtension) return last;
             return last.Substring(0, last.IndexOf('.'));
         }

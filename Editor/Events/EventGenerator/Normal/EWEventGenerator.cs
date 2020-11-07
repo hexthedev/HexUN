@@ -96,9 +96,9 @@ namespace HexUN.Events
             {
                 PathString path = new PathString(EditorUtility.SaveFolderPanel("Generation Path", _lastSavePath, type));
 
-                path = path.AddStep($"{type?.EnforceFistCharCaptial()}.event");
+                path = path.InsertAtEnd($"{type?.EnforceFistCharCaptial()}.event");
                 path.CreateIfNotExistsDirectory();
-                _lastSavePath = path.RemoveStep();
+                _lastSavePath = path.RemoveAtEnd();
 
                 UTEventGeneration.GenerateEventsOfAllTypes(path, type, _namespace.String, $"{_menuPath.String}", _selectedTypeList.SelectedType.Namespace);
                 AssetDatabase.Refresh();

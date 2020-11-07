@@ -39,7 +39,7 @@ namespace HexUN.Data
         {
             get
             {
-                if(_editorAssetsUnityPath == null) _editorAssetsUnityPath = UnityPath.AssetsPath.Path.AddStep(cEditorAssetsFolderName);
+                if(_editorAssetsUnityPath == null) _editorAssetsUnityPath = UnityPath.AssetsPath.Path.InsertAtEnd(cEditorAssetsFolderName);
                 return _editorAssetsUnityPath;
             }
         }
@@ -50,7 +50,7 @@ namespace HexUN.Data
         {
             get
             {
-                if (_runtimeFilesUnityPath == null) _runtimeFilesUnityPath = UnityPath.PersistentDataPath.Path.AddStep(cRuntimeFilesFolderName);
+                if (_runtimeFilesUnityPath == null) _runtimeFilesUnityPath = UnityPath.PersistentDataPath.Path.InsertAtEnd(cRuntimeFilesFolderName);
                 return _runtimeFilesUnityPath;
             }
         }

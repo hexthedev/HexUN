@@ -18,7 +18,7 @@ namespace HexUN.Data
 
         public void GetRuntimeFileLogsFile()
         {
-            UnityPath path = Files.GetPath(EFileLocationType.RuntimeFiles, ECommonFileType.Logs).Path.AddStep("log.txt");
+            UnityPath path = Files.GetPath(EFileLocationType.RuntimeFiles, ECommonFileType.Logs).Path.InsertAtEnd("log.txt");
 
             Debug.Log($"Created the file at the path {path.ToString()}");
 
