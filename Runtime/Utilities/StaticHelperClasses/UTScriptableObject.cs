@@ -86,6 +86,26 @@ namespace HexUN.Utilities
             populator(obj, pop);
             return obj;
         }
+
+        /// <summary>
+        /// Get all instances of scriptable object of type T. from https://answers.unity.com/questions/1425758/how-can-i-find-all-instances-of-a-scriptable-objec.html
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
+        public static T[] GetAllInstances<T>() where T : ScriptableObject
+        {
+            //FindAssets uses tags check documentation for more info
+            string[] guids = AssetDatabase.FindAssets("t:" + typeof(T).Name);  
+
+            T[] a = new T[guids.Length];
+            for (int i = 0; i < guids.Length; i++)
+            {
+                string path = AssetDatabase.GUIDToAssetPath(guids[i]);
+                a[i] = AssetDatabase.LoadAssetAtPath<T>(path);
+            }
+
+            return a;
+        }
 #endif
     }
 }

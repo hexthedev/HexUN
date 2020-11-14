@@ -166,7 +166,8 @@ namespace HexUN.Data
         }
 
         /// <summary>
-        /// Gets the path as an absolute path using the System.IO.Path.GetFullPath method
+        /// Gets the path as an absolute path using the System.IO.Path.GetFullPath method.
+        /// This path should mesure form the project folder.
         /// </summary>
         public PathString AbsolutePath
         {
