@@ -1,13 +1,10 @@
 ﻿using Hex.Paths;
-using HexCS.Data.Persistence;
 using UnityEngine;
 
 namespace HexUN.Data
 {
     /// <summary>
-    /// Class that holds a class and calculates important information about it that
-    /// allow it to be used with Unitys APIs. 
-    /// 
+    /// Class that holds a path and eases path manipualtion to work with Unity APIs.
     /// The reason I made this is because different APIs require different path types. 
     /// Absolute, Resource Relative, Asset Relative etc. 
     /// </summary>
@@ -48,7 +45,7 @@ namespace HexUN.Data
         {
             get
             {
-                if (_projectPath == null) _projectPath = AssetsPath.Path.RemoveStep();
+                if (_projectPath == null) _projectPath = AssetsPath.Path.RemoveAtEnd();
                 return _projectPath;
             }
         }
@@ -56,7 +53,7 @@ namespace HexUN.Data
         /// <summary>
         /// The name of the project root folder
         /// </summary>
-        public static string ProjectFolderName => ProjectPath.Path.GetEndStep();
+        public static string ProjectFolderName => ProjectPath.Path.End;
 
         /// <summary>
         /// Path to the /Assets folder
@@ -70,6 +67,9 @@ namespace HexUN.Data
             }
         }
 
+        /// <summary>
+        /// Path to the persistent data path of the platform. 
+        /// </summary>
         public static UnityPath PersistentDataPath
         {
             get
@@ -95,7 +95,7 @@ namespace HexUN.Data
             {
                 if (!_resourceRelativePathInitalized)
                 {
-                    if (Path.ContainsStep(cResourcesFolderName))
+                    if (Path.Contains(cResourcesFolderName))
                     {
                         _resourceRelativePath = Path.RelativeTo(cResourcesFolderName);
                     }
@@ -132,7 +132,7 @@ namespace HexUN.Data
             {
                 if (!_assetRelativePathInitalized)
                 {
-                    if (AbsolutePath.ContainsStep(ProjectFolderName))
+                    if (AbsolutePath.Contains(ProjectFolderName))
                     {
                         _assetDatabaseAssetPath = AbsolutePath.RelativeTo(ProjectFolderName);
                     }
@@ -153,7 +153,7 @@ namespace HexUN.Data
             {
                 if (!_assetRelativePathInitalized)
                 {
-                    if (AbsolutePath.ContainsStep(cAssetsFolderName))
+                    if (AbsolutePath.Contains(cAssetsFolderName))
                     {
                         _assetRelativePath = AbsolutePath.RelativeTo(cAssetsFolderName);
                     }
@@ -166,7 +166,8 @@ namespace HexUN.Data
         }
 
         /// <summary>
-        /// Gets the path as an absolute path using the System.IO.Path.GetFullPath method
+        /// Gets the path as an absolute path using the System.IO.Path.GetFullPath method.
+        /// This path should mesure form the project folder.
         /// </summary>
         public PathString AbsolutePath
         {
@@ -185,18 +186,6 @@ namespace HexUN.Data
         public UnityPath(PathString path)
         {
             Path = path;
-        }
-
-        /// <summary>
-        /// Returns ths last step of the path with or without extension
-        /// </summary>
-        /// <param name="withExtension"></param>
-        /// <returns></returns>
-        public string GetLastStep(bool withExtension = false)
-        {
-            string last = Path.GetEndStep();
-            if (withExtension) return last;
-            return last.Substring(0, last.IndexOf('.'));
         }
         #endregion
 

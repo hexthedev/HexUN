@@ -1,8 +1,4 @@
-﻿using HexCS.Core;
-
-using Event = HexCS.Core.Event;
-
-namespace HexUN.CSStandard.StateMachine
+﻿namespace HexUN.CSStandard.StateMachine
 {
     /// <summary>
     /// A state is a single state that operates over an environment.
@@ -11,20 +7,16 @@ namespace HexUN.CSStandard.StateMachine
     /// </summary>
     public abstract class AState<TStatesEnum, TEnvrionment>
     {
-        private Event _onChangeState = new Event();
-
-        /// <summary>
-        /// Emited when the state has changed
-        /// </summary>
-        public IEventSubscriber OnChangeState => _onChangeState;
-
         /// <summary>
         /// Is the state initialized
         /// </summary>
         public bool IsInitialized { get; private set; } = false;
 
         /// <summary>
-        /// Initialize the state if it is not already initialized
+        /// Initialize the state if it is not already initialized. Returns true if
+        /// after state initalization the nextState should be moved to. Careful, there
+        /// is room for infinite loops here, if Initialization always moves to
+        /// the next state and next state is it self. 
         /// </summary>
         public bool IntializeState(TEnvrionment env, out TStatesEnum nextState)
         {
@@ -49,6 +41,13 @@ namespace HexUN.CSStandard.StateMachine
             IsInitialized = false;
         }
 
+        /// <summary>
+        /// Tick the state. Returns true if the state is completed, and provides the next state that should occur
+        /// </summary>
+        /// <param name="env"></param>
+        /// <param name="args"></param>
+        /// <param name="nextState"></param>
+        /// <returns></returns>
         public abstract bool Tick(TEnvrionment env, object args, out TStatesEnum nextState);
 
 

@@ -17,8 +17,8 @@ namespace HexUN.Events
         /// </summary>
         public static void GenerateEventsOfAllTypes(PathString path, string evtType, string evtNamespace, string menuPath, string evtTypeNamespace)
         {
-            new EventGenerationArgs(evtType, evtNamespace, menuPath, evtTypeNamespace).GenerateEvents(path.AddStep("Base"));
-            new EventGenerationArgs($"{evtType}[]", evtNamespace, menuPath, evtTypeNamespace).GenerateEvents(path.AddStep("Array"));
+            new EventGenerationArgs(evtType, evtNamespace, menuPath, evtTypeNamespace).GenerateEvents(path.InsertAtEnd("Base"));
+            new EventGenerationArgs($"{evtType}[]", evtNamespace, menuPath, evtTypeNamespace).GenerateEvents(path.InsertAtEnd("Array"));
         }
 
         /// <summary>
@@ -31,8 +31,8 @@ namespace HexUN.Events
             StringBuilder sb = new StringBuilder();
 
             // The Event Files
-            args.GenerateGenericEvents(sb, path.AddStep("Generic"));
-            args.GenerateSOEvents(sb, path.AddStep("ScriptableObject"));
+            args.GenerateGenericEvents(sb, path.InsertAtEnd("Generic"));
+            args.GenerateSOEvents(sb, path.InsertAtEnd("ScriptableObject"));
         }
 
         /// <summary>
@@ -45,7 +45,7 @@ namespace HexUN.Events
         {
             // The Unity Event File
             sb.Clear();
-            using (GTFile file = new GTFile(sb, folderPath.AddStep($"{args.UnityEvtName}.cs"), Encoding.UTF8))
+            using (GTFile file = new GTFile(sb, folderPath.InsertAtEnd($"{args.UnityEvtName}.cs"), Encoding.UTF8))
             {
                 using (GTUsings us = file.Generate_Usings<GTUsings>())
                 {
@@ -79,7 +79,7 @@ namespace HexUN.Events
 
             // The Reliable Event File
             sb.Clear();
-            using (GTFile file = new GTFile(sb, folderPath.AddStep($"{args.ReliableEvtName}.cs"), Encoding.UTF8))
+            using (GTFile file = new GTFile(sb, folderPath.InsertAtEnd($"{args.ReliableEvtName}.cs"), Encoding.UTF8))
             {
                 using (GTUsings us = file.Generate_Usings<GTUsings>())
                 {
@@ -155,7 +155,7 @@ namespace HexUN.Events
         {
             sb.Clear();
             // Generate the SO Event file
-            using (GTFile file = new GTFile(sb, folderPath.AddStep($"{args.SoEvtName}.cs"), Encoding.UTF8))
+            using (GTFile file = new GTFile(sb, folderPath.InsertAtEnd($"{args.SoEvtName}.cs"), Encoding.UTF8))
             {
                 using (GTUsings us = file.Generate_Usings<GTUsings>())
                 {
@@ -195,7 +195,7 @@ namespace HexUN.Events
 
             // Generate the SO Event Listener file
             sb.Clear();
-            using (GTFile file = new GTFile(sb, folderPath.AddStep($"{args.SoEvtListenerName}.cs"), Encoding.UTF8))
+            using (GTFile file = new GTFile(sb, folderPath.InsertAtEnd($"{args.SoEvtListenerName}.cs"), Encoding.UTF8))
             {
                 using (GTUsings us = file.Generate_Usings<GTUsings>())
                 {

@@ -1,8 +1,11 @@
-﻿namespace HexUN.App
+﻿using System;
+
+namespace HexUN.App
 {
     /// <summary>
     /// Represents a scene in the scene tracker
     /// </summary>
+    [Serializable]
     public class SceneToken
     {
         public string Name;

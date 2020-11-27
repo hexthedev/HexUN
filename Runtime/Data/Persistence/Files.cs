@@ -14,7 +14,7 @@
         /// <returns></returns>
         public static UnityPath GetPath(EFileLocationType location, ECommonFileType file)
         {
-            return UTEFileLocationType.GetFileLocation(location).AddStep(file.ToString());
+            return UTEFileLocationType.GetFileLocation(location).InsertAtEnd(file.ToString());
         }
     }
 }

@@ -48,6 +48,15 @@ namespace HexUN.Events
                 RegisterCallback();
             }
         }
+
+        /// <summary>
+        /// Invoke event listener as though a scriptable object event had been invoked
+        /// </summary>
+        /// <param name="args"></param>
+        public void Invoke(T args)
+        {
+            _unityEvent?.Invoke(args);
+        }
         #endregion
 
         private void Awake() => OnValidate();

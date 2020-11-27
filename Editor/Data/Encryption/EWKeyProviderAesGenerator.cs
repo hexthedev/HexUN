@@ -46,7 +46,7 @@ namespace HexUN.Data
         }
 
         // Add menu named "My Window" to the Window menu
-        [MenuItem("Tobias/Encryption/AesKeyProviderGenerator")]
+        [MenuItem("Hex/Encryption/AesKeyProviderGenerator")]
         public static void Init()
         {
             // Get existing open window or if none, make a new one:

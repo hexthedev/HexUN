@@ -43,3 +43,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9bf1e45023b57149a758bb67c158d74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _onRegisterCurrentlyLoadedScenes:
+    _soEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 11400000, guid: 87bb6261005d1fd4eb7dadfc869d7de9, type: 2}
+          m_MethodName: Invoke
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2

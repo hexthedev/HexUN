@@ -1,6 +1,11 @@
 ﻿using HexUN.MonoB;
-using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using System.Collections.Generic;
+
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 namespace HexUN.App
 {
@@ -10,55 +15,89 @@ namespace HexUN.App
     /// </summary>
     public class SceneResources : MonoEnhanced
     {
+        private const string cEditorResourceTag = "EditorOnly";
+
         [Header("Options")]
         [SerializeField]
         private GameObject[] _resources = null;
 
         private bool _isActive = false;
-
         private GameObject[] _instances = null;
+
+        // Used to track the scene resources that are loaded. This uses the name of the SceneResource gameobject
+        private static List<string> _loadedSceneResources;
 
         protected override void MonoAwake()
         {
-            base.MonoAwake();
-
             if (!_isActive)
             {
-                if (!AppManager.IsBootstrapped) InstantiateResources();
-                _isActive = true;
+                if (!AppManager.IsBootstrapped)
+                {
+                    if (_loadedSceneResources == null || !_loadedSceneResources.Contains(name))
+                    {
+                        InstantiatePlayModeResources();
+                        _isActive = true;
+                    }
+                }
             }
+
+            //Destroy(gameObject);
         }
 
         /// <inheritdoc />
         protected void OnValidate()
         {
+            EditorApplication.playModeStateChanged -= HandlePlayModeStateChange;
+            EditorApplication.playModeStateChanged += HandlePlayModeStateChange;
+
             if (!_isActive && gameObject.activeInHierarchy)
             {
                 if (!Application.isPlaying)
                 {
-                    InstantiateResources();
+                    InstantiateEditorResources();
                     _isActive = true;
                 }
             }
         }
 
-        protected override void OnDestroy() => ClearInstanceCache();
-
-        private void InstantiateResources()
+        private void InstantiateEditorResources()
         {
             if (_resources == null) return;
             ClearInstanceCache();
 
             _instances = new GameObject[_resources.Length];
 
+#if UNITY_EDITOR
             for(int i = 0; i<_resources.Length; i++)
             {
-#if UNITY_EDITOR
                 GameObject inst = (GameObject)PrefabUtility.InstantiatePrefab(_resources[i], transform);
                 inst.hideFlags = HideFlags.DontSaveInEditor | HideFlags.DontSaveInBuild;
                 _instances[i] = inst;
-#endif
             }
+#endif
+        }
+
+        private void InstantiatePlayModeResources()
+        {
+            if (_resources == null) return;
+            ClearInstanceCache();
+
+#if UNITY_EDITOR
+            _instances = new GameObject[_resources.Length];
+            Scene sc = SceneManager.CreateScene(name);
+
+            for (int i = 0; i < _resources.Length; i++)
+            {
+                GameObject inst = (GameObject)PrefabUtility.InstantiatePrefab(_resources[i]);
+                inst.hideFlags = HideFlags.DontSaveInEditor | HideFlags.DontSaveInBuild;
+                _instances[i] = inst;
+
+                SceneManager.MoveGameObjectToScene(inst, sc);
+            }
+#endif
+
+            if (_loadedSceneResources == null) _loadedSceneResources = new List<string>();
+            _loadedSceneResources.Add(name);
         }
 
         private void ClearInstanceCache()
@@ -69,6 +108,14 @@ namespace HexUN.App
                 {
                     DestroyImmediate(instance);
                 }
+            }
+        }
+
+        private void HandlePlayModeStateChange(PlayModeStateChange obj)
+        {
+            if (obj == PlayModeStateChange.ExitingEditMode)
+            {
+                ClearInstanceCache();
             }
         }
     }

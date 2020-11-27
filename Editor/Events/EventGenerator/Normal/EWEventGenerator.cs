@@ -29,7 +29,7 @@ namespace HexUN.Events
         private EECustomString _menuPath;
 
         // Add menu named "My Window" to the Window menu
-        [MenuItem("Tobias/Events/EventGenerator")]
+        [MenuItem("Hex/Events/EventGenerator")]
         private static void CreateWindow()
         {
             // Get existing open window or if none, make a new one:
@@ -96,9 +96,9 @@ namespace HexUN.Events
             {
                 PathString path = new PathString(EditorUtility.SaveFolderPanel("Generation Path", _lastSavePath, type));
 
-                path = path.AddStep($"{type?.EnforceFistCharCaptial()}.event");
+                path = path.InsertAtEnd($"{type?.EnforceFistCharCaptial()}.event");
                 path.CreateIfNotExistsDirectory();
-                _lastSavePath = path.RemoveStep();
+                _lastSavePath = path.RemoveAtEnd();
 
                 UTEventGeneration.GenerateEventsOfAllTypes(path, type, _namespace.String, $"{_menuPath.String}", _selectedTypeList.SelectedType.Namespace);
                 AssetDatabase.Refresh();

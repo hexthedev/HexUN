@@ -1,9 +1,8 @@
 {
     "name": "HexUN.CSStandard",
     "references": [
-        "GUID:e6cf7a9d4b86ecd45b8095fc035e5353",
         "GUID:6055be8ebefd69e48b49212b09b47b2f",
-        "GUID:5763fc22942dd9b45b75c90785a04d3a"
+        "GUID:c9c783d9d722e7447a47c6b0da9d55fd"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

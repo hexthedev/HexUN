@@ -43,7 +43,7 @@ namespace HexUN.App
         /// <summary>
         /// Quit the application
         /// </summary>
-        public static void QuitApp()
+        public void QuitApp()
         {
             Application.Quit();
 #if UNITY_EDITOR

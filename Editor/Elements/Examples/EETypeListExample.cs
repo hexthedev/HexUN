@@ -18,7 +18,7 @@ namespace HexUN.EditorElements
         string _console;
 
         // Add menu item named "My Window" to the Window menu
-        [MenuItem("Tobias/Examples/Elements/TypeList")]
+        [MenuItem("Hex/Examples/Elements/TypeList")]
         public static void ShowWindow()
         {
             //Show existing window instance. If one doesn't exist, make one.

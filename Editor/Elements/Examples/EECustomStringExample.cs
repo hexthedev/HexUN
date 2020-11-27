@@ -11,7 +11,7 @@ namespace HexUN.EditorElements
         private EECustomString _string;
 
         // Add menu item named "My Window" to the Window menu
-        [MenuItem("Tobias/Examples/Elements/CustomString")]
+        [MenuItem("Hex/Examples/Elements/CustomString")]
         public static void ShowWindow()
         {
             //Show existing window instance. If one doesn't exist, make one.

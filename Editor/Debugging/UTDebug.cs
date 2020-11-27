@@ -10,7 +10,7 @@ namespace HexUN.Debugging
 
     public static class UTDebug
     {
-        [MenuItem("Tobias/Utility/Cleanup Missing Scripts")]
+        [MenuItem("Hex/Utility/Cleanup Missing Scripts")]
         static void CleanupMissingScripts()
         {
             for (int i = 0; i < Selection.gameObjects.Length; i++)

@@ -14,7 +14,7 @@ namespace HexUN.EditorElements
         private string _response;
 
         // Add menu item named "My Window" to the Window menu
-        [MenuItem("Tobias/Examples/Elements/Dropdown")]
+        [MenuItem("Hex/Examples/Elements/Dropdown")]
         public static void ShowWindow()
         {
             //Show existing window instance. If one doesn't exist, make one.
