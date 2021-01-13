@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Hex.Paths;
+using HexCS.Core;
 using HexCS.Data.Generation.CSharp;
 
 namespace HexUN.Events

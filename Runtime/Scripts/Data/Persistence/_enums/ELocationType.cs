@@ -1,4 +1,4 @@
-﻿using Hex.Paths;
+﻿using HexCS.Core;
 using HexCS.Data.Persistence;
 
 namespace HexUN.Data

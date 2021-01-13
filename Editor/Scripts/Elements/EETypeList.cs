@@ -2,9 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using HexCS.Core;
-using HexCS.Reflection;
 using UnityEditor;
+using HexCS.Core;
 
 namespace HexUN.EditorElements
 {

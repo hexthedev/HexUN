@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Hex.Paths;
+using HexCS.Core;
 using HexCS.Data.Persistence;
 using UnityEditor;
 using UnityEngine;

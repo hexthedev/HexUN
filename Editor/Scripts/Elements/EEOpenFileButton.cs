@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEditor;
 using HexCS.Data.Persistence;
 using HexUN.Data;
-using Hex.Paths;
+using HexCS.Core;
 
 namespace HexUN.EditorElements
 {
