@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using HexCS.Mathematics;
+
+using HexUN.Math;
 using HexUN.MonoB;
 using UnityEngine;
 
@@ -65,11 +66,11 @@ namespace HexUN.Animation
             if (args.Interpolations.Length == 0) yield break;
 
             int interCount = args.Interpolations.Length;
-            HexCS.Mathematics.Interpolation[] interpolations = new HexCS.Mathematics.Interpolation[interCount];
+            Interpolation[] interpolations = new Interpolation[interCount];
 
             for(int i = 0; i< interCount; i++)
             {
-                interpolations[i] = new HexCS.Mathematics.Interpolation(
+                interpolations[i] = new Interpolation(
                     args.Interpolations[i].Start,
                     args.Interpolations[i].End,
                     args.Duration,

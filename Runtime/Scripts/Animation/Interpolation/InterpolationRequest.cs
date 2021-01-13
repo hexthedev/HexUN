@@ -1,5 +1,4 @@
 ﻿using HexCS.Core;
-using HexCS.Mathematics;
 
 namespace HexUN.Animation
 {

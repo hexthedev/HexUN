@@ -1,5 +1,5 @@
 ﻿using HexCS.Core;
-using HexCS.Mathematics;
+using HexUN.Math;
 using System;
 using System.Collections.Generic;
 
