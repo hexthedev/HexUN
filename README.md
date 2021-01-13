@@ -1,10 +1,16 @@
 # HexUN
-Centralized collection of base systems and static utiities used by other hex systems across unity projects.
+Framework classes for the HexUN Unity process
 
-## Dependencies
-HexUN depends on the following HexCS libraries:
-* HexCS
-* #Updates to come#
+### Installation
+To add this to your project make sure the following is in your package.json
 
-## How to use
-HexUN is designed to function as a git dependency using git submodules. #more info to come#
+```json
+{
+    "dependencies" : 
+    {
+        "com.hex.hexcs" : "https://github.com/hexthedev/HexCS.git",
+        "com.hex.hexcs.data" : "https://github.com/hexthedev/HexCS-Data.git",
+        "com.hex.hexun" : "https://github.com/hexthedev/HexUN.git"
+    }
+}
+```

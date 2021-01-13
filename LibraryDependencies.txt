@@ -1,2 +1,0 @@
-JsonDotNet - Newtonsoft
-TextMesh Pro
