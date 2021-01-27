@@ -47,8 +47,10 @@ namespace HexUN.App
         /// <inheritdoc />
         protected void OnValidate()
         {
+#if UNITY_EDITOR
             EditorApplication.playModeStateChanged -= HandlePlayModeStateChange;
             EditorApplication.playModeStateChanged += HandlePlayModeStateChange;
+#endif
 
             if (!_isActive && gameObject.activeInHierarchy)
             {
@@ -111,6 +113,7 @@ namespace HexUN.App
             }
         }
 
+#if UNITY_EDITOR
         private void HandlePlayModeStateChange(PlayModeStateChange obj)
         {
             if (obj == PlayModeStateChange.ExitingEditMode)
@@ -118,5 +121,6 @@ namespace HexUN.App
                 ClearInstanceCache();
             }
         }
+#endif
     }
 }
