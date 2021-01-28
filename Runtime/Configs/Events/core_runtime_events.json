@@ -48,6 +48,13 @@
       "Namespace": "HexUN.MonoB",
       "MenuPath": "HexUN/Events",
       "EventTypeNamespace": "HexUN.MonoB"
+    },
+    {
+      "Path": "Dependencies/HexUN/Runtime/Events/Generated/GameObject.event",
+      "Type": "GameObject",
+      "Namespace": "HexUN.Events",
+      "MenuPath": "HexUN/Events",
+      "EventTypeNamespace": "UnityEngine"
     }
   ]
 }   
