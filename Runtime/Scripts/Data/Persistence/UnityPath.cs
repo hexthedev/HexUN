@@ -130,14 +130,14 @@ namespace HexUN.Data
         {
             get
             {
-                if (!_assetRelativePathInitalized)
+                if (!_assetDatabaseAssetPathInitialized)
                 {
                     if (AbsolutePath.Contains(ProjectFolderName))
                     {
                         _assetDatabaseAssetPath = AbsolutePath.RelativeTo(ProjectFolderName);
                     }
 
-                    _assetRelativePathInitalized = true;
+                    _assetDatabaseAssetPathInitialized = true;
                 }
 
                 return _assetDatabaseAssetPath;

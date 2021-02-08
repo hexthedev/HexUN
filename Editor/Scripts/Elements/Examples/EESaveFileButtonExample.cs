@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Reflection;
 using HexCS.Core;
-using HexCS.Core;
 using HexUN.App;
 using UnityEditor;
 using UnityEngine;

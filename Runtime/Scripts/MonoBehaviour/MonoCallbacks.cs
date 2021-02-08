@@ -12,6 +12,8 @@ namespace HexUN.MonoB
     {
         private Event _OnUpdate = new Event();
 
+        private Event _OnLateUpdate = new Event();
+
         private Event _OnFixedUpdate = new Event();
 
         #region API
@@ -19,6 +21,11 @@ namespace HexUN.MonoB
         /// Subscriber for Update functions
         /// </summary>
         public IEventSubscriber OnUpdate => _OnUpdate;
+
+        /// <summary>
+        /// Subscriber for LateUpdate functions
+        /// </summary>
+        public IEventSubscriber OnLateUpdate => _OnLateUpdate;
 
         /// <summary>
         /// Subscriber for fixed update functions
@@ -29,6 +36,11 @@ namespace HexUN.MonoB
         private void Update()
         {
             _OnUpdate.Invoke();
+        }
+
+        private void LateUpdate()
+        {
+            _OnLateUpdate.Invoke();
         }
 
         private void FixedUpdate()
