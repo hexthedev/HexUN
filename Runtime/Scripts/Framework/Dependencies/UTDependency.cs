@@ -41,9 +41,9 @@ namespace HexUN.Deps
             }
 
             // is the dependecy a monobehaviour component
-            if(ob is MonoBehaviour)
+            if(ob is GameObject)
             {
-                MonoBehaviour obj = (MonoBehaviour)ob;
+                GameObject obj = (GameObject)ob;
 
                 TExpected comp = obj.GetComponent<TExpected>();
 

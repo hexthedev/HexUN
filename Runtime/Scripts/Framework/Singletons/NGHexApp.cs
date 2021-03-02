@@ -1,4 +1,5 @@
 ﻿using HexUN.Deps;
+using HexUN.Framework.Debugging;
 using HexUN.MonoB;
 
 using UnityEngine;
@@ -13,11 +14,23 @@ namespace HexUN.Framework
     {
         [SerializeField]
         [Tooltip("Prefab or scriptable object that provides ILog interface dependency to the Unity application")]
-        private GameObject ILog = null;
+        private Object ILog = null;
 
+        private ILog _log;
 
-        UTDependency
+#if UNITY_EDITOR
+        protected void OnValidate()
+        {
+            UTDependency.Resolve(ref ILog, out _log, this);
+        }
+#endif
 
+        #region API
+        /// <summary>
+        /// Returns the loggin mechanism for the framework
+        /// </summary>
+        public ILog Log => _log;
+        #endregion
 
 
     }
