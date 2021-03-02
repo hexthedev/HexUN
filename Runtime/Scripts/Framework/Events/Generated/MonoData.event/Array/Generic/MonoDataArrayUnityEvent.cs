@@ -5,7 +5,7 @@ using UnityEngine.Events;
 namespace HexUN.MonoB
 {
    [System.Serializable]
-   public class MonoDataArrayUnityEvent : UnityEvent<MonoData[]>
+   public class MonoDataArrayUnityEvent : UnityEvent<DataBehaviour[]>
    {
    }
 }

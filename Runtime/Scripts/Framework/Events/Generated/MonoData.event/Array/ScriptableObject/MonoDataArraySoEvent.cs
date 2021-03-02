@@ -4,7 +4,7 @@ using HexUN.Events;
 namespace HexUN.MonoB
 {
    [CreateAssetMenu(fileName = "MonoDataArraySoEvent", menuName = "HexUN/Events/MonoDataArray")]
-   public class MonoDataArraySoEvent : ScriptableObjectEvent<MonoData[]>
+   public class MonoDataArraySoEvent : ScriptableObjectEvent<DataBehaviour[]>
    {
    }
 }

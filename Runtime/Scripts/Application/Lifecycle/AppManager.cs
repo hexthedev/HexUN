@@ -12,7 +12,7 @@ namespace HexUN.App
     /// global application level apis. The update functions of this monobehaviour act at a global levle relative
     /// to the application, and can have function registered to them
     /// </summary>
-    public class AppManager : AMonoSingletonPersistent<AppManager>
+    public class AppManager : ANGHexPersistent<AppManager>
     {
         [SerializeField]
         [Tooltip("Has the application been bootstrapped. If true, then dev scene resources will not enable themselves assuming that these resources were created during bootstrapping")]

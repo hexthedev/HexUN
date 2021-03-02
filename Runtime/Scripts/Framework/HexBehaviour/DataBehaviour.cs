@@ -6,7 +6,7 @@ namespace HexUN.MonoB
     /// <summary>
     /// Abstract class for all controls
     /// </summary>
-    public abstract class MonoData : MonoEnhanced
+    public abstract class DataBehaviour : HexBehaviour
     {
         #region Protected API
         [Header("Proto UI Data (APuiControl)")]

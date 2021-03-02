@@ -12,11 +12,11 @@ namespace HexUN.MonoB
     /// Currenty includes:
     /// - Ability to register functions to occur after Awake() and Start()
     /// </summary>
-    public abstract class MonoEnhanced : MonoBehaviour
+    public abstract class HexBehaviour : MonoBehaviour
     {
 #if HEXDB
         [SerializeField]
-        [Header("Debug(MonoEnhanced)")]
+        [Header("Debug(HexBehaviour)")]
         protected ObjectSoEvent Log = null;
 #endif
 

@@ -8,7 +8,7 @@ namespace HexUN.App
     /// <summary>
     /// Loads scenes
     /// </summary>
-    public class SceneLoader : MonoEnhanced
+    public class SceneLoader : HexBehaviour
     {
         [SerializeField]
         [Tooltip("Scene load instruction")]

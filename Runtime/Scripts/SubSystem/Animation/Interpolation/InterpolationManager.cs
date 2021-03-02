@@ -12,7 +12,7 @@ namespace HexUN.Animation
     /// simply provides the numbers requested over time and events to manage the interpolations
     /// occurence. Start, Cancel, Etc. 
     /// </summary>
-    public class InterpolationManager : AMonoSingletonPersistent<InterpolationManager>
+    public class InterpolationManager : ANGHexPersistent<InterpolationManager>
     {
         // id is just an iteration on an int for now. 
         private int _id = int.MinValue;

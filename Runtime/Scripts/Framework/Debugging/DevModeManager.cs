@@ -6,7 +6,7 @@ namespace HexUN.Debugging
     /// <summary>
     /// Handles putting gameobjects in dev mode
     /// </summary>
-    public class DevModeManager : MonoEnhanced
+    public class DevModeManager : HexBehaviour
     {
         [SerializeField]
         [Tooltip("Show gameobject in dev mode")]

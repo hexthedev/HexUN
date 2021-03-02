@@ -10,7 +10,7 @@ namespace HexUN.App
     /// Scene tracker is a singleton that tracks the loaded scenes and knows what needs unloading
     /// between scenes
     /// </summary>
-    public class SceneLoadManager : AMonoSingletonPersistent<SceneLoadManager>
+    public class SceneLoadManager : ANGHexPersistent<SceneLoadManager>
     {
         [SerializeField]
         [Tooltip("This event is fired on awake so that any currenly loaded scenes can be registed using the RegisterLoadedOrLoadingSceneToken function. Normally used in conjunction with the SceneRegisterer so that play mode acts the same way as starting the app from the beginning")]

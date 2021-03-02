@@ -13,7 +13,7 @@ namespace HexUN.App
     /// Holds the resources required by the scene and provides options on
     /// when they should be enabled or disabled
     /// </summary>
-    public class SceneResources : MonoEnhanced
+    public class SceneResources : HexBehaviour
     {
         private const string cEditorResourceTag = "EditorOnly";
 

@@ -8,7 +8,7 @@ namespace HexUN.App
     /// to call the RegisterSceneTokenFunction. The most common event is emitted from the 
     /// the SceneLoadManager, the OnRegisterCurrentlyLoadedScenes event. 
     /// </summary>
-    public class SceneRegisterer : MonoEnhanced
+    public class SceneRegisterer : HexBehaviour
     {
         #region API
         [Tooltip("TokenToRegister")]

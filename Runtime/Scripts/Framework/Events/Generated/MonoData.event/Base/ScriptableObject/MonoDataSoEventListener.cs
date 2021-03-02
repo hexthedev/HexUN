@@ -5,7 +5,7 @@ using UnityEngine.Events;
 namespace HexUN.MonoB
 {
    [AddComponentMenu("HexUN/Events/MonoData/MonoDataSoEventListener")]
-   public class MonoDataSoEventListener : ScriptableObjectEventListener<MonoData, MonoDataSoEvent, MonoDataUnityEvent>
+   public class MonoDataSoEventListener : ScriptableObjectEventListener<DataBehaviour, MonoDataSoEvent, MonoDataUnityEvent>
    {
    }
 }

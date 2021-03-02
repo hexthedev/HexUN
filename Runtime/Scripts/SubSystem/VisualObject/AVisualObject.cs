@@ -6,7 +6,7 @@ namespace HexUN.Render
     /// Facade with functionality to call a render function every frame if
     /// some value has changed
     /// </summary>
-    public abstract class AVisualObject : MonoData
+    public abstract class AVisualObject : DataBehaviour
     {
         /// <summary>
         /// set to true in order to cause handle render to be called this frame

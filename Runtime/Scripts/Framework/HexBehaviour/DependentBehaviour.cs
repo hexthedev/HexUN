@@ -9,7 +9,7 @@ namespace HexUN.MonoB
     /// Adds useful functionality to any Monobehaviours that follows the inferface dependency pattern
     /// used commonly in HexUN Control and Views. Allows to
     /// </summary>
-    public abstract class MonoDependent : MonoEnhanced
+    public abstract class DependentBehaviour : HexBehaviour
     {
         #region Protected API
         /// <inheritdoc>

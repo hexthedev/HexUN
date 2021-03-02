@@ -12,7 +12,7 @@ namespace HexUN.Data
     /// incoming data
     /// </para>
     /// </summary>
-    public abstract class AMonoDataReciever : MonoEnhanced
+    public abstract class AMonoDataReciever : HexBehaviour
     {
         protected override void MonoAwake()
         {

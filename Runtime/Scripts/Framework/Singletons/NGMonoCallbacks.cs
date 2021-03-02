@@ -8,7 +8,7 @@ namespace HexUN.MonoB
     /// Global access point for Unity Engine functions that can be accessed
     /// statically. This can allow devs to register funcitons ot main thread, for example
     /// </summary>
-    public class MonoCallbacks : AMonoSingletonPersistent<MonoCallbacks>
+    public class NGMonoCallbacks : ANGHexPersistent<NGMonoCallbacks>
     {
         private Event _OnUpdate = new Event();
 

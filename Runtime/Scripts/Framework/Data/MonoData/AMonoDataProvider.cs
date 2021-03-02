@@ -16,7 +16,7 @@ namespace HexUN.Data
     /// one type of data. This means that all listenrs need to do a cast and check when interpreting data</para>
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public abstract class AMonoDataProvider : MonoEnhanced
+    public abstract class AMonoDataProvider : HexBehaviour
     {
         protected Event<object> _onProvideData = new Event<object>();
 

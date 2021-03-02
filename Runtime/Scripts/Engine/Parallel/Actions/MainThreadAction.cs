@@ -18,7 +18,7 @@ namespace HexUN.Parallel
 
         public void Call()
         {
-            MonoCallbacks.Instance.OnUpdate.SubscribeSingleUse(_action);
+            NGMonoCallbacks.Instance.OnUpdate.SubscribeSingleUse(_action);
         }
         #endregion
     }
@@ -38,7 +38,7 @@ namespace HexUN.Parallel
 
         public void Call(T input)
         {
-            MonoCallbacks.Instance.OnUpdate.SubscribeSingleUse(() => _action(input));
+            NGMonoCallbacks.Instance.OnUpdate.SubscribeSingleUse(() => _action(input));
         }
         #endregion
     }

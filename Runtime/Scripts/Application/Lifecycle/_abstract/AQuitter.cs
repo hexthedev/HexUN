@@ -7,7 +7,7 @@ namespace HexUN.App
     /// Used in classes the require knowledge of MonoBehaviours quit status. Good
     /// example is Singletons. 
     /// </summary>
-    public abstract class AQuitter : MonoEnhanced
+    public abstract class AQuitter : HexBehaviour
     {
         /// <summary>
         /// Is the Unity application quitting
