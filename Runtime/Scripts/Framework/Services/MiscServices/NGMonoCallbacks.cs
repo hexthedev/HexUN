@@ -1,14 +1,16 @@
 ﻿using HexCS.Core;
 
+using HexUN.MonoB;
+
 using Event = HexCS.Core.Event;
 
-namespace HexUN.MonoB
+namespace HexUN.Framework.Services
 {
     /// <summary>
     /// Global access point for Unity Engine functions that can be accessed
     /// statically. This can allow devs to register funcitons ot main thread, for example
     /// </summary>
-    public class NGMonoCallbacks : ANGHexPersistent<NGMonoCallbacks>
+    public class NGMonoCallbacks : ANGHexPersistent<NGMonoCallbacks>, IMonoCallbacks
     {
         private Event _OnUpdate = new Event();
 
