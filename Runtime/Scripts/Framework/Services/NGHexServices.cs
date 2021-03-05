@@ -50,7 +50,5 @@ namespace HexUN.Framework
         /// </summary>
         private IMonoCallbacks MonoCallbacks => _monoCallbacks;
         #endregion
-
-
     }
 }
