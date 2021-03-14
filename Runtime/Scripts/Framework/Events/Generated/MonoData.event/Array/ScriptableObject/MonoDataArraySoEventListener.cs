@@ -2,7 +2,7 @@ using HexUN.Events;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace HexUN.MonoB
+namespace HexUN.Behaviour
 {
    [AddComponentMenu("HexUN/Events/MonoDataArray/MonoDataArraySoEventListener")]
    public class MonoDataArraySoEventListener : ScriptableObjectEventListener<DataBehaviour[], MonoDataArraySoEvent, MonoDataArrayUnityEvent>

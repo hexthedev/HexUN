@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using HexCS.Core;
 using UnityEngine;
 
-namespace HexUN.MonoB
+namespace HexUN.Behaviour
 {
     /// <summary>
     /// Adds useful functionality to a monebehaviour that makes it easier to manage certain

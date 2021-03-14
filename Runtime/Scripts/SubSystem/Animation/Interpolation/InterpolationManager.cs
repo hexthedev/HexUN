@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 using HexUN.Math;
-using HexUN.MonoB;
+using HexUN.Behaviour;
 using UnityEngine;
 
 namespace HexUN.Animation

@@ -1,7 +1,7 @@
 ﻿using HexUN.Deps;
 using HexUN.Framework.Debugging;
 using HexUN.Framework.Services;
-using HexUN.MonoB;
+using HexUN.Behaviour;
 
 using UnityEngine;
 

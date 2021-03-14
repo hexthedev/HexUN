@@ -1,7 +1,7 @@
 ﻿using HexCS.Core;
 
 using HexUN.Framework.Services;
-using HexUN.MonoB;
+using HexUN.Behaviour;
 
 using UnityEngine;
 

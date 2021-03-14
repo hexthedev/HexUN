@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace HexUN.MonoB
+namespace HexUN.Behaviour
 {
     /// <summary>
     /// Abstract class for all controls

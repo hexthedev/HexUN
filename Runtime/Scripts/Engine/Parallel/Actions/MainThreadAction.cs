@@ -1,7 +1,7 @@
 ﻿using System;
 
 using HexUN.Framework.Services;
-using HexUN.MonoB;
+using HexUN.Behaviour;
 
 namespace HexUN.Parallel
 {

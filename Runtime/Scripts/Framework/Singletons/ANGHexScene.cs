@@ -1,7 +1,7 @@
 ﻿using HexUN.App;
 using UnityEngine;
 
-namespace HexUN.MonoB
+namespace HexUN.Behaviour
 {
     /// <summary>
     /// Implementation of Singleton for MonBehavious that insures only a single instance

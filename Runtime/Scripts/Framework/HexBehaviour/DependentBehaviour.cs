@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using HexCS.Core;
+﻿using HexCS.Core;
 using UnityEngine;
 
-namespace HexUN.MonoB
+namespace HexUN.Behaviour
 {
     /// <summary>
-    /// Adds useful functionality to any Monobehaviours that follows the inferface dependency pattern
-    /// used commonly in HexUN Control and Views. Allows to
+    /// Adds useful functionality for managing interface dependencies of objects.
+    /// - Provides an overridable <see cref="ResolveDependencies"></see> function to resolve iterface dependencies in gameobjects
+    /// - Provides an overridable <see cref="ResolveEventBindings"></see> to bind events to resolved dependencies
+    /// - Automatically handles the validation functionality of dependencies to enforce the dependencies have correct interface
     /// </summary>
     public abstract class DependentBehaviour : HexBehaviour
     {
@@ -26,9 +26,17 @@ namespace HexUN.MonoB
         /// <inheritdoc>
         protected virtual void OnValidate()
         {
-            ResolveDependencies();
-            EventBindings.ClearAndUnsubscribeAll();
-            ResolveEventBindings(EventBindings);
+#if UNITY_EDITOR
+            // This is commented out because this is happening right as you click play in editor.
+            // i.e. It's being validated in some editor phase where the object is set to null (probably during initialization)
+
+            //if (!Application.isPlaying)
+            //{
+            //    ResolveDependencies();
+            //    EventBindings.ClearAndUnsubscribeAll();
+            //    ResolveEventBindings(EventBindings);
+            //}
+#endif
         }
 
         /// <summary>

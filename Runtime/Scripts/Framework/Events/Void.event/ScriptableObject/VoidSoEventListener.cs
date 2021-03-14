@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 using System;
-using HexUN.MonoB;
+using HexUN.Behaviour;
 using HexCS.Core;
 
 namespace HexUN.Events
