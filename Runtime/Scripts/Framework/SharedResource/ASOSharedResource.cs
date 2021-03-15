@@ -22,6 +22,14 @@ namespace HexUN.Framework.SharedResource
 
         private NGMonoCallbacks instRef = null;
 
+        #region Protected API
+        /// <summary>
+        /// Clear the data. This is used because ScriptableObjects serialize
+        /// and save their data in editor
+        /// </summary>
+        public abstract void Clear();
+        #endregion
+
         #region API
         /// <inheritdoc/>
         public IEventSubscriber OnUpdated => _onUpdated;

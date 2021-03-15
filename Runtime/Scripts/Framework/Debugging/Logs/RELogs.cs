@@ -31,5 +31,10 @@ namespace HexUN.Framework.Debugging
                 _logs.Dequeue();
             }
         }
+
+        public override void Clear()
+        {
+            _logs.Clear();
+        }
     }
 }
