@@ -1,12 +1,14 @@
 ﻿using HexCS.Core;
 using HexCS.Data.Persistence;
 
+using System;
+
 namespace HexUN.Data
 {
     /// <summary>
     /// Enumeration containing label locations that map to common paths in unity projects
     /// </summary>
-    public enum EFileLocationType : byte
+    public enum ECommonFolder : byte
     {
         /// <summary>
         /// The ProjectName/Assets folder
@@ -28,14 +30,20 @@ namespace HexUN.Data
         /// The persistentDataPath/_RuntimeFiles used to save runtime files for
         /// the game
         /// </summary>
-        RuntimeFiles = 3
+        RuntimeFiles = 3,
+
+        /// <summary>
+        /// Used when saving to the user data folder on a persons computer. This is normally
+        /// used at editor time and points to %USERPROFILE% on windows a ~/ on linux/mac
+        /// </summary>
+        UserData = 4
     }
 
-    public static class UTEFileLocationType
+    public static class UTECommonFolder
     {
         private const string cEditorAssetsFolderName = "_EditorAssets";
         private static UnityPath _editorAssetsUnityPath = null;
-        private static UnityPath cEditorAssetsUnityPath
+        private static UnityPath EditorAssetsUnityPath
         {
             get
             {
@@ -46,7 +54,7 @@ namespace HexUN.Data
 
         private const string cRuntimeFilesFolderName = "_RuntimeFiles";
         private static UnityPath _runtimeFilesUnityPath = null;
-        private static UnityPath cRuntimeFilesUnityPath
+        private static UnityPath RuntimeFilesUnityPath
         {
             get
             {
@@ -55,23 +63,35 @@ namespace HexUN.Data
             }
         }
 
+        private static readonly string cUserDataName = $".{UnityPath.ProjectFolderName}";
+        private static UnityPath _userDataUnityPath = null;
+        private static UnityPath UserDataUnityPath
+        {
+            get
+            {
+                if (_userDataUnityPath == null)
+                    _userDataUnityPath = new UnityPath(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)).Path.InsertAtEnd(cUserDataName);
+                return _userDataUnityPath;
+            }
+        }
+
         /// <summary>
-        /// Gets a PathString 
+        /// Returns the UnityPath to the target folder
         /// </summary>
-        /// <param name="gfl"></param>
-        /// <returns></returns>
-        public static PathString GetFileLocation(EFileLocationType gfl)
+        public static UnityPath GetFolderPath(ECommonFolder gfl)
         {
             switch (gfl)
             {
-                case EFileLocationType.Assets:
+                case ECommonFolder.Assets:
                     return UnityPath.AssetsPath;
-                case EFileLocationType.Project:
+                case ECommonFolder.Project:
                     return UnityPath.ProjectPath;
-                case EFileLocationType.EditorAssets:
-                    return cEditorAssetsUnityPath;
-                case EFileLocationType.RuntimeFiles:
-                    return cRuntimeFilesUnityPath;
+                case ECommonFolder.EditorAssets:
+                    return EditorAssetsUnityPath;
+                case ECommonFolder.RuntimeFiles:
+                    return RuntimeFilesUnityPath;
+                case ECommonFolder.UserData:
+                    return UserDataUnityPath;
             }
 
             return null;

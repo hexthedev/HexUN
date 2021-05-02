@@ -29,10 +29,10 @@ namespace HexUN.Events
                     (float)i / tokens.Tokens.Length
                 );
 
-                PathString p = UTEFileLocationType.GetFileLocation(EFileLocationType.Assets) + "/" + to.Path;
+                PathString p = UTECommonFolder.GetFolderPath(ECommonFolder.Assets) + "/" + to.Path;
 
                 UTEventGeneration.GenerateEventsOfAllTypes(
-                    UTEFileLocationType.GetFileLocation(EFileLocationType.Assets) + "/" + to.Path,
+                    UTECommonFolder.GetFolderPath(ECommonFolder.Assets) + "/" + to.Path,
                     to.Type,
                     to.Namespace,
                     to.MenuPath,
