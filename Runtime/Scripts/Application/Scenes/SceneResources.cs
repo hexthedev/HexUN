@@ -1,4 +1,4 @@
-﻿using HexUN.MonoB;
+﻿using HexUN.Behaviour;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
@@ -13,7 +13,7 @@ namespace HexUN.App
     /// Holds the resources required by the scene and provides options on
     /// when they should be enabled or disabled
     /// </summary>
-    public class SceneResources : MonoEnhanced
+    public class SceneResources : HexBehaviour
     {
         private const string cEditorResourceTag = "EditorOnly";
 
@@ -47,8 +47,10 @@ namespace HexUN.App
         /// <inheritdoc />
         protected void OnValidate()
         {
+#if UNITY_EDITOR
             EditorApplication.playModeStateChanged -= HandlePlayModeStateChange;
             EditorApplication.playModeStateChanged += HandlePlayModeStateChange;
+#endif
 
             if (!_isActive && gameObject.activeInHierarchy)
             {
@@ -111,6 +113,7 @@ namespace HexUN.App
             }
         }
 
+#if UNITY_EDITOR
         private void HandlePlayModeStateChange(PlayModeStateChange obj)
         {
             if (obj == PlayModeStateChange.ExitingEditMode)
@@ -118,5 +121,6 @@ namespace HexUN.App
                 ClearInstanceCache();
             }
         }
+#endif
     }
 }

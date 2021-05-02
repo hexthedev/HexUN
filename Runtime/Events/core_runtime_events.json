@@ -1,0 +1,60 @@
+{
+  "Tokens": [
+    {
+      "Path": "Dependencies/HexUN/Runtime/Scripts/Events/Generated/Boolean.event",
+      "Type": "Boolean",
+      "Namespace": "HexUN.Events",
+      "MenuPath": "HexUN/Events",
+      "EventTypeNamespace": "System"
+    },
+    {
+      "Path": "Dependencies/HexUN/Runtime/Scripts/Events/Generated/Int32.event",
+      "Type": "Int32",
+      "Namespace": "HexUN.Events",
+      "MenuPath": "HexUN/Events",
+      "EventTypeNamespace": "System"
+    },
+    {
+      "Path": "Dependencies/HexUN/Runtime/Scripts/Events/Generated/Single.event",
+      "Type": "Single",
+      "Namespace": "HexUN.Events",
+      "MenuPath": "HexUN/Events",
+      "EventTypeNamespace": "System"
+    },
+    {
+      "Path": "Dependencies/HexUN/Runtime/Scripts/Events/Generated/Object.event",
+      "Type": "object",
+      "Namespace": "HexUN.Events",
+      "MenuPath": "HexUN/Events",
+      "EventTypeNamespace": "System"
+    },
+    {
+      "Path": "Dependencies/HexUN/Runtime/Scripts/Events/Generated/String.event",
+      "Type": "String",
+      "Namespace": "HexUN.Events",
+      "MenuPath": "HexUN/Events",
+      "EventTypeNamespace": "System"
+    },
+    {
+      "Path": "Dependencies/HexUN/Runtime/Scripts/Events/Generated/Vector2.event",
+      "Type": "Vector2",
+      "Namespace": "HexUN.Events",
+      "MenuPath": "HexUN/Events",
+      "EventTypeNamespace": "UnityEngine"
+    },
+    {
+      "Path": "Dependencies/HexUN/Runtime/Scripts/Events/Generated/MonoData.event",
+      "Type": "MonoData",
+      "Namespace": "HexUN.MonoB",
+      "MenuPath": "HexUN/Events",
+      "EventTypeNamespace": "HexUN.MonoB"
+    },
+    {
+      "Path": "Dependencies/HexUN/Runtime/Scripts/Events/Generated/GameObject.event",
+      "Type": "GameObject",
+      "Namespace": "HexUN.Events",
+      "MenuPath": "HexUN/Events",
+      "EventTypeNamespace": "UnityEngine"
+    }
+  ]
+}   

@@ -1,5 +1,5 @@
 ﻿using System.Collections;
-using HexUN.MonoB;
+using HexUN.Behaviour;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,7 +8,7 @@ namespace HexUN.App
     /// <summary>
     /// Loads scenes
     /// </summary>
-    public class SceneLoader : MonoEnhanced
+    public class SceneLoader : HexBehaviour
     {
         [SerializeField]
         [Tooltip("Scene load instruction")]
