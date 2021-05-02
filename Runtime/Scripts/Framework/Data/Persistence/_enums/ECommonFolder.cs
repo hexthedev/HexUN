@@ -21,10 +21,10 @@ namespace HexUN.Data
         Project = 1,
 
         /// <summary>
-        /// ProjectName/Assets/_EditorAssets. Used for editor configurations that
+        /// ProjectName/Assets/Config. Used for editor configurations that
         /// need to be stored in the project. Saves for editor menus and what not
         /// </summary>
-        EditorAssets = 2,
+        Config = 2,
 
         /// <summary>
         /// The persistentDataPath/_RuntimeFiles used to save runtime files for
@@ -41,14 +41,14 @@ namespace HexUN.Data
 
     public static class UTECommonFolder
     {
-        private const string cEditorAssetsFolderName = "_EditorAssets";
-        private static UnityPath _editorAssetsUnityPath = null;
-        private static UnityPath EditorAssetsUnityPath
+        private const string cConfigFolderName = "Config";
+        private static UnityPath _configUnityPath = null;
+        private static UnityPath ConfigUnityPath
         {
             get
             {
-                if(_editorAssetsUnityPath == null) _editorAssetsUnityPath = UnityPath.AssetsPath.Path.InsertAtEnd(cEditorAssetsFolderName);
-                return _editorAssetsUnityPath;
+                if(_configUnityPath == null) _configUnityPath = UnityPath.AssetsPath.Path.InsertAtEnd(cConfigFolderName);
+                return _configUnityPath;
             }
         }
 
@@ -63,14 +63,13 @@ namespace HexUN.Data
             }
         }
 
-        private static readonly string cUserDataName = $".{UnityPath.ProjectFolderName}";
         private static UnityPath _userDataUnityPath = null;
         private static UnityPath UserDataUnityPath
         {
             get
             {
                 if (_userDataUnityPath == null)
-                    _userDataUnityPath = new UnityPath(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)).Path.InsertAtEnd(cUserDataName);
+                    _userDataUnityPath = new UnityPath(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)).Path;
                 return _userDataUnityPath;
             }
         }
@@ -86,8 +85,8 @@ namespace HexUN.Data
                     return UnityPath.AssetsPath;
                 case ECommonFolder.Project:
                     return UnityPath.ProjectPath;
-                case ECommonFolder.EditorAssets:
-                    return EditorAssetsUnityPath;
+                case ECommonFolder.Config:
+                    return ConfigUnityPath;
                 case ECommonFolder.RuntimeFiles:
                     return RuntimeFilesUnityPath;
                 case ECommonFolder.UserData:
