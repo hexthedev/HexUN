@@ -9,11 +9,11 @@ namespace HexUN.Utilities
     /// <summary>
     /// Utilities for lists of GameObjects
     /// </summary>
-    public static class UTListGo
+    public static class UTListGameObject
     {
         /// <summary>
         /// Forces the list to a new size either by reducing or growing. 
-        /// Reducing destorys gameobjects with destroyFunction nd removes from list, skipping null objects. 
+        /// Reducing destorys gameobjects with destroyFunction and removes from list, skipping null objects. 
         /// Growing instantiates them using instantiation function and adds to list.
         /// </summary>
         public static void ForceCount<TObject>(this List<TObject> target, int count, Func<TObject> instanationFunction, Action<TObject> destroyFunction)
