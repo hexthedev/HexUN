@@ -27,7 +27,7 @@ namespace HexUN.App
         // Used to track the scene resources that are loaded. This uses the name of the SceneResource gameobject
         private static List<string> _loadedSceneResources;
 
-        protected override void MonoAwake()
+        protected override void HexAwake()
         {
             if (!_isActive)
             {

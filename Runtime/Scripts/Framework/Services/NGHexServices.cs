@@ -43,9 +43,9 @@ namespace HexUN.Framework
         }
 #endif
 
-        protected override void MonoAwake()
+        protected override void HexAwake()
         {
-            base.MonoAwake();
+            base.HexAwake();
             DoResolves();
         }
 

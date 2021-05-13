@@ -32,7 +32,7 @@ namespace HexUN.Behaviour
             }
         }
 
-        protected override void MonoAwake() => TryCreateSingleton((T)this, ref _instance);
+        protected override void HexAwake() => TryCreateSingleton((T)this, ref _instance);
 
         /// <summary>
         /// <para>Tries to create a singleton. Succeeds if no instance has yet been created. Destroys any calling object that isn't the instance</para>

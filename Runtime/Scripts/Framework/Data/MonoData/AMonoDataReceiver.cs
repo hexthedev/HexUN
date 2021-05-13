@@ -14,7 +14,7 @@ namespace HexUN.Data
     /// </summary>
     public abstract class AMonoDataReciever : HexBehaviour
     {
-        protected override void MonoAwake()
+        protected override void HexAwake()
         {
             AMonoDataProvider[] providers = gameObject.GetComponents<AMonoDataProvider>();
 

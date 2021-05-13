@@ -68,13 +68,13 @@ namespace HexUN.Behaviour
         /// Replaces the Awake function for base classes. The Start() funciton is managed by
         /// The MonoEnhanced and contains special functionalities
         /// </summary>
-        protected virtual void MonoAwake() { }
+        protected virtual void HexAwake() { }
 
         /// <summary>
         /// Replaces the Start function for base classes. The Start() funciton is managed by
         /// The MonoEnhanced and contains special functionalities
         /// </summary>
-        protected virtual void MonoStart() {}
+        protected virtual void HexStart() {}
 
 #if HEXDB
         protected void LogInfo<T>(string message)
@@ -141,7 +141,7 @@ namespace HexUN.Behaviour
         /// </summary>
         private void Awake()
         {
-            MonoAwake();
+            HexAwake();
             IsAwake = true;
             foreach (Action<object> o in _callAfterAwake) o(this);
             _callAfterAwake.Clear();
@@ -157,7 +157,7 @@ namespace HexUN.Behaviour
         /// </summary>
         private void Start()
         {
-            MonoStart();
+            HexStart();
             IsStarted = true;
             foreach (Action<object> o in _callAfterStart) o(this);
             _callAfterStart.Clear();

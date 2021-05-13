@@ -13,7 +13,7 @@ namespace HexUN.Behaviour
     {
         #region Protected API
         /// <inheritdoc>
-        protected override void MonoAwake()
+        protected override void HexAwake()
         {
             ResolveDependencies();
             EventBindings.ClearAndUnsubscribeAll();

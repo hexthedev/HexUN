@@ -20,9 +20,9 @@ namespace HexUN.Behaviour
         /// </summary>
         protected List<object> _data = new List<object>();
 
-        protected override void MonoAwake()
+        protected override void HexAwake()
         {
-            base.MonoAwake();
+            base.HexAwake();
             if (_genericSoData != null) _data.AddRange(_genericSoData);
         }
         #endregion

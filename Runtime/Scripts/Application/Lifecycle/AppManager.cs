@@ -52,9 +52,9 @@ namespace HexUN.App
         }
         #endregion
 
-        protected override void MonoStart()
+        protected override void HexStart()
         {
-            base.MonoStart();
+            base.HexStart();
 
             if(_appInitSceneTasks != null)
             {
