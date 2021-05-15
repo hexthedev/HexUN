@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
+
 using UnityEngine;
 
 namespace HexUN.Engine.Utilities
@@ -52,6 +54,26 @@ namespace HexUN.Engine.Utilities
                 GameObject process = hierarchy.Dequeue();
 
                 if (action(process))
+                {
+                    foreach (Transform t in process.transform) hierarchy.Enqueue(t.gameObject);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Perform an action on every Gameobject in a GameObject Hierarchy. The action returns a bool.
+        /// If it return false, then the current gameobjects children are not processed. If it returns 
+        /// true, the children are also processed.
+        /// </summary>
+        public static async void DoToHierarchyAsync(GameObject[] target, Func<GameObject, Task<bool>> action)
+        {
+            Queue<GameObject> hierarchy = new Queue<GameObject>(target);
+
+            while (hierarchy.Count > 0)
+            {
+                GameObject process = hierarchy.Dequeue();
+
+                if (await action(process))
                 {
                     foreach (Transform t in process.transform) hierarchy.Enqueue(t.gameObject);
                 }
