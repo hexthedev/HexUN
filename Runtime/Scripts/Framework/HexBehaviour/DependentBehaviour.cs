@@ -1,4 +1,7 @@
 ﻿using HexCS.Core;
+
+using HexUN.Framework.Behaviour;
+
 using UnityEngine;
 
 namespace HexUN.Behaviour
@@ -9,7 +12,7 @@ namespace HexUN.Behaviour
     /// - Provides an overridable <see cref="ResolveEventBindings"></see> to bind events to resolved dependencies
     /// - Automatically handles the validation functionality of dependencies to enforce the dependencies have correct interface
     /// </summary>
-    public abstract class DependentBehaviour : HexBehaviour
+    public abstract class DependentBehaviour : SceneBehaviour
     {
         #region Protected API
         /// <inheritdoc>
