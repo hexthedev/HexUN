@@ -52,12 +52,24 @@ namespace HexUN.Engine
         /// <summary>
         /// Get all the children of the transform as an array
         /// </summary>
-        public static Transform[] GetAllChildren(Transform target)
+        public static Transform[] GetAllChildren(this Transform target)
         {
             Transform[] children = new Transform[target.childCount];
 
             int i = 0;
             foreach (Transform child in target) children[i++] = child;
+            return children;
+        }
+
+        /// <summary>
+        /// Gets all the children of a transform as gameobjects
+        /// </summary>
+        public static GameObject[] GetAllChildrenAsGameObjects(this Transform target)
+        {
+            GameObject[] children = new GameObject[target.childCount];
+
+            int i = 0;
+            foreach (Transform child in target) children[i++] = child.gameObject;
             return children;
         }
     }

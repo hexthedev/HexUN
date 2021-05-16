@@ -43,6 +43,17 @@ namespace HexUN.Engine.Utilities
         /// <summary>
         /// Perform an action on every Gameobject in a GameObject Hierarchy. The action returns a bool.
         /// If it return false, then the current gameobjects children are not processed. If it returns 
+        /// true, the children are also processed. Passing a gameobject will automtically skip the
+        /// provided gameobject and begin processing it's children. 
+        /// </summary>
+        public static void DoToHierarchy(GameObject target, Predicate<GameObject> action)
+        {
+            DoToHierarchy(target.transform.GetAllChildrenAsGameObjects(), action);
+        }
+
+        /// <summary>
+        /// Perform an action on every Gameobject in a GameObject Hierarchy. The action returns a bool.
+        /// If it return false, then the current gameobjects children are not processed. If it returns 
         /// true, the children are also processed.
         /// </summary>
         public static void DoToHierarchy(GameObject[] target, Predicate<GameObject> action)
