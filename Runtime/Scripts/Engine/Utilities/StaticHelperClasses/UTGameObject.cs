@@ -20,25 +20,52 @@ namespace HexUN.Engine.Utilities
             return cp;
         }
 
-        public static void DestroyAllChildren(this GameObject go)
+        /// <summary>
+        /// Destroy all children. Unless is a predicate that, if it returns true the child is not destoryed
+        /// </summary>
+        public static void DestroyAllChildren(this GameObject go, Predicate<GameObject> unless = null)
         {
-            foreach (Transform child in UTTransform.GetAllChildren(go.transform)) UnityEngine.Object.Destroy(child.gameObject);
-        }
+            if(unless == null)
+            {
+                foreach (Transform child in UTTransform.GetAllChildren(go.transform)) UnityEngine.Object.Destroy(child.gameObject);
+            }
+            else
+            {
+                foreach (Transform child in UTTransform.GetAllChildren(go.transform))
+                {
+                    if(!unless(child.gameObject)) UnityEngine.Object.Destroy(child.gameObject);
+                }
+            }
 
-        public static void DestroyAllChildrenImmediate(this GameObject go)
-        {
-            foreach (Transform child in UTTransform.GetAllChildren(go.transform)) UnityEngine.Object.DestroyImmediate(child.gameObject);
         }
 
         /// <summary>
-        /// Destroy all children of a gameobject. If in editor DestroyImmediate, otherwise
+        /// DestroyImmedicate all children. Unless is a predicate that, if it returns true the child is not destoryed
+        /// </summary>
+        public static void DestroyAllChildrenImmediate(this GameObject go, Predicate<GameObject> unless = null)
+        {
+            if (unless == null)
+            {
+                foreach (Transform child in UTTransform.GetAllChildren(go.transform)) UnityEngine.Object.DestroyImmediate(child.gameObject);
+            }
+            else
+            {
+                foreach (Transform child in UTTransform.GetAllChildren(go.transform))
+                {
+                    if (!unless(child.gameObject)) UnityEngine.Object.DestroyImmediate(child.gameObject);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Destroy all children of a gameobject.
         /// regular destroy
         /// </summary>
-        public static void DestroyAllChildren_EditorSafe(this GameObject go)
+        public static void DestroyAllChildren_EditorSafe(this GameObject go, Predicate<GameObject> unless = null)
         {
 #if UNITY_EDITOR
-            if (Application.isPlaying) go.DestroyAllChildren();
-            else go.DestroyAllChildrenImmediate();
+            if (Application.isPlaying) go.DestroyAllChildren(unless);
+            else go.DestroyAllChildrenImmediate(unless);
 #else
             go.DestroyAllChildren();
 #endif
