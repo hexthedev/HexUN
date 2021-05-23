@@ -22,12 +22,26 @@ namespace HexUN.Engine.Utilities
 
         public static void DestroyAllChildren(this GameObject go)
         {
-            foreach (Transform child in UTTransform.GetAllChildren(go.transform)) UnityEngine.Object.Destroy(child);
+            foreach (Transform child in UTTransform.GetAllChildren(go.transform)) UnityEngine.Object.Destroy(child.gameObject);
         }
 
         public static void DestroyAllChildrenImmediate(this GameObject go)
         {
             foreach (Transform child in UTTransform.GetAllChildren(go.transform)) UnityEngine.Object.DestroyImmediate(child.gameObject);
+        }
+
+        /// <summary>
+        /// Destroy all children of a gameobject. If in editor DestroyImmediate, otherwise
+        /// regular destroy
+        /// </summary>
+        public static void DestroyAllChildren_EditorSafe(this GameObject go)
+        {
+#if UNITY_EDITOR
+            if (Application.isPlaying) go.DestroyAllChildren();
+            else go.DestroyAllChildrenImmediate();
+#else
+            go.DestroyAllChildren();
+#endif
         }
 
         /// <summary>
