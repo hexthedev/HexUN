@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Threading.Tasks;
+using System.Timers;
 
 using UnityEngine;
 
@@ -11,7 +13,11 @@ namespace HexUN.Framework.Request
     /// </summary>
     public class Request<TReq, TRes>
     {
+        private System.Timers.Timer aTimer;
+
         private readonly TaskCompletionSource<TRes> _src = new TaskCompletionSource<TRes>();
+
+        private Coroutine _timeout;
 
         /// <summary>
         /// Is the request complete
@@ -34,9 +40,14 @@ namespace HexUN.Framework.Request
         public Request(TReq request) => RequestObject = request;
 
         /// <summary>
-        /// Await the completion of the request
+        /// Await the completion of the request. Set timeout in milliseconds.
+        /// Throws <see cref="TimeoutException"/> if timeout occurs
         /// </summary>
-        public async Task<TRes> AwaitAsync() => await _src.Task;
+        public async Task<TRes> AwaitAsync(float timeout = 1000)
+        {
+            SetTimeoutTimer(timeout);
+            return await _src.Task;
+        }
 
         /// <summary>
         /// Awaits the completion of the request by checking that the task
@@ -56,6 +67,26 @@ namespace HexUN.Framework.Request
 
             ResponseObject = Response;
             _src.TrySetResult(Response);
+        }
+
+        private void SetTimeoutTimer(float timeout)
+        {
+            aTimer = new Timer(timeout);
+            aTimer.Elapsed += OnTimeout;
+            aTimer.Enabled = true;
+
+            void OnTimeout(System.Object source, ElapsedEventArgs e)
+            {
+                _src.SetException(new RequestException($"Request timed out after {timeout} milliseconds"));
+                aTimer.Dispose();
+                aTimer = null;
+            }
+        }
+
+        public class RequestException : Exception 
+        {
+            public RequestException() : base() { }
+            public RequestException(string message) : base(message) { }
         }
     }
 }
