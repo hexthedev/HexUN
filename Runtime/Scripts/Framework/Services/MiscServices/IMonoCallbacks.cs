@@ -1,5 +1,9 @@
 ﻿using HexCS.Core;
 
+using System.Collections;
+
+using UnityEngine;
+
 namespace HexUN.Framework.Services
 {
     /// <summary>
@@ -22,5 +26,15 @@ namespace HexUN.Framework.Services
         /// Subscriber for fixed update functions
         /// </summary>
         IEventSubscriber OnFixedUpdate { get; }
+
+        /// <summary>
+        /// Start a coroutine on a global mono
+        /// </summary>
+        public Coroutine StartCoroutine(IEnumerator coroutine);
+
+        /// <summary>
+        /// Stop a coroutine on a global mono
+        /// </summary>
+        public void StopCoroutine(Coroutine routine);
     }
 }
