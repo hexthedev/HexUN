@@ -71,6 +71,16 @@ namespace HexUN.Engine.Utilities
 #endif
         }
 
+        public static void Destroy_EditorSafe(this GameObject go)
+        {
+#if UNITY_EDITOR
+            if (Application.isPlaying) UnityEngine.Object.Destroy(go);
+            else UnityEngine.Object.DestroyImmediate(go);
+#else
+            UnityEngine.Object.Destroy(go);
+#endif
+        }
+
         /// <summary>
         /// Creates a generic failure object
         /// </summary>
