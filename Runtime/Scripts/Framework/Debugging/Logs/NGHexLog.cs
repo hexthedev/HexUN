@@ -1,5 +1,6 @@
 ﻿using HexUN.Behaviour;
 
+using System;
 using System.Text;
 
 using UnityEngine;
@@ -26,6 +27,14 @@ namespace HexUN.Framework.Debugging
         public void Error(string category, string message)
         {
             string log = WriteLog(category, message);
+            Debug.LogError(log);
+            PushLog(log);
+        }
+
+        /// <inheritdoc />
+        public void Error(string category, string message, Exception e)
+        {
+            string log = WriteLog(category, $"{message}\n Exception: {e.Message}\nStack Trace:\n {e.StackTrace}");
             Debug.LogError(log);
             PushLog(log);
         }

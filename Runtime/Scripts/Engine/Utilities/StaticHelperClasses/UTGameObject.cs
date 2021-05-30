@@ -81,6 +81,13 @@ namespace HexUN.Engine.Utilities
             return ob;
         }
 
+        public static GameObject CreateChild(this GameObject target, string name)
+        {
+            GameObject obj = new GameObject(name);
+            obj.transform.SetParent(target.transform);
+            return obj;
+        }
+
         /// <summary>
         /// Perform an action on every Gameobject in a GameObject Hierarchy. The action returns a bool.
         /// If it return false, then the current gameobjects children are not processed. If it returns 
