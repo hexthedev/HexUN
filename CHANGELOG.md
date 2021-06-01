@@ -1,18 +1,22 @@
-* Fix editor code not wrapped in editor tags in SceneResource
-* Moved events into their own folder instead of in scripts
-* Put the events back because it causes issues with asmdefs
-* Fixed warnings
-* Updated readme a bit
-* Added a small utility for object lists
-* Reorganized folder structure to clarify framework purpose
-* Updated UTDependency
-* Wrote code for framework logging
-* namespace updates and orgnaization
-* Added UTTransform
-* Removed needless white space
-* Updated namespace and log code
-* Added clearing mechanism for shared resources
-* Added application control to hex services
-* Added an input interface to hex services
-* Updated singletons
-* Added simple rotation controls
+* Added Files and Folders as utility classes to get paths
+* Moved Folders code to new path
+* Added missing reference from NGHexServices prefab
+* Updated common folders
+* Improved UTTransform and UTGameObject
+* Added UTAssetBundle for some basic asset bundle operation utilities
+* Added funcs to destroy GO children, and performing hierarchy actions.
+* Changed MonoStart and MonoAwake -> HexStart and HexAwake
+* Added request pattern code
+* Added async version of DoToHierachy
+* Added project relative path to UnityPath
+* Added a simple scene behavior class for scene init and denit
+* Added UTTransform function to get all GO children
+* Added utility for editor safe children destroy
+* Added Predicate to DestroyAllChildren for more control
+* Updated singletons with better editor behaviour
+* Updated hex services to include instance of IInput
+* Added Coroutine functions to MonoCallbacks
+* Updated requests with timeout on async
+* Updated materials for URP
+* Added Logging utility for errors, and create child for gameobjects
+* Added template scenes and gameobject utilities
