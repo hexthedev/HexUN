@@ -25,6 +25,9 @@ namespace HexUN.Data
         private bool _assetDatabaseAssetPathInitialized = false;
         private PathString _assetDatabaseAssetPath = null;
 
+        private bool _projectRelaitvePathInitialized = false;
+        private PathString _projectRelativePath = null;
+
         private string _resourceApiCompatiblePath = null;
 
         #region Public Static Fields and Properties
@@ -162,6 +165,22 @@ namespace HexUN.Data
                 }
 
                 return _assetRelativePath;
+            }
+        }
+
+        /// <summary>
+        /// Project relative version of the path
+        /// </summary>
+        public PathString ProjectRelativePath
+        {
+            get
+            {
+                if (!_projectRelaitvePathInitialized)
+                {
+                    _projectRelativePath = AbsolutePath.RelativeTo(ProjectFolderName);
+                }
+
+                return _projectRelativePath;
             }
         }
 

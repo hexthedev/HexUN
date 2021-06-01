@@ -3,14 +3,14 @@ namespace HexUN.Data
     /// <summary>
     /// Manages path to a central folder used to store configuration files.
     /// </summary>
-    public static class Files
+    public static class Folders
     {
         /// <summary>
-        /// Constructs path to common file based on type
+        /// Returns a path to a common folder
         /// </summary>
-        public static UnityPath GetCommonFile(ECommonFile file)
+        public static UnityPath GetPath(ECommonFolder location)
         {
-            return UTECommonFile.GetFilePath(file);
+            return UTECommonFolder.GetFolderPath(location);
         }
     }
 }

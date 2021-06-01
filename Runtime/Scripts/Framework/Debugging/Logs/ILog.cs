@@ -1,4 +1,6 @@
-﻿namespace HexUN.Framework.Debugging
+﻿using System;
+
+namespace HexUN.Framework.Debugging
 {
     /// <summary>
     /// Capable of logging messages
@@ -19,5 +21,10 @@
         /// Logs errors in the applicaiton that break functionality
         /// </summary>
         void Error(string category, string message);
+
+        /// <summary>
+        /// Logs errors in the applicaiton that break functionality. Appends standard exception message format at end
+        /// </summary>
+        void Error(string category, string message, Exception e);
     }
 }
