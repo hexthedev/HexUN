@@ -6,7 +6,7 @@ namespace HexUN.Utilities
     /// Holds a variable. This variable can be set externally.
     /// Whenever the variable is set, a function is called on it
     /// </summary>
-    public class OnChangeVariable<T> where T : UnityEngine.Object
+    public class OnChangeVariable<T>
     {
         private Action<T> _changeAction;
 
@@ -16,13 +16,17 @@ namespace HexUN.Utilities
             get => _value;
             set
             {
-                _value = value;
-                _changeAction(_value);
+                if (!_value.Equals(value))
+                {
+                    _value = value;
+                    _changeAction(_value);
+                }
             }
         }
 
-        public OnChangeVariable(Action<T> changeAction)
+        public OnChangeVariable(Action<T> changeAction, T defaultValue = default)
         {
+            _value = defaultValue;
             _changeAction = changeAction;
         }
     }
