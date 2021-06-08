@@ -22,11 +22,13 @@ namespace HexUN.Behaviour
         {
             get
             {
+#if !UNITY_EDITOR
                 if (AppQuitting)
                 {
                     Debug.LogWarning($"No {nameof(ANGHexPersistent<T>)} returned because application is quiting");
                     return null;
                 }
+#endif
                 TryCreateSingleton(_instance, ref _instance);
                 return _instance;
             }
