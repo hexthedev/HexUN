@@ -103,6 +103,8 @@ namespace HexUN.Behaviour
             }
             return true;
 #endif
+
+            return true;
         }
     }
 
