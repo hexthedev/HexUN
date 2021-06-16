@@ -1,16 +1,15 @@
-﻿using HexCS.Core;
+using HexCS.Core;
 
-using HexUN.Behaviour;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 using Event = HexCS.Core.Event;
 
 namespace HexUN.Framework.Services
 {
-    /// <summary>
-    /// Global access point for Unity Engine functions that can be accessed
-    /// statically. This can allow devs to register funcitons ot main thread, for example
-    /// </summary>
-    public class NgMonoCallbacks : ANgHexPersistent<NgMonoCallbacks, IMonoCallbacks>, IMonoCallbacks
+    [CreateAssetMenu(fileName ="MonoCallbacks", menuName = "HexUN/Services/MonoCallbacks")]
+    public class SoMonoCallbacks : ScriptableObject, IMonoCallbacks
     {
         private Event _OnUpdate = new Event();
 
@@ -48,6 +47,16 @@ namespace HexUN.Framework.Services
         private void FixedUpdate()
         {
             _OnFixedUpdate.Invoke();
+        }
+
+        public Coroutine StartCoroutine(IEnumerator coroutine)
+        {
+            return null;
+        }
+
+        public void StopCoroutine(Coroutine routine)
+        {
+
         }
     }
 }

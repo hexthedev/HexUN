@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1587330147363062667}
   - component: {fileID: 1587330147363062666}
   m_Layer: 0
-  m_Name: NGInput
+  m_Name: NgInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

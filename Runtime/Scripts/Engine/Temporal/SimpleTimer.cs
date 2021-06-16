@@ -39,7 +39,7 @@ namespace HexUN.Temporal
             _isDelayed = startDelay > 0;
             _remainingDelay = startDelay;
 
-            NGMonoCallbacks.Instance.OnUpdate.Subscribe(HandleTick);
+            NgMonoCallbacks.Instance.OnUpdate.Subscribe(HandleTick);
         }
         #endregion
 

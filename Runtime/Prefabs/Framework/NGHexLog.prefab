@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5616176642045256379}
   - component: {fileID: 5940482708224258129}
   m_Layer: 0
-  m_Name: NGHexLog
+  m_Name: NgHexLog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

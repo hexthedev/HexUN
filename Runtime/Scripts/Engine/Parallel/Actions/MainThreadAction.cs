@@ -20,7 +20,7 @@ namespace HexUN.Parallel
 
         public void Call()
         {
-            NGMonoCallbacks.Instance.OnUpdate.SubscribeSingleUse(_action);
+            NgMonoCallbacks.Instance.OnUpdate.SubscribeSingleUse(_action);
         }
         #endregion
     }
@@ -40,7 +40,7 @@ namespace HexUN.Parallel
 
         public void Call(T input)
         {
-            NGMonoCallbacks.Instance.OnUpdate.SubscribeSingleUse(() => _action(input));
+            NgMonoCallbacks.Instance.OnUpdate.SubscribeSingleUse(() => _action(input));
         }
         #endregion
     }

@@ -2,6 +2,8 @@
 using System.Reflection;
 using HexCS.Core;
 using HexUN.App;
+using HexUN.Framework;
+
 using UnityEditor;
 using UnityEngine;
 
@@ -33,7 +35,7 @@ namespace HexUN.EditorElements
             );
 
 
-            _list = new EETypeList(new Assembly[] { typeof(int).Assembly, typeof(UTArray).Assembly, typeof(AppManager).Assembly }, 2, test);
+            _list = new EETypeList(new Assembly[] { typeof(int).Assembly, typeof(UTArray).Assembly, typeof(NgHexServices).Assembly }, 2, test);
         }
 
         private void OnGUI()

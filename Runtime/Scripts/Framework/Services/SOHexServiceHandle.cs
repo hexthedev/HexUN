@@ -14,7 +14,7 @@ namespace HexUN.Framework.Services
         /// </summary>
         public void IAppControl_Quit()
         {
-            NGHexServices.Instance.AppControl.Quit();
+            NgHexServices.Instance.AppControl.Quit();
         }
         #endregion
     }

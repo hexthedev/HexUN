@@ -1,5 +1,3 @@
-using HexUN.Behaviour;
-
 using UnityEngine;
 
 namespace HexUN.App
@@ -7,7 +5,8 @@ namespace HexUN.App
     /// <summary>
     /// Exposes important application control unsing an interface
     /// </summary>
-    public class NgAppControl : ANgHexPersistent<NgAppControl, IAppControl>, IAppControl
+    [CreateAssetMenu(fileName = "AppControl", menuName = "HexUN/Services/AppControl")]
+    public class SoAppControl : ScriptableObject, IAppControl
     {
         public void Quit()
         {

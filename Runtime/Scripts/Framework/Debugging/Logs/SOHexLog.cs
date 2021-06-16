@@ -1,24 +1,18 @@
-﻿using HexUN.Behaviour;
-
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Text;
 
 using UnityEngine;
 
 namespace HexUN.Framework.Debugging
 {
-    /// <summary>
-    /// Logs to the unity logger and to a shared resource object if avalable
-    /// </summary>
-    public class NgHexLog : ANgHexPersistent<NgHexLog, ILog>, ILog
+    [CreateAssetMenu(fileName = "HexLog", menuName = "HexUN/Services/HexLog")]
+    public class SOHexLog : ScriptableObject, ILog
     {
         private const string cOpenBrack = "[";
         private const string cCloseBrack = "]";
         private const string cSep = " - ";
-
-        [SerializeField]
-        [Tooltip("The logs shared resource")]
-        private RELogs _logs;
 
         private StringBuilder _sb = new StringBuilder();
 
@@ -69,11 +63,7 @@ namespace HexUN.Framework.Debugging
 
         private void PushLog(string log)
         {
-            if(_logs != null)
-            {
-                _logs.AddLog(log);
-                _logs.PushUpdate();
-            }
+            
         }
     }
 }

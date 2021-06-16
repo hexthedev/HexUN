@@ -12,7 +12,7 @@ namespace HexUN.Engine.Utilities.UsefulMonos
         [SerializeField]
         private float Speed = 50.0f;
 
-        private IInput _input => NGHexServices.Instance.Input;
+        private IInput _input => NgHexServices.Instance.Input;
 
         // Update is called once per frame
         void Update()

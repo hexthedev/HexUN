@@ -29,17 +29,14 @@ namespace HexUN.App
 
         protected override void HexAwake()
         {
-            if (!_isActive)
+  
+            if (_loadedSceneResources == null || !_loadedSceneResources.Contains(name))
             {
-                if (!AppManager.IsBootstrapped)
-                {
-                    if (_loadedSceneResources == null || !_loadedSceneResources.Contains(name))
-                    {
-                        InstantiatePlayModeResources();
-                        _isActive = true;
-                    }
-                }
+                InstantiatePlayModeResources();
+                _isActive = true;
             }
+                
+            
 
             //Destroy(gameObject);
         }

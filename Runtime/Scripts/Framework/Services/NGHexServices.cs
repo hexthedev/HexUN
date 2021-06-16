@@ -13,7 +13,7 @@ namespace HexUN.Framework
     /// For use in the Hex Framework. Provides application level dependencies
     /// such as logging, etc. Allows for configuration of these components. 
     /// </summary>
-    public class NGHexServices : ANGHexPersistent<NGHexServices>
+    public class NgHexServices : ANgHexPersistent<NgHexServices, IHexServices>, IHexServices
     {
         [SerializeField]
         [Tooltip("Prefab, instance or scriptable object that provides App Lifecycle Control functions")]
@@ -53,28 +53,29 @@ namespace HexUN.Framework
         /// <summary>
         /// Provides access to application control singleton
         /// </summary>
-        public IAppControl AppControl => GetService<IAppControl, NGAppControl>(ref _appControl);
+        public IAppControl AppControl => GetService<IAppControl, NgAppControl>(ref _appControl);
 
         /// <summary>
         /// Returns the loggin mechanism for the framework
         /// </summary>
-        public ILog Log => GetService<ILog, NGHexLog>(ref _log);
+        public ILog Log => GetService<ILog, NgHexLog>(ref _log);
 
         /// <summary>
         /// Provides access to mono behaviour callbacks
         /// </summary>
-        public IMonoCallbacks MonoCallbacks => GetService<IMonoCallbacks, NGMonoCallbacks>(ref _monoCallbacks);
+        public IMonoCallbacks MonoCallbacks => GetService<IMonoCallbacks, NgMonoCallbacks>(ref _monoCallbacks);
 
         /// <summary>
         /// Provides access to mono behaviour callbacks
         /// </summary>
-        public IInput Input => GetService<IInput, NGInput_Unity>(ref _input);
+        public IInput Input => GetService<IInput, NgInput_Unity>(ref _input);
         #endregion
 
         private TService GetService<TService, TDefault>(ref TService expected)
-            where TDefault: ANGHexPersistent<TDefault>, TService
+            where TDefault: ANgHexPersistent<TDefault, TService>, TService
+            where TService: class
         {
-            if (expected == null) expected = ANGHexPersistent<TDefault>.Instance;
+            if (expected == null) expected = ANgHexPersistent<TDefault, TService>.Instance;
             return expected;
         }
 

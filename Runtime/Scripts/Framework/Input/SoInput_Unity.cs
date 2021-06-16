@@ -1,12 +1,9 @@
-using HexUN.Behaviour;
-
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace HexUN.Framework.Input
 {
-    public class NgInput_Unity : ANgHexPersistent<NgInput_Unity, IInput>, IInput
+    [CreateAssetMenu(fileName = "Input_Unity", menuName = "HexUN/Services/Input_Unity")]
+    public class SoInput_Unity : ScriptableObject, IInput
     {
         public bool GetKeyDown(KeyCode key)
         {
