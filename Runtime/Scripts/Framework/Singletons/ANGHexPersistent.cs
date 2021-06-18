@@ -31,7 +31,7 @@ namespace HexUN.Behaviour
 #if !UNITY_EDITOR
                 if (AppQuitting)
                 {
-                    Debug.LogWarning($"No {nameof(ANGHexPersistent<T>)} returned because application is quiting");
+                    Debug.LogWarning($"No {nameof(ANgHexPersistent<TSingleton, TInterface>)} returned because application is quiting");
                     return null;
                 }
 #endif

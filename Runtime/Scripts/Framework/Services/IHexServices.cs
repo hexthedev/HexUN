@@ -1,5 +1,3 @@
-using Codice.LogWrapper;
-
 using HexUN.App;
 using HexUN.Framework.Input;
 using HexUN.Framework.Debugging;
