@@ -7,7 +7,7 @@ namespace HexUN.App
     /// <summary>
     /// Exposes important application control unsing an interface
     /// </summary>
-    public class NgAppControl : ANgHexPersistent<NgAppControl, IAppControl>, IAppControl
+    public class NgAppControl : AOneHexPersistent<NgAppControl, IAppControl>, IAppControl
     {
         public void Quit()
         {

@@ -20,7 +20,7 @@ namespace HexUN.Framework.SharedResource
 
         private bool _isUpdatePushed = false;
 
-        private IMonoCallbacks instRef = null;
+        private IHexServices instRef = null;
 
         #region Protected API
         /// <summary>
@@ -39,7 +39,7 @@ namespace HexUN.Framework.SharedResource
         {
             if (instRef == null)
             {
-                instRef = NgMonoCallbacks.Instance;
+                instRef = OneHexServices.Instance;
                 instRef.OnLateUpdate.Subscribe(DoPushUpdate);
             }
 

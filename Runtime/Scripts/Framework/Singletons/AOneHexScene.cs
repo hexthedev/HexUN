@@ -9,7 +9,7 @@ namespace HexUN.Behaviour
     /// is unloaded
     /// </summary>
     /// <typeparam name="T">The type of the subclass.</typeparam>
-    public abstract class ANGHexScene<T> : AQuitter where T : ANGHexScene<T>
+    public abstract class AOneHexScene<T> : AQuitter where T : AOneHexScene<T>
     {
         private static T _instance;
 
@@ -24,7 +24,7 @@ namespace HexUN.Behaviour
             {
                 if (AppQuitting)
                 {
-                    Debug.LogWarning($"No {nameof(ANGHexScene<T>)} returned because application is quiting");
+                    Debug.LogWarning($"No {nameof(AOneHexScene<T>)} returned because application is quiting");
                     return null;
                 }
                 TryCreateSingleton(_instance, ref _instance);
@@ -92,7 +92,7 @@ namespace HexUN.Behaviour
             }
             else if (caller != instanceVar)
             {
-                Debug.LogError($"{caller.name} is a {nameof(ANGHexScene<T>)}, but atleast one other exists in the scene: {instanceVar.name}");
+                Debug.LogError($"{caller.name} is a {nameof(AOneHexScene<T>)}, but atleast one other exists in the scene: {instanceVar.name}");
                 return false;
             }
             return true;

@@ -13,8 +13,8 @@ namespace HexUN.Behaviour
     /// </summary>
     /// <typeparam name="TSingleton">The type of the subclass.</typeparam>
     /// <typeparam name="TInterface">The interface type the class represents</typeparam>
-    public abstract class ANgHexPersistent<TSingleton, TInterface> : AQuitter 
-        where TSingleton : ANgHexPersistent<TSingleton, TInterface>, TInterface
+    public abstract class AOneHexPersistent<TSingleton, TInterface> : AQuitter 
+        where TSingleton : AOneHexPersistent<TSingleton, TInterface>, TInterface
         where TInterface : class
     {
         private static TInterface _instance;
@@ -31,7 +31,7 @@ namespace HexUN.Behaviour
 #if !UNITY_EDITOR
                 if (AppQuitting)
                 {
-                    Debug.LogWarning($"No {nameof(ANgHexPersistent<TSingleton, TInterface>)} returned because application is quiting");
+                    Debug.LogWarning($"No {nameof(AOneHexPersistent<TSingleton, TInterface>)} returned because application is quiting");
                     return null;
                 }
 #endif
@@ -110,7 +110,7 @@ namespace HexUN.Behaviour
 
                 if (assets.Length == 0)
                 {
-                    Debug.LogWarning($"[{nameof(ANgHexPersistent<TSingleton, TInterface>)}] Unable to find assets of type {searchClass}");
+                    Debug.LogWarning($"[{nameof(AOneHexPersistent<TSingleton, TInterface>)}] Unable to find assets of type {searchClass}");
                 }
 
                 string config = assets[0];
@@ -120,17 +120,16 @@ namespace HexUN.Behaviour
 
                 if (instanceVar == null)
                 {
-                    Debug.LogWarning($"[{nameof(ANgHexPersistent<TSingleton, TInterface>)}] Failed to case {AssetDatabase.GUIDToAssetPath(config)} as {typeof(TInterface).Name}");
+                    Debug.LogWarning($"[{nameof(AOneHexPersistent<TSingleton, TInterface>)}] Failed to case {AssetDatabase.GUIDToAssetPath(config)} as {typeof(TInterface).Name}");
                 }
             }
             else
             {
-                Debug.LogWarning($"[{nameof(ANgHexPersistent<TSingleton, TInterface>)}] Unable to convert asset name {typeName} into So (ScriptableObject) form. All Ng Singletons that need to be used at editor name should have an So equivalent that implements to interface.");
+                Debug.LogWarning($"[{nameof(AOneHexPersistent<TSingleton, TInterface>)}] Unable to convert asset name {typeName} into So (ScriptableObject) form. All Ng Singletons that need to be used at editor name should have an So equivalent that implements to interface.");
             }
 
             return true;
 #endif
-
             return false;
         }
     }

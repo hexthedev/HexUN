@@ -10,7 +10,7 @@ namespace HexUN.Framework.Debugging
     /// <summary>
     /// Logs to the unity logger and to a shared resource object if avalable
     /// </summary>
-    public class NgHexLog : ANgHexPersistent<NgHexLog, ILog>, ILog
+    public class NgHexLog : AOneHexPersistent<NgHexLog, ILog>, ILog
     {
         private const string cOpenBrack = "[";
         private const string cCloseBrack = "]";

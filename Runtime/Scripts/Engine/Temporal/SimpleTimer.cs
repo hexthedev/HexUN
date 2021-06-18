@@ -3,6 +3,7 @@ using UnityEngine;
 using HexCS.Core;
 using Event = HexCS.Core.Event;
 using HexUN.Framework.Services;
+using HexUN.Framework;
 
 namespace HexUN.Temporal
 {
@@ -39,7 +40,7 @@ namespace HexUN.Temporal
             _isDelayed = startDelay > 0;
             _remainingDelay = startDelay;
 
-            NgMonoCallbacks.Instance.OnUpdate.Subscribe(HandleTick);
+            OneHexServices.Instance.OnUpdate.Subscribe(HandleTick);
         }
         #endregion
 

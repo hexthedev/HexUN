@@ -7,7 +7,7 @@ namespace RoboArena
     /// <summary>
     /// Automatically takes control of the main camera on start. When Destoryed, puts the camera back in it's own scene.
     /// </summary>
-    public class CameraRig : ANGHexScene<CameraRig>
+    public class CameraRig : AOneHexScene<CameraRig>
     {
         private const string cCameraSceneName = "CameraResource";
         

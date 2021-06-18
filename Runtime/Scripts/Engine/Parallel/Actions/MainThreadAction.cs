@@ -2,6 +2,7 @@
 
 using HexUN.Framework.Services;
 using HexUN.Behaviour;
+using HexUN.Framework;
 
 namespace HexUN.Parallel
 {
@@ -20,7 +21,7 @@ namespace HexUN.Parallel
 
         public void Call()
         {
-            NgMonoCallbacks.Instance.OnUpdate.SubscribeSingleUse(_action);
+            OneHexServices.Instance.OnUpdate.SubscribeSingleUse(_action);
         }
         #endregion
     }
@@ -40,7 +41,7 @@ namespace HexUN.Parallel
 
         public void Call(T input)
         {
-            NgMonoCallbacks.Instance.OnUpdate.SubscribeSingleUse(() => _action(input));
+            OneHexServices.Instance.OnUpdate.SubscribeSingleUse(() => _action(input));
         }
         #endregion
     }

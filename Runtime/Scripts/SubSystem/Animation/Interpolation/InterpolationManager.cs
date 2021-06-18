@@ -18,7 +18,7 @@ namespace HexUN.Animation
     /// simply provides the numbers requested over time and events to manage the interpolations
     /// occurence. Start, Cancel, Etc. 
     /// </summary>
-    public class InterpolationManager : ANgHexPersistent<InterpolationManager, IInterpolationManager>, IInterpolationManager
+    public class InterpolationManager : AOneHexPersistent<InterpolationManager, IInterpolationManager>, IInterpolationManager
     {
         // id is just an iteration on an int for now. 
         private int _id = int.MinValue;

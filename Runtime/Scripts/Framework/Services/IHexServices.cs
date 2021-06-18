@@ -1,12 +1,26 @@
 using HexUN.App;
-using HexUN.Framework.Input;
 using HexUN.Framework.Debugging;
-using ILog = HexUN.Framework.Debugging.ILog;
+using HexCS.Core;
 
 namespace HexUN.Framework.Services
 {
     public interface IHexServices
     {
+        /// <summary>
+        /// Subscriber for Update functions
+        /// </summary>
+        public IEventSubscriber OnUpdate { get; }
+
+        /// <summary>
+        /// Subscriber for LateUpdate functions
+        /// </summary>
+        public IEventSubscriber OnLateUpdate { get; }
+
+        /// <summary>
+        /// Subscriber for fixed update functions
+        /// </summary>
+        public IEventSubscriber OnFixedUpdate { get; }
+
         /// <summary>
         /// Provides access to application control singleton
         /// </summary>
@@ -16,14 +30,5 @@ namespace HexUN.Framework.Services
         /// Returns the loggin mechanism for the framework
         /// </summary>
         public ILog Log { get; }
-
-        /// <summary>
-        /// Provides access to mono behaviour callbacks
-        /// </summary>
-        public IMonoCallbacks MonoCallbacks { get; }
-        /// <summary>
-        /// Provides access to mono behaviour callbacks
-        /// </summary>
-        public IInput Input { get; }
     }
 }

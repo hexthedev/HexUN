@@ -35,7 +35,7 @@ namespace HexUN.EditorElements
             );
 
 
-            _list = new EETypeList(new Assembly[] { typeof(int).Assembly, typeof(UTArray).Assembly, typeof(NgHexServices).Assembly }, 2, test);
+            _list = new EETypeList(new Assembly[] { typeof(int).Assembly, typeof(UTArray).Assembly, typeof(OneHexServices).Assembly }, 2, test);
         }
 
         private void OnGUI()

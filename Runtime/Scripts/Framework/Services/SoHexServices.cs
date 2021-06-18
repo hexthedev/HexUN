@@ -1,6 +1,7 @@
+using HexCS.Core;
+
 using HexUN.App;
 using HexUN.Framework.Debugging;
-using HexUN.Framework.Input;
 
 using UnityEngine;
 
@@ -9,6 +10,8 @@ namespace HexUN.Framework.Services
     [CreateAssetMenu(fileName = "HexServices", menuName = "HexUN/Services/HexServices")]
     public class SoHexServices : ScriptableObject, IHexServices
     {
+        private const string cLogCategory = nameof(SoHexServices);
+
         [SerializeField]
         [Tooltip("Prefab, instance or scriptable object that provides App Lifecycle Control functions")]
         private Object IAppControl = null;
@@ -17,36 +20,45 @@ namespace HexUN.Framework.Services
         [Tooltip("Prefab, instance or scriptable object that provides ILog interface dependency to the Unity application")]
         private Object ILog = null;
 
-        [SerializeField]
-        [Tooltip("Prefab, instance or scriptable object that provides IMonoCallbacks interface dependency to the Unity application")]
-        private Object IMonoCallbacks = null;
+        #region API
+        /// <inheritdoc />
+        public IEventSubscriber OnUpdate
+        {
+            get
+            {
+                Log.Warn(cLogCategory, $"Trying to subscribe to {nameof(OnUpdate)} in editor mode. This isn't allowed");
+                return null;
+            }
+        }
 
-        [SerializeField]
-        [Tooltip("Prefab, instance or scriptable object that provides IInput interface dependency to the Unity application")]
-        private Object IInput = null;
+        /// <inheritdoc />
+        public IEventSubscriber OnLateUpdate
+        {
+            get
+            {
+                Log.Warn(cLogCategory, $"Trying to subscribe to {nameof(OnLateUpdate)} in editor mode. This isn't allowed");
+                return null;
+            }
+        }
 
-#region API
-        /// <summary>
-        /// Provides access to application control singleton
-        /// </summary>
+        /// <inheritdoc />
+        public IEventSubscriber OnFixedUpdate
+        {
+            get
+            {
+                Log.Warn(cLogCategory, $"Trying to subscribe to {nameof(OnFixedUpdate)} in editor mode. This isn't allowed");
+                return null;
+            }
+        }
+
+        /// <inheritdoc />
         public IAppControl AppControl => GetInterface<IAppControl>(ref IAppControl);
 
-        /// <summary>
-        /// Returns the loggin mechanism for the framework
-        /// </summary>
+        /// <inheritdoc />
         public ILog Log => GetInterface<ILog>(ref ILog);
 
-        /// <summary>
-        /// Provides access to mono behaviour callbacks
-        /// </summary>
-        public IMonoCallbacks MonoCallbacks => GetInterface<IMonoCallbacks>(ref IMonoCallbacks);
-
-        /// <summary>
-        /// Provides access to mono behaviour callbacks
-        /// </summary>
-        public IInput Input => GetInterface<IInput>(ref IInput);
-
-        public T GetInterface<T>(ref Object candidate) where T : class
+#endregion
+        private T GetInterface<T>(ref Object candidate) where T : class
         {
             if (candidate == null)
             {
@@ -64,10 +76,5 @@ namespace HexUN.Framework.Services
 
             return instance;
         }
-#endregion
-
-
-
-
     }
 }

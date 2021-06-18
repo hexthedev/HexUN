@@ -5,7 +5,8 @@ using HexUN.Behaviour;
 
 using UnityEngine;
 using HexUN.App;
-using HexUN.Framework.Input;
+using HexCS.Core;
+using Event = HexCS.Core.Event;
 
 namespace HexUN.Framework
 {
@@ -13,7 +14,7 @@ namespace HexUN.Framework
     /// For use in the Hex Framework. Provides application level dependencies
     /// such as logging, etc. Allows for configuration of these components. 
     /// </summary>
-    public class NgHexServices : ANgHexPersistent<NgHexServices, IHexServices>, IHexServices
+    public class OneHexServices : AOneHexPersistent<OneHexServices, IHexServices>, IHexServices
     {
         [SerializeField]
         [Tooltip("Prefab, instance or scriptable object that provides App Lifecycle Control functions")]
@@ -23,18 +24,14 @@ namespace HexUN.Framework
         [Tooltip("Prefab, instance or scriptable object that provides ILog interface dependency to the Unity application")]
         private Object ILog = null;
 
-        [SerializeField]
-        [Tooltip("Prefab, instance or scriptable object that provides IMonoCallbacks interface dependency to the Unity application")]
-        private Object IMonoCallbacks = null;
+        private Event _OnUpdate = new Event();
 
-        [SerializeField]
-        [Tooltip("Prefab, instance or scriptable object that provides IInput interface dependency to the Unity application")]
-        private Object IInput = null;
+        private Event _OnLateUpdate = new Event();
+
+        private Event _OnFixedUpdate = new Event();
 
         private IAppControl _appControl;
         private ILog _log;
-        private IMonoCallbacks _monoCallbacks;
-        private IInput _input;
 
 #if UNITY_EDITOR
         protected void OnValidate()
@@ -50,41 +47,49 @@ namespace HexUN.Framework
         }
 
         #region API
-        /// <summary>
-        /// Provides access to application control singleton
-        /// </summary>
+        /// <inheritdoc />
+        public IEventSubscriber OnUpdate => _OnUpdate;
+
+        /// <inheritdoc />
+        public IEventSubscriber OnLateUpdate => _OnLateUpdate;
+
+        /// <inheritdoc />
+        public IEventSubscriber OnFixedUpdate => _OnFixedUpdate;
+
+        /// <inheritdoc />
         public IAppControl AppControl => GetService<IAppControl, NgAppControl>(ref _appControl);
 
-        /// <summary>
-        /// Returns the loggin mechanism for the framework
-        /// </summary>
+        /// <inheritdoc />
         public ILog Log => GetService<ILog, NgHexLog>(ref _log);
-
-        /// <summary>
-        /// Provides access to mono behaviour callbacks
-        /// </summary>
-        public IMonoCallbacks MonoCallbacks => GetService<IMonoCallbacks, NgMonoCallbacks>(ref _monoCallbacks);
-
-        /// <summary>
-        /// Provides access to mono behaviour callbacks
-        /// </summary>
-        public IInput Input => GetService<IInput, NgInput_Unity>(ref _input);
         #endregion
 
         private TService GetService<TService, TDefault>(ref TService expected)
-            where TDefault: ANgHexPersistent<TDefault, TService>, TService
+            where TDefault: AOneHexPersistent<TDefault, TService>, TService
             where TService: class
         {
-            if (expected == null) expected = ANgHexPersistent<TDefault, TService>.Instance;
+            if (expected == null) expected = AOneHexPersistent<TDefault, TService>.Instance;
             return expected;
+        }
+
+        private void Update()
+        {
+            _OnUpdate.Invoke();
+        }
+
+        private void LateUpdate()
+        {
+            _OnLateUpdate.Invoke();
+        }
+
+        private void FixedUpdate()
+        {
+            _OnFixedUpdate.Invoke();
         }
 
         private void DoResolves()
         {
             UTDependency.Resolve(ref ILog, out _log, this);
-            UTDependency.Resolve(ref IMonoCallbacks, out _monoCallbacks, this);
             UTDependency.Resolve(ref IAppControl, out _appControl, this);
-            UTDependency.Resolve(ref IInput, out _input, this);
         }
     }
 }
