@@ -91,11 +91,25 @@ namespace HexUN.Engine.Utilities
             return ob;
         }
 
-        public static GameObject CreateChild(this GameObject target, string name)
+        /// <summary>
+        /// Instantiates a gameobject that is a child of this game object 
+        /// </summary>
+        public static GameObject AddChild(this GameObject target, string name)
         {
             GameObject obj = new GameObject(name);
             obj.transform.SetParent(target.transform);
             return obj;
+        }
+
+        /// <summary>
+        /// Instantiates a gameobject that is a child of this game object 
+        /// </summary>
+        public static T AddChild<T>(this GameObject target, string name)
+            where T:MonoBehaviour
+        {
+            GameObject obj = new GameObject(name);
+            obj.transform.SetParent(target.transform);
+            return obj.AddComponent<T>();
         }
 
         /// <summary>
