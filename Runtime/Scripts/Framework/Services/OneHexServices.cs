@@ -60,7 +60,7 @@ namespace HexUN.Framework
         public IAppControl AppControl => GetService<IAppControl, NgAppControl>(ref _appControl);
 
         /// <inheritdoc />
-        public ILog Log => GetService<ILog, NgHexLog>(ref _log);
+        public ILog Log => GetService<ILog, OneHexLog>(ref _log);
         #endregion
 
         private TService GetService<TService, TDefault>(ref TService expected)

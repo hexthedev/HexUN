@@ -14,14 +14,28 @@ namespace HexUN.Framework.Debugging
         private const string cCloseBrack = "]";
         private const string cSep = " - ";
 
+        private Action<string> _logInfoAction = Debug.Log;
+        private Action<string> _logWarningAction = Debug.LogWarning;
+        private Action<string> _logErrorAction = Debug.LogError;
+
         private StringBuilder _sb = new StringBuilder();
+
+        /// <inheritdoc />
+        public Action<string> LogInfoAction { get => _logInfoAction; set => _logInfoAction = value; }
+
+        /// <inheritdoc />
+        public Action<string> LogWarnAction { get => _logWarningAction; set => _logWarningAction = value; }
+
+        /// <inheritdoc />
+        public Action<string> LogErrorAction { get => _logErrorAction; set => _logErrorAction = value; }
+
 
         #region API
         /// <inheritdoc />
         public void Error(string category, string message)
         {
             string log = WriteLog(category, message);
-            Debug.LogError(log);
+            LogErrorAction(log);
             PushLog(log);
         }
 
@@ -29,7 +43,7 @@ namespace HexUN.Framework.Debugging
         public void Error(string category, string message, Exception e)
         {
             string log = WriteLog(category, $"{message}\n Exception: {e.Message}\nStack Trace:\n {e.StackTrace}");
-            Debug.LogError(log);
+            LogErrorAction(log);
             PushLog(log);
         }
 
@@ -37,7 +51,7 @@ namespace HexUN.Framework.Debugging
         public void Info(string category, string message)
         {
             string log = WriteLog(category, message);
-            Debug.Log(log);
+            LogInfoAction(log);
             PushLog(log);
         }
 
@@ -45,7 +59,7 @@ namespace HexUN.Framework.Debugging
         public void Warn(string category, string message)
         {
             string log = WriteLog(category, message);
-            Debug.LogWarning(log);
+            LogWarnAction(log);
             PushLog(log);
         }
         #endregion

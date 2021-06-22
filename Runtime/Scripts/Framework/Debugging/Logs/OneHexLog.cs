@@ -10,15 +10,28 @@ namespace HexUN.Framework.Debugging
     /// <summary>
     /// Logs to the unity logger and to a shared resource object if avalable
     /// </summary>
-    public class NgHexLog : AOneHexPersistent<NgHexLog, ILog>, ILog
+    public class OneHexLog : AOneHexPersistent<OneHexLog, ILog>, ILog
     {
         private const string cOpenBrack = "[";
         private const string cCloseBrack = "]";
         private const string cSep = " - ";
 
+        private Action<string> _logInfoAction = Debug.Log;
+        private Action<string> _logWarningAction = Debug.LogWarning;
+        private Action<string> _logErrorAction = Debug.LogError;
+
         [SerializeField]
         [Tooltip("The logs shared resource")]
         private RELogs _logs;
+
+        /// <inheritdoc />
+        public Action<string> LogInfoAction { get => _logInfoAction; set => _logInfoAction = value; }
+
+        /// <inheritdoc />
+        public Action<string> LogWarnAction { get => _logWarningAction; set => _logWarningAction = value; }
+
+        /// <inheritdoc />
+        public Action<string> LogErrorAction { get => _logErrorAction; set => _logErrorAction = value; }
 
         private StringBuilder _sb = new StringBuilder();
 
@@ -27,7 +40,7 @@ namespace HexUN.Framework.Debugging
         public void Error(string category, string message)
         {
             string log = WriteLog(category, message);
-            Debug.LogError(log);
+            LogErrorAction(log);
             PushLog(log);
         }
 
@@ -35,7 +48,7 @@ namespace HexUN.Framework.Debugging
         public void Error(string category, string message, Exception e)
         {
             string log = WriteLog(category, $"{message}\n Exception: {e.Message}\nStack Trace:\n {e.StackTrace}");
-            Debug.LogError(log);
+            LogErrorAction(log);
             PushLog(log);
         }
 
@@ -43,7 +56,7 @@ namespace HexUN.Framework.Debugging
         public void Info(string category, string message)
         {
             string log = WriteLog(category, message);
-            Debug.Log(log);
+            LogInfoAction(log);
             PushLog(log);
         }
 
@@ -51,7 +64,7 @@ namespace HexUN.Framework.Debugging
         public void Warn(string category, string message)
         {
             string log = WriteLog(category, message);
-            Debug.LogWarning(log);
+            LogWarnAction(log);
             PushLog(log);
         }
         #endregion
