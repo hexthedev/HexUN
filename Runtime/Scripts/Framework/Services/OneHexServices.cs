@@ -57,7 +57,7 @@ namespace HexUN.Framework
         public IEventSubscriber OnFixedUpdate => _OnFixedUpdate;
 
         /// <inheritdoc />
-        public IAppControl AppControl => GetService<IAppControl, NgAppControl>(ref _appControl);
+        public IAppControl AppControl => GetService<IAppControl, OneAppControl>(ref _appControl);
 
         /// <inheritdoc />
         public ILog Log => GetService<ILog, OneHexLog>(ref _log);

@@ -99,9 +99,9 @@ namespace HexUN.Behaviour
             string typeName = typeof(TSingleton).Name;
             string searchClass = null;
 
-            if (typeName.Contains("Ng"))
+            if (typeName.Contains("One"))
             {
-                searchClass = typeName.Replace("Ng", "So");
+                searchClass = typeName.Replace("One", "So");
             }
 
             if (searchClass != null)
