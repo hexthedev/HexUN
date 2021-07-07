@@ -38,6 +38,14 @@ namespace HexUN.Framework
             }
         }
 
-        protected override void HexAwake() => UTOneHex.TryCreateSingleton((TSingleton)this, ref _instance, ref _instantiating);
+        protected override void HexAwake()
+        {
+            UTOneHex.TryCreateSingleton((TSingleton)this, ref _instance, ref _instantiating);
+            
+            if(_instance == this)
+            {
+                DontDestroyOnLoad(_instance);
+            }
+        }
     }
 }

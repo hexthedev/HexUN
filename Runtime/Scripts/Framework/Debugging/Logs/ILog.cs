@@ -26,21 +26,21 @@ namespace HexUN.Framework.Debugging
         /// <summary>
         /// Logs non-critical info
         /// </summary>
-        void Info(string category, string message);
+        void Info(string category, string message, bool forUser = false);
 
         /// <summary>
         /// Logs a warning that may need paying attention to
         /// </summary>
-        void Warn(string category, string message);
+        void Warn(string category, string message, bool forUser = false);
 
         /// <summary>
         /// Logs errors in the applicaiton that break functionality
         /// </summary>
-        void Error(string category, string message);
+        void Error(string category, string message, bool forUser = false);
 
         /// <summary>
         /// Logs errors in the applicaiton that break functionality. Appends standard exception message format at end
         /// </summary>
-        void Error(string category, string message, Exception e);
+        void Error(string category, string message, Exception e, bool forUser = false);
     }
 }

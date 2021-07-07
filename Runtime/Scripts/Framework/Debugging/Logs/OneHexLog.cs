@@ -37,7 +37,7 @@ namespace HexUN.Framework.Debugging
 
         #region API
         /// <inheritdoc />
-        public void Error(string category, string message)
+        public void Error(string category, string message, bool forUser = false)
         {
             string log = WriteLog(category, message);
             LogErrorAction(log);
@@ -45,7 +45,7 @@ namespace HexUN.Framework.Debugging
         }
 
         /// <inheritdoc />
-        public void Error(string category, string message, Exception e)
+        public void Error(string category, string message, Exception e, bool forUser = false)
         {
             string log = WriteLog(category, $"{message}\n Exception: {e.Message}\nStack Trace:\n {e.StackTrace}");
             LogErrorAction(log);
@@ -53,7 +53,7 @@ namespace HexUN.Framework.Debugging
         }
 
         /// <inheritdoc />
-        public void Info(string category, string message)
+        public void Info(string category, string message, bool forUser = false)
         {
             string log = WriteLog(category, message);
             LogInfoAction(log);
@@ -61,7 +61,7 @@ namespace HexUN.Framework.Debugging
         }
 
         /// <inheritdoc />
-        public void Warn(string category, string message)
+        public void Warn(string category, string message, bool forUser = false)
         {
             string log = WriteLog(category, message);
             LogWarnAction(log);

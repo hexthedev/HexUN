@@ -6,6 +6,13 @@
       "Namespace": "HexUN.Events",
       "MenuPath": "HexUN/Events",
       "EventTypeNamespace": "UnityEngine"
+    },
+    {
+      "Path": "Dependencies/HexUN/Runtime/Scripts/Events/Generated/Texture3D.event",
+      "Type": "Texture3D",
+      "Namespace": "HexUN.Events",
+      "MenuPath": "HexUN/Events",
+      "EventTypeNamespace": "UnityEngine"
     }
   ]
 }   
