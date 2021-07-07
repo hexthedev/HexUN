@@ -87,7 +87,10 @@ namespace HexUN.Framework
 
         private void DoResolves()
         {
+            if (ILog == null) ILog = OneHexLog.Instance;
             UTDependency.Resolve(ref ILog, out _log, this);
+
+            if (IAppControl == null) IAppControl = OneAppControl.Instance;
             UTDependency.Resolve(ref IAppControl, out _appControl, this);
         }
     }

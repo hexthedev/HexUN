@@ -11,7 +11,7 @@ namespace HexUN.Data
     public enum ECommonFolder : byte
     {
         /// <summary>
-        /// The ProjectName/Assets folder
+        /// The ProjectName/Assets folder.
         /// </summary>
         Assets = 0,
 

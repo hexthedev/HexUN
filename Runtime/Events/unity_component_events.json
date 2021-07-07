@@ -1,0 +1,11 @@
+{
+  "Tokens": [
+    {
+      "Path": "Dependencies/HexUN/Runtime/Scripts/Events/Generated/Texture2D.event",
+      "Type": "Texture2D",
+      "Namespace": "HexUN.Events",
+      "MenuPath": "HexUN/Events",
+      "EventTypeNamespace": "UnityEngine"
+    }
+  ]
+}   

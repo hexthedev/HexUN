@@ -71,7 +71,8 @@ namespace HexUN.Data
         }
 
         /// <summary>
-        /// Path to the persistent data path of the platform. 
+        /// Path to the persistent data path of the platform. Cannot be called during
+        /// Monobehaviour constructor and must be called in Start() or Awake()
         /// </summary>
         public static UnityPath PersistentDataPath
         {
