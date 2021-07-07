@@ -14,7 +14,7 @@ namespace HexUN.Framework
     /// For use in the Hex Framework. Provides application level dependencies
     /// such as logging, etc. Allows for configuration of these components. 
     /// </summary>
-    public class OneHexServices : AOneHexPersistent<OneHexServices, IHexServices>, IHexServices
+    public class OneHexServices : AOneHexPersistent<OneHexServices>
     {
         [SerializeField]
         [Tooltip("Prefab, instance or scriptable object that provides App Lifecycle Control functions")]
@@ -64,10 +64,9 @@ namespace HexUN.Framework
         #endregion
 
         private TService GetService<TService, TDefault>(ref TService expected)
-            where TDefault: AOneHexPersistent<TDefault, TService>, TService
-            where TService: class
+            where TDefault : AOneHexPersistent<TDefault>, TService
         {
-            if (expected == null) expected = AOneHexPersistent<TDefault, TService>.Instance;
+            if (expected == null) expected = AOneHexPersistent<TDefault>.Instance;
             return expected;
         }
 

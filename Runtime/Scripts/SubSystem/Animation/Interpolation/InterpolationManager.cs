@@ -2,23 +2,17 @@
 using System.Collections.Generic;
 
 using HexUN.Math;
-using HexUN.Behaviour;
 using UnityEngine;
+using HexUN.Framework;
 
 namespace HexUN.Animation
 {
-    public interface IInterpolationManager
-    {
-        public int GetUniqueId();
-        public IInterpolationToken<float[]> StartInterpolation(int id, float duration, params SInterpolation[] interpolations);
-    }
-
     /// <summary>
     /// Singleton that runs all interpolations that occur in the game. This class
     /// simply provides the numbers requested over time and events to manage the interpolations
     /// occurence. Start, Cancel, Etc. 
     /// </summary>
-    public class InterpolationManager : AOneHexPersistent<InterpolationManager, IInterpolationManager>, IInterpolationManager
+    public class InterpolationManager : AOneHexPersistent<InterpolationManager>
     {
         // id is just an iteration on an int for now. 
         private int _id = int.MinValue;

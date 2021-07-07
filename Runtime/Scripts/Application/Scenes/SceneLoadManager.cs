@@ -1,22 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using HexUN.Events;
-using HexUN.Behaviour;
 using UnityEngine;
+using HexUN.Framework;
 
 namespace HexUN.App
 {
-    public interface ISceneLoadManager
-    {
-        public void RegisterLoadedOrLoadingSceneToken(SceneToken token);
-        public void QueueTasks(params ASceneLoadTask[] tasks);
-    }
-
     /// <summary>
     /// Scene tracker is a singleton that tracks the loaded scenes and knows what needs unloading
     /// between scenes
     /// </summary>
-    public class SceneLoadManager : AOneHexPersistent<SceneLoadManager, ISceneLoadManager>, ISceneLoadManager
+    public class SceneLoadManager : AOneHexPersistent<SceneLoadManager>
     {
         [SerializeField]
         [Tooltip("This event is fired on awake so that any currenly loaded scenes can be registed using the RegisterLoadedOrLoadingSceneToken function. Normally used in conjunction with the SceneRegisterer so that play mode acts the same way as starting the app from the beginning")]

@@ -20,7 +20,7 @@ namespace HexUN.Framework.SharedResource
 
         private bool _isUpdatePushed = false;
 
-        private IHexServices instRef = null;
+        private OneHexServices instRef = null;
 
         #region Protected API
         /// <summary>
