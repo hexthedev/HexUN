@@ -1,6 +1,5 @@
 ﻿using HexUN.Framework.SharedResource;
 
-using System.Collections;
 using System.Collections.Generic;
 
 using UnityEngine;
@@ -8,21 +7,24 @@ using UnityEngine;
 namespace HexUN.Framework.Debugging
 {
     /// <summary>
-    /// Shared resource for cahching logs
+    /// Shared resource for caching logs
     /// </summary>
     [CreateAssetMenu(fileName = "RELogs", menuName = "HexUN/Framework/SharedResources/Logs")]
-    public class RELogs : ASOSharedResource
+    public class ReLogs : ASOSharedResource
     {
         [SerializeField]
         [Tooltip("The maximum number of logs that will be stored")]
         private int _max;
 
-        private Queue<string> _logs = new Queue<string>();
+        private Queue<SrLog> _logs = new Queue<SrLog>();
+
+        #region API
+        public IEnumerable<SrLog> Logs => _logs;
 
         /// <summary>
         /// Adds a log to the logs
         /// </summary>
-        public void AddLog(string log)
+        public void AddLog(SrLog log)
         {
             _logs.Enqueue(log);
 
@@ -36,5 +38,6 @@ namespace HexUN.Framework.Debugging
         {
             _logs.Clear();
         }
+        #endregion
     }
 }

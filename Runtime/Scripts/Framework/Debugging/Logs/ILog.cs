@@ -22,7 +22,6 @@ namespace HexUN.Framework.Debugging
         /// </summary>
         public Action<string> LogErrorAction { get; set; }
 
-
         /// <summary>
         /// Logs non-critical info
         /// </summary>

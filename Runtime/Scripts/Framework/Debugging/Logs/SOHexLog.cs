@@ -8,7 +8,7 @@ using UnityEngine;
 namespace HexUN.Framework.Debugging
 {
     [CreateAssetMenu(fileName = "HexLog", menuName = "HexUN/Services/HexLog")]
-    public class SOHexLog : ScriptableObject, ILog
+    public class SoHexLog : ScriptableObject, ILog
     {
         private const string cOpenBrack = "[";
         private const string cCloseBrack = "]";
