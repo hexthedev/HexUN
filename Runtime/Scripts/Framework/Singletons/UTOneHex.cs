@@ -57,6 +57,9 @@ namespace HexUN.Framework
                 return true;
             }
 
+#if !UNITY_EDITOR
+            return false;
+#endif
             /*
              * In Editor when not playing, we don't want to save singletons to the scene if they are used at
              * editor time. If the singleton is not present, it will be added to the scene but not saved.
@@ -92,7 +95,6 @@ namespace HexUN.Framework
 
             return true;
 #endif
-            return false;
         }
     }
 }
