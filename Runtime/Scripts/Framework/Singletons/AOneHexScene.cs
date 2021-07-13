@@ -27,7 +27,7 @@ namespace HexUN.Behaviour
 #if !UNITY_EDITOR
                 if (AppQuitting)
                 {
-                    Debug.LogWarning($"No {nameof(AOneHexPersistent<TSingleton>)} returned because application is quiting");
+                    Debug.LogWarning($"No {nameof(AOneHexScene<TSingleton>)} returned because application is quiting");
                     return null;
                 }
 #endif
