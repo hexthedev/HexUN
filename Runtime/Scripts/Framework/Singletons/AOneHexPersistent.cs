@@ -32,7 +32,12 @@ namespace HexUN.Framework
                 }
 #endif
                 if(UTOneHex.TryCreateSingleton(_instance, ref _instance, ref _instantiating))
-                    DontDestroyOnLoad(_instance);
+                {
+                    if (Application.isPlaying)
+                    {
+                        DontDestroyOnLoad(_instance);
+                    }
+                }
 
                 return _instance;
             }

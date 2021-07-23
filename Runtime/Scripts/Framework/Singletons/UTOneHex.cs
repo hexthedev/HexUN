@@ -67,11 +67,11 @@ namespace HexUN.Framework
              */
 #if UNITY_EDITOR
             string typeName = typeof(TSingleton).Name;
-            string[] assets = AssetDatabase.FindAssets($"{typeName}.asset");
+            string[] assets = AssetDatabase.FindAssets($"{typeName}");
 
             if (assets.Length == 0)
             {
-                Debug.LogWarning($"[{nameof(TSingleton)}] Unable to find prefab with name {typeName}");
+                Debug.LogWarning($"[{typeof(TSingleton).Name}] Unable to find prefab with name {typeName}");
                 return false;
             }
 
