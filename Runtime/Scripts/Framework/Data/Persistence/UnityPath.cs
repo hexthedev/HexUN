@@ -216,6 +216,13 @@ namespace HexUN.Data
 
         #region Public Static API
         /// <summary>
+        /// Converts a path created from the asset database path into a unity path.
+        /// Basically gets it's absolute path and then provides this as the unity path
+        /// </summary>
+        public static UnityPath FromAssetDatabasePath(string assetDatabasePath)
+            => ProjectPath.Path.InsertAtEnd(assetDatabasePath); 
+
+        /// <summary>
         /// UnityPaths can implicitly convert to PathStrings using the original path 
         /// </summary>
         /// <param name="path"></param>
