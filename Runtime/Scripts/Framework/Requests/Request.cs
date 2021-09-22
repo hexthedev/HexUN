@@ -34,11 +34,6 @@ namespace HexUN.Framework.Request
         public EState State { get; private set; } = EState.AwaitingClaim;
 
         /// <summary>
-        /// Id left by responder object when claiming the request
-        /// </summary>
-        public string Responder { get; private set; }
-
-        /// <summary>
         /// The object sent as the request
         /// </summary>
         public TReq RequestObject { get; private set; }
@@ -73,9 +68,9 @@ namespace HexUN.Framework.Request
 
         /// <summary>
         /// Claim the request. An object that claims a request is responsible for completeing the
-        /// request and called respond. Retursn false if the claim fails. 
+        /// request and called respond. Returns false if the claim fails. 
         /// </summary>
-        public bool TryClaim(object responderObject, string responderId)
+        public bool TryClaim(object responderObject)
         {
             if (IsClaimed) return false;
 
@@ -84,7 +79,6 @@ namespace HexUN.Framework.Request
                 if (_responderObject != null) return false;
 
                 _responderObject = responderObject;
-                Responder = responderId;
                 State = EState.AwaitingResponse;
                 return true;
             }
