@@ -1,8 +1,8 @@
-using HexUN.App;
-using HexUN.Framework.Debugging;
+using Hex.UN.Runtime.Application.Lifecycle;
+using Hex.UN.Runtime.Framework.Debugging.Logs;
 using HexCS.Core;
 
-namespace HexUN.Framework.Services
+namespace Hex.UN.Runtime.Framework.Services
 {
     public interface IHexServices
     {

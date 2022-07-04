@@ -1,9 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using HexCS.Core;
-using UnityEngine;
+﻿using HexCS.Core;
 
-namespace HexUN.Work
+namespace Hex.UN.Runtime.Framework.Work
 {
     /// <summary>
     /// A completion token provides an event subscriber that can be used to subscribe

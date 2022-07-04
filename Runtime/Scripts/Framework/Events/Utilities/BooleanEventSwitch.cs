@@ -1,8 +1,9 @@
-﻿using HexCS.Core;
+﻿using Hex.UN.Runtime.Framework.Events.Generated.Boolean.@event.Base.ScriptableObject;
+using HexCS.Core;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace HexUN.Events
+namespace Hex.UN.Runtime.Framework.Events.Utilities
 {
     /// <summary>
     /// Used to take in a boolean event and do a different void function if true or false

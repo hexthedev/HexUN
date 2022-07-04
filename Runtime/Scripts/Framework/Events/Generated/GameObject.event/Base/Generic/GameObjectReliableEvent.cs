@@ -1,9 +1,7 @@
-using UnityEngine;
-
-namespace HexUN.Events
+namespace Hex.UN.Runtime.Framework.Events.Generated.GameObject.@event.Base.Generic
 {
    [System.Serializable]
-   public class GameObjectReliableEvent : ReliableEvent<GameObject, GameObjectUnityEvent>
+   public class GameObjectReliableEvent : ReliableEvent<UnityEngine.GameObject, GameObjectUnityEvent>
    {
    }
 }

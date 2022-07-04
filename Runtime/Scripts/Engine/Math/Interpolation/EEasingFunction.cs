@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace HexUN.Math
+﻿namespace Hex.UN.Runtime.Engine.Math.Interpolation
 {
     /// <summary>
     /// Easing functions commonly using in interpolations. 

@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Reflection;
+using Hex.UN.Editor.Scripts.Elements._struct;
 using HexCS.Core;
-using HexUN.App;
 using UnityEditor;
 using UnityEngine;
 
-namespace HexUN.EditorElements
+namespace Hex.UN.Editor.Scripts.Elements.Examples
 { 
     /// <summary>
     /// Example InteractableList

@@ -1,10 +1,9 @@
-using UnityEngine;
 using UnityEngine.Events;
 
-namespace HexUN.Events
+namespace Hex.UN.Runtime.Framework.Events.Generated.Vector2.@event.Base.Generic
 {
    [System.Serializable]
-   public class Vector2UnityEvent : UnityEvent<Vector2>
+   public class Vector2UnityEvent : UnityEvent<UnityEngine.Vector2>
    {
    }
 }

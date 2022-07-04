@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HexUN.Utilities
+namespace Hex.UN.Runtime.Engine.Utilities.UsefulClasses
 {
     /// <summary>
     /// Holds a variable. This variable can be set externally.

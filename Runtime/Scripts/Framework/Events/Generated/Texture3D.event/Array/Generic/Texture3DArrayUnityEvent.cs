@@ -1,10 +1,9 @@
-using UnityEngine;
 using UnityEngine.Events;
 
-namespace HexUN.Events
+namespace Hex.UN.Runtime.Framework.Events.Generated.Texture3D.@event.Array.Generic
 {
    [System.Serializable]
-   public class Texture3DArrayUnityEvent : UnityEvent<Texture3D[]>
+   public class Texture3DArrayUnityEvent : UnityEvent<UnityEngine.Texture3D[]>
    {
    }
 }

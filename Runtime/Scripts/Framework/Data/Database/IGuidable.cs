@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HexUN.Data
+namespace Hex.UN.Runtime.Framework.Data.Database
 {
     public interface IGuidable
     {

@@ -1,11 +1,10 @@
+using Hex.UN.Runtime.Framework.Events.Generated.String.@event.Base.Generic;
 using UnityEngine;
-using UnityEngine.Events;
-using System;
 
-namespace HexUN.Events
+namespace Hex.UN.Runtime.Framework.Events.Generated.String.@event.Base.ScriptableObject
 {
    [AddComponentMenu("HexUN/Events/String/StringSoEventListener")]
-   public class StringSoEventListener : ScriptableObjectEventListener<String, StringSoEvent, StringUnityEvent>
+   public class StringSoEventListener : ScriptableObjectEventListener<string, StringSoEvent, StringUnityEvent>
    {
    }
 }

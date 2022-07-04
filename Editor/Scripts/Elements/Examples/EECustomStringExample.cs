@@ -1,7 +1,8 @@
-﻿using UnityEditor;
+﻿using Hex.UN.Editor.Scripts.Elements._struct;
+using UnityEditor;
 using UnityEngine;
 
-namespace HexUN.EditorElements
+namespace Hex.UN.Editor.Scripts.Elements.Examples
 { 
     /// <summary>
     /// Example InteractableList

@@ -1,9 +1,9 @@
 ﻿using UnityEditor;
 
-namespace HexUN.Debugging
+namespace Hex.UN.Editor.Scripts.Debugging
 {
     [CanEditMultipleObjects]
-    public abstract class ADevModeManagerEditor : Editor
+    public abstract class ADevModeManagerEditor : UnityEditor.Editor
     {
         private SerializedProperty _devmode;
         private SerializedProperty _devMonobehaviours;

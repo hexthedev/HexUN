@@ -1,13 +1,10 @@
-﻿using HexUN.Behaviour;
+﻿using System.Collections.Generic;
+using Hex.UN.Runtime.Framework.HexBehaviour;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Collections.Generic;
 
-#if UNITY_EDITOR
-using UnityEditor;
-#endif
-
-namespace HexUN.App
+namespace Hex.UN.Runtime.Application.Scenes
 {
     /// <summary>
     /// Holds the resources required by the scene and provides options on
@@ -51,7 +48,7 @@ namespace HexUN.App
 
             if (!_isActive && gameObject.activeInHierarchy)
             {
-                if (!Application.isPlaying)
+                if (!UnityEngine.Application.isPlaying)
                 {
                     InstantiateEditorResources();
                     _isActive = true;

@@ -1,4 +1,4 @@
-﻿namespace HexUN.Serialization
+﻿namespace Hex.UN.Runtime.Engine.Serialization.Json
 {
     /// <summary>
     /// Can be converted to and from Json

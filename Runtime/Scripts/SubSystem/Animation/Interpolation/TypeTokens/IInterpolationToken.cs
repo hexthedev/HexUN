@@ -1,6 +1,6 @@
 ﻿using HexCS.Core;
 
-namespace HexUN.Animation
+namespace Hex.UN.Runtime.SubSystem.Animation.Interpolation.TypeTokens
 {
     /// <summary>
     /// Obtained by something performing requesting an interpolation. Can be used to subscribe

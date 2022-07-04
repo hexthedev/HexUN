@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace HexUN.Physics2D
+namespace Hex.UN.Runtime.SubSystem.Physics2D._structs
 {
     /// <summary>
     /// Represents a force applied to an object

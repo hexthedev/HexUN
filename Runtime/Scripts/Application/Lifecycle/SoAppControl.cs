@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace HexUN.App
+namespace Hex.UN.Runtime.Application.Lifecycle
 {
     /// <summary>
     /// Exposes important application control unsing an interface
@@ -10,7 +10,7 @@ namespace HexUN.App
     {
         public void Quit()
         {
-            Application.Quit();
+            UnityEngine.Application.Quit();
 #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;
 #endif

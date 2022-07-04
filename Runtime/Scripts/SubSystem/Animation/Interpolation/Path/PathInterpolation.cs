@@ -1,9 +1,9 @@
-﻿using HexCS.Core;
-using HexUN.Math;
-using System;
-using System.Collections.Generic;
+﻿using System;
+using Hex.UN.Runtime.Engine.Math.Interpolation;
+using Hex.UN.Runtime.SubSystem.Animation.Interpolation.TypeTokens;
+using HexCS.Core;
 
-namespace HexUN.Animation
+namespace Hex.UN.Runtime.SubSystem.Animation.Interpolation.Path
 {
     /// <summary>
     /// Allows interpolating a sequence of T interpolation, and encasulates in a single InterpoationToken

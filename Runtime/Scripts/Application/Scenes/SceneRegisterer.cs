@@ -1,7 +1,7 @@
-﻿using HexUN.Behaviour;
+﻿using Hex.UN.Runtime.Framework.HexBehaviour;
 using UnityEngine;
 
-namespace HexUN.App
+namespace Hex.UN.Runtime.Application.Scenes
 {
     /// <summary>
     /// Simple Mono for registering a scene to the SceneLoadManager. Event should be used

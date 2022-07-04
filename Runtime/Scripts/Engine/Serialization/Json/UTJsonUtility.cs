@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace HexUN.Serialization
+namespace Hex.UN.Runtime.Engine.Serialization.Json
 {
     /// <summary>
     /// Static utilities for using UNities builtin json serialization

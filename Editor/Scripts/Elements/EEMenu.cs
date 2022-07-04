@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
+using Hex.UN.Editor.Scripts.Elements._abstract;
 using HexCS.Core;
-using HexCS.Data.Persistence;
 using UnityEditor;
 using UnityEngine;
 
-namespace HexUN.EditorElements
+namespace Hex.UN.Editor.Scripts.Elements
 {
     /// <summary>
     /// An interactable list where a type can be selected

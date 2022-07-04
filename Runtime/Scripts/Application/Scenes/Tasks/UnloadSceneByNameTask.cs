@@ -3,7 +3,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace HexUN.App
+namespace Hex.UN.Runtime.Application.Scenes.Tasks
 {
     /// <summary>
     /// Unloads a single scene by name

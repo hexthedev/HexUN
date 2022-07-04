@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace HexUN.Utilities
+namespace Hex.UN.Runtime.Engine.Utilities.StaticHelperClasses
 {
     /// <summary>
     /// Static helper for dealing with Unity Rect transforms. Mostly contains helper functions for

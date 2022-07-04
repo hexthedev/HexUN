@@ -1,8 +1,6 @@
-using UnityEngine;
 using UnityEngine.Events;
-using System;
 
-namespace HexUN.Events
+namespace Hex.UN.Runtime.Framework.Events.Generated.Object.@event.Array.Generic
 {
    [System.Serializable]
    public class ObjectArrayUnityEvent : UnityEvent<object[]>

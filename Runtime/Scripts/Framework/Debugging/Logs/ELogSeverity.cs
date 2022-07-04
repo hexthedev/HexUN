@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace HexUN.Framework.Debugging
+namespace Hex.UN.Runtime.Framework.Debugging.Logs
 {
     public enum ELogSeverity
     {

@@ -1,9 +1,6 @@
-﻿using HexCS.Core;
-using HexCS.Data.Persistence;
+﻿using System;
 
-using System;
-
-namespace HexUN.Data
+namespace Hex.UN.Runtime.Framework.Data.Persistence._enums
 {
     /// <summary>
     /// Enumeration containing label locations that map to common paths in unity projects

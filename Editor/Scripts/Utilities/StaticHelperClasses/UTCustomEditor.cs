@@ -1,7 +1,7 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-namespace HexUN.Edit
+namespace Hex.UN.Editor.Scripts.Utilities.StaticHelperClasses
 {
     public static class UTCustomEditor
     {

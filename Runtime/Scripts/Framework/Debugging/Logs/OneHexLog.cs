@@ -1,11 +1,9 @@
-﻿using HexUN.Behaviour;
-
-using System;
+﻿using System;
 using System.Text;
-
+using Hex.UN.Runtime.Framework.Singletons;
 using UnityEngine;
 
-namespace HexUN.Framework.Debugging
+namespace Hex.UN.Runtime.Framework.Debugging.Logs
 {
     /// <summary>
     /// Logs to the unity logger and to a shared resource object if avalable

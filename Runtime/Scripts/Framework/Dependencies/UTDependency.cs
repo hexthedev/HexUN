@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace HexUN.Deps
+namespace Hex.UN.Runtime.Framework.Dependencies
 {
     /// <summary>
     /// Contains useful functions for managing dependencies in Unity

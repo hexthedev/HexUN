@@ -4,7 +4,7 @@ using System.Text;
 using HexCS.Core;
 using HexCS.Data.Generation.CSharp;
 
-namespace HexUN.Events
+namespace Hex.UN.Editor.Scripts.Events.EventGenerator
 {
     /// <summary>
     /// COntains all utility function used to genrated events

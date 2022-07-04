@@ -1,12 +1,10 @@
-using HexUN.App;
-
-#if UNITY_EDITOR
+using Hex.UN.Runtime.Application.Lifecycle._abstract;
 using UnityEditor;
+using UnityEngine;
+#if UNITY_EDITOR
 #endif
 
-using UnityEngine;
-
-namespace HexUN.Framework
+namespace Hex.UN.Runtime.Framework.Singletons
 {
     public static class UTOneHex
     {
@@ -24,7 +22,7 @@ namespace HexUN.Framework
              * When the application is playing, the required behaviour is to spawn the singleton object in the scene and 
              * deal with it's destroy properties. This is safe, because when the game stops playing the scene is reset.
              */
-            if (Application.isPlaying)
+            if (UnityEngine.Application.isPlaying)
             {
                 // if no instance created, can create
                 if (instanceVar == null)

@@ -1,9 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using HexUN.Math;
-using UnityEngine;
+﻿using Hex.UN.Runtime.Engine.Math.Interpolation;
 
-namespace HexUN.Animation
+namespace Hex.UN.Runtime.SubSystem.Animation.Interpolation
 {
     /// <summary>
     /// The core arguments that define an interpolation

@@ -1,7 +1,7 @@
-﻿using UnityEditor;
-using HexUN.Debugging;
+﻿using Hex.UN.Runtime.Framework.Debugging;
+using UnityEditor;
 
-namespace HexUN.Debugging
+namespace Hex.UN.Editor.Scripts.Debugging
 {
     [CustomEditor(typeof(DevModeManager))]
     [CanEditMultipleObjects]

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace HexUN.Edit
+namespace Hex.UN.Editor.Scripts.Utilities.StaticHelperClasses
 {
     /// <summary>
     /// Super general utilites to do with everything Unity Editor

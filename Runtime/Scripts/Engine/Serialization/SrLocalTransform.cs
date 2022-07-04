@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-namespace HexUN.Engine
+namespace Hex.UN.Runtime.Engine.Serialization
 {
     /// <summary>
     /// A json serializable local transform

@@ -1,9 +1,9 @@
-using HexUN.Events;
+using Hex.UN.Runtime.Framework.Events;
 
-namespace HexUN.Physics2D
+namespace Hex.UN.Runtime.SubSystem.Physics2D._events.SForce2D.@event.Base.Generic
 {
    [System.Serializable]
-   public class SForce2DReliableEvent : ReliableEvent<SForce2D, SForce2DUnityEvent>
+   public class SForce2DReliableEvent : ReliableEvent<_structs.SForce2D, SForce2DUnityEvent>
    {
    }
 }

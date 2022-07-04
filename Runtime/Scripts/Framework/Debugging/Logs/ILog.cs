@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HexUN.Framework.Debugging
+namespace Hex.UN.Runtime.Framework.Debugging.Logs
 {
     /// <summary>
     /// Capable of logging messages

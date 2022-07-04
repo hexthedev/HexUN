@@ -1,12 +1,11 @@
-﻿using HexUN.Behaviour;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace HexUN.Debugging
+namespace Hex.UN.Runtime.Framework.Debugging
 {
     /// <summary>
     /// Handles putting gameobjects in dev mode
     /// </summary>
-    public class DevModeManager : HexBehaviour
+    public class DevModeManager : HexBehaviour.HexBehaviour
     {
         [SerializeField]
         [Tooltip("Show gameobject in dev mode")]

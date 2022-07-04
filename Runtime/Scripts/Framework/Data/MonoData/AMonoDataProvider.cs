@@ -1,8 +1,6 @@
 ﻿using HexCS.Core;
-using HexUN.Behaviour;
-using UnityEngine;
 
-namespace HexUN.Data
+namespace Hex.UN.Runtime.Framework.Data.MonoData
 {
     /// <summary>
     /// <para>DataProviders classes that provide data through an event and allow
@@ -16,7 +14,7 @@ namespace HexUN.Data
     /// one type of data. This means that all listenrs need to do a cast and check when interpreting data</para>
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public abstract class AMonoDataProvider : HexBehaviour
+    public abstract class AMonoDataProvider : HexBehaviour.HexBehaviour
     {
         protected Event<object> _onProvideData = new Event<object>();
 

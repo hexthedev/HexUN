@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace HexUN.Data
+namespace Hex.UN.Runtime.Framework.Data
 {
     /// <summary>
     /// Light weight data struct for Transform data

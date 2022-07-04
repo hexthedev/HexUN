@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace HexUN.Framework.Services
+namespace Hex.UN.Runtime.Framework.Services
 {
     /// <summary>
     /// SOWrapper for common service functions. Acts as a way to do

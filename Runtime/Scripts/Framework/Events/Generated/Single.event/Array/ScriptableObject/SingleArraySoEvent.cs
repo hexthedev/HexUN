@@ -1,10 +1,9 @@
 using UnityEngine;
-using System;
 
-namespace HexUN.Events
+namespace Hex.UN.Runtime.Framework.Events.Generated.Single.@event.Array.ScriptableObject
 {
    [CreateAssetMenu(fileName = "SingleArraySoEvent", menuName = "HexUN/Events/SingleArray")]
-   public class SingleArraySoEvent : ScriptableObjectEvent<Single[]>
+   public class SingleArraySoEvent : ScriptableObjectEvent<float[]>
    {
    }
 }

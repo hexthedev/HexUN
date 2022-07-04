@@ -1,9 +1,7 @@
-using System;
-
-namespace HexUN.Events
+namespace Hex.UN.Runtime.Framework.Events.Generated.Boolean.@event.Base.Generic
 {
    [System.Serializable]
-   public class BooleanReliableEvent : ReliableEvent<Boolean, BooleanUnityEvent>
+   public class BooleanReliableEvent : ReliableEvent<bool, BooleanUnityEvent>
    {
    }
 }

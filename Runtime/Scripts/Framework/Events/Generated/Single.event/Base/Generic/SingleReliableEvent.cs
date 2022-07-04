@@ -1,9 +1,7 @@
-using System;
-
-namespace HexUN.Events
+namespace Hex.UN.Runtime.Framework.Events.Generated.Single.@event.Base.Generic
 {
    [System.Serializable]
-   public class SingleReliableEvent : ReliableEvent<Single, SingleUnityEvent>
+   public class SingleReliableEvent : ReliableEvent<float, SingleUnityEvent>
    {
    }
 }

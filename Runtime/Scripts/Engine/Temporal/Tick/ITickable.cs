@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace HexUN.Temporal
+﻿namespace Hex.UN.Runtime.Engine.Temporal.Tick
 {
     /// <summary>
     /// This class can be ticked witha float delta representing tick proportion, 

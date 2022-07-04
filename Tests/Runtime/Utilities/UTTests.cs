@@ -1,11 +1,10 @@
-#if UNITY_EDITOR
-using UnityEditor;
-#endif
 
+using Hex.UN.Runtime.Framework.Services;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.TestTools;
 
-namespace HexUN.Framework.Testing
+namespace Hex.UN.Tests.Runtime.Utilities
 {
     public static class UTTests
     {

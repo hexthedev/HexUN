@@ -1,6 +1,6 @@
 ﻿using HexCS.Core;
 
-namespace HexUN.Events
+namespace Hex.UN.Editor.Scripts.Events.EventGenerator
 {
     public class EventGenerationArgs
     {

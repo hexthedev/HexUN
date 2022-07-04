@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace HexUN.Physics3D
+namespace Hex.UN.Runtime.SubSystem.Physics3D.Rigidbody
 {
     /// <summary>
     /// Good way to pause rigidbody
@@ -10,12 +10,12 @@ namespace HexUN.Physics3D
     {
         public bool IsRunning { get; private set; } = true;
 
-        private Rigidbody _Body;
+        private UnityEngine.Rigidbody _Body;
         private Vector3 _SavedVelocity;
         private Vector3 _SavedAngularVelocity;
 
         #region API
-        public RigidbodyPauser(Rigidbody Body)
+        public RigidbodyPauser(UnityEngine.Rigidbody Body)
         {
             _Body = Body;
         }

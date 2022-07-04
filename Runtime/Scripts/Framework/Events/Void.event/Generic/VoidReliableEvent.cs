@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using Event = HexCS.Core.Event;
 
-namespace HexUN.Events
+namespace Hex.UN.Runtime.Framework.Events.Void.@event.Generic
 {
    [System.Serializable]
    public class VoidReliableEvent : IEvent

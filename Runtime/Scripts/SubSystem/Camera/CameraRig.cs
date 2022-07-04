@@ -1,8 +1,8 @@
-﻿using HexUN.Behaviour;
+﻿using Hex.UN.Runtime.Framework.Singletons;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace RoboArena
+namespace Hex.UN.Runtime.SubSystem.Camera
 {
     /// <summary>
     /// Automatically takes control of the main camera on start. When Destoryed, puts the camera back in it's own scene.
@@ -11,12 +11,12 @@ namespace RoboArena
     {
         private const string cCameraSceneName = "CameraResource";
         
-        private Camera _managedCam;
+        private UnityEngine.Camera _managedCam;
         private Scene _cameraScene;
 
         private void Start()
         {
-            _managedCam = Camera.main;
+            _managedCam = UnityEngine.Camera.main;
 
             bool isCameraSceneCreated = false;
             for(int i = 0; i<SceneManager.sceneCount; i++)

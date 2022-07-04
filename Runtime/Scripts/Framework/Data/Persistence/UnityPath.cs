@@ -1,7 +1,6 @@
 ﻿using HexCS.Core;
-using UnityEngine;
 
-namespace HexUN.Data
+namespace Hex.UN.Runtime.Framework.Data.Persistence
 {
     /// <summary>
     /// Class that holds a path and eases path manipualtion to work with Unity APIs.
@@ -65,7 +64,7 @@ namespace HexUN.Data
         {
             get
             {
-                if (_assetsPath == null) _assetsPath = Application.dataPath;
+                if (_assetsPath == null) _assetsPath = UnityEngine.Application.dataPath;
                 return _assetsPath;
             }
         }
@@ -78,7 +77,7 @@ namespace HexUN.Data
         {
             get
             {
-                if (_persistentDataPath == null) _persistentDataPath = Application.persistentDataPath;
+                if (_persistentDataPath == null) _persistentDataPath = UnityEngine.Application.persistentDataPath;
                 return _persistentDataPath;
             }
         }

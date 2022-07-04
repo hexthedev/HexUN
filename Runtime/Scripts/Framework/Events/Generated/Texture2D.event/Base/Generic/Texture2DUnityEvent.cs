@@ -1,10 +1,9 @@
-using UnityEngine;
 using UnityEngine.Events;
 
-namespace HexUN.Events
+namespace Hex.UN.Runtime.Framework.Events.Generated.Texture2D.@event.Base.Generic
 {
    [System.Serializable]
-   public class Texture2DUnityEvent : UnityEvent<Texture2D>
+   public class Texture2DUnityEvent : UnityEvent<UnityEngine.Texture2D>
    {
    }
 }

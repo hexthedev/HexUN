@@ -1,11 +1,8 @@
-using HexUN.Data;
-
-using System;
 using System.Linq;
-
+using Hex.UN.Runtime.Framework.Data.Persistence;
 using UnityEngine;
 
-namespace HexUN.Engine.Utilities
+namespace Hex.UN.Runtime.Engine.Utilities.StaticHelperClasses
 {
     /// <summary>
     /// Utiltiies and extension methods for dealing with AssetBundles

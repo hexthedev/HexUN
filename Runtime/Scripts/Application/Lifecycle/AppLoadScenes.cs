@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace HexUN.App
+namespace Hex.UN.Runtime.Application.Lifecycle
 {
     [CreateAssetMenu(fileName = "AppLoadScenes", menuName = "HexUN/App/AppLoadScenes") ]
     public class AppLoadScenes : ScriptableObject

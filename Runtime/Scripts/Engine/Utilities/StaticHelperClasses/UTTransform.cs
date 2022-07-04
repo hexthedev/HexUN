@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-
 using UnityEngine;
 
-namespace HexUN.Engine
+namespace Hex.UN.Runtime.Engine.Utilities.StaticHelperClasses
 {
     /// <summary>
     /// Useful helper classes for transforms

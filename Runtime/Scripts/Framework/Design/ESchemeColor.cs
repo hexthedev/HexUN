@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace HexUN.Design
+﻿namespace Hex.UN.Runtime.Framework.Design
 {
     /// <summary>
     /// The color to pull from a color scheme

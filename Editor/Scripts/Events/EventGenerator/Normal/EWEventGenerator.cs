@@ -1,11 +1,12 @@
 using System;
+using Hex.UN.Editor.Scripts.Elements;
+using Hex.UN.Editor.Scripts.Elements._struct;
+using Hex.UN.Runtime.Framework.Design;
 using HexCS.Core;
-using HexUN.Design;
-using HexUN.EditorElements;
 using UnityEditor;
 using UnityEngine;
 
-namespace HexUN.Events
+namespace Hex.UN.Editor.Scripts.Events.EventGenerator.Normal
 {
     public class EWEventGenerator : EditorWindow
     {

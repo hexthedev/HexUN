@@ -1,10 +1,9 @@
 using UnityEngine;
-using System;
 
-namespace HexUN.Events
+namespace Hex.UN.Runtime.Framework.Events.Generated.String.@event.Base.ScriptableObject
 {
    [CreateAssetMenu(fileName = "StringSoEvent", menuName = "HexUN/Events/String")]
-   public class StringSoEvent : ScriptableObjectEvent<String>
+   public class StringSoEvent : ScriptableObjectEvent<string>
    {
    }
 }

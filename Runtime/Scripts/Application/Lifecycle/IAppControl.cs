@@ -1,4 +1,4 @@
-namespace HexUN.App
+namespace Hex.UN.Runtime.Application.Lifecycle
 {
     /// <summary>
     /// Interface for application levle control requirements in a HexService

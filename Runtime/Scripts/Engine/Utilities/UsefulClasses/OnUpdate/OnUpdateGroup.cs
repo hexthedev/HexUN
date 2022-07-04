@@ -1,10 +1,10 @@
-﻿using HexCS.Core;
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using HexCS.Core;
 
-namespace HexUN.Utilities
+namespace Hex.UN.Runtime.Engine.Utilities.UsefulClasses.OnUpdate
 {
     /// <summary>
     /// A list of update variables that automatically listens to the update of each variable and emits an event when one variable is updated.

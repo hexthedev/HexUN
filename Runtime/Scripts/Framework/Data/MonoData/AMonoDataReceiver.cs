@@ -1,8 +1,4 @@
-﻿using HexCS.Core;
-using HexUN.Behaviour;
-using UnityEngine;
-
-namespace HexUN.Data
+﻿namespace Hex.UN.Runtime.Framework.Data.MonoData
 {
     /// <summary>
     /// <para>
@@ -12,7 +8,7 @@ namespace HexUN.Data
     /// incoming data
     /// </para>
     /// </summary>
-    public abstract class AMonoDataReciever : HexBehaviour
+    public abstract class AMonoDataReciever : HexBehaviour.HexBehaviour
     {
         protected override void HexAwake()
         {

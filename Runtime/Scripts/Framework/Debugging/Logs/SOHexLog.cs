@@ -1,11 +1,8 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Text;
-
 using UnityEngine;
 
-namespace HexUN.Framework.Debugging
+namespace Hex.UN.Runtime.Framework.Debugging.Logs
 {
     [CreateAssetMenu(fileName = "HexLog", menuName = "HexUN/Services/HexLog")]
     public class SoHexLog : ScriptableObject, ILog

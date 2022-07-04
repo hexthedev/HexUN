@@ -1,8 +1,6 @@
 ﻿using HexCS.Core;
 
-using System;
-
-namespace HexUN.Framework.SharedResource
+namespace Hex.UN.Runtime.Framework.SharedResource
 {
     /// <summary>
     /// A resource that is shared between multiple classes. Updates

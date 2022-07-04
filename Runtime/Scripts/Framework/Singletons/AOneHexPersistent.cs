@@ -1,8 +1,6 @@
-﻿using HexUN.App;
-using UnityEditor;
-using UnityEngine;
+﻿using Hex.UN.Runtime.Application.Lifecycle._abstract;
 
-namespace HexUN.Framework
+namespace Hex.UN.Runtime.Framework.Singletons
 {
     /// <summary>
     /// Implementation of Singleton for MonBehavious that insures only a single instance
@@ -33,7 +31,7 @@ namespace HexUN.Framework
 #endif
                 if(UTOneHex.TryCreateSingleton(_instance, ref _instance, ref _instantiating))
                 {
-                    if (Application.isPlaying)
+                    if (UnityEngine.Application.isPlaying)
                     {
                         DontDestroyOnLoad(_instance);
                     }

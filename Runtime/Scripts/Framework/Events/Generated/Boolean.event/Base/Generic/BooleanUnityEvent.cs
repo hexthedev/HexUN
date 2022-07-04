@@ -1,11 +1,9 @@
-using UnityEngine;
 using UnityEngine.Events;
-using System;
 
-namespace HexUN.Events
+namespace Hex.UN.Runtime.Framework.Events.Generated.Boolean.@event.Base.Generic
 {
    [System.Serializable]
-   public class BooleanUnityEvent : UnityEvent<Boolean>
+   public class BooleanUnityEvent : UnityEvent<bool>
    {
    }
 }

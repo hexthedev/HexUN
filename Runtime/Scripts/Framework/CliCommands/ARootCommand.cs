@@ -1,37 +1,40 @@
 ﻿using System.Text;
 
-public abstract class ARootCommand : ACliCommand
+namespace Hex.UN.Runtime.Framework.CliCommands
 {
-    public override string Name { get; set; } = "Root Command";
-    public override string Description { get; set; } = "lists of available commands";
-
-    public override string DoCommand(string[] args)
+    public abstract class ARootCommand : ACliCommand
     {
-        if(args == null || args.Length == 0)
-            return string.Empty;
+        public override string Name { get; set; } = "Root Command";
+        public override string Description { get; set; } = "lists of available commands";
 
-        if (args[0] == "help")
+        public override string DoCommand(string[] args)
         {
-            StringBuilder sb = new StringBuilder();
+            if(args == null || args.Length == 0)
+                return string.Empty;
 
-            PrintHelp(this, 0, sb);
-            
-            void PrintHelp(ACliCommand command, int depth, StringBuilder sb)
+            if (args[0] == "help")
             {
-                for (int i = 0; i < depth; i++)
-                    sb.Append('-');
-                sb.Append($" {command.Name}: {command.Description}\n");
+                StringBuilder sb = new StringBuilder();
 
-                if (command.Subcommands != null)
+                PrintHelp(this, 0, sb);
+            
+                void PrintHelp(ACliCommand command, int depth, StringBuilder sb)
                 {
-                    foreach (ACliCommand subcommand in command.Subcommands)
-                        PrintHelp(subcommand, depth+1, sb);
+                    for (int i = 0; i < depth; i++)
+                        sb.Append('-');
+                    sb.Append($" {command.Name}: {command.Description}\n");
+
+                    if (command.Subcommands != null)
+                    {
+                        foreach (ACliCommand subcommand in command.Subcommands)
+                            PrintHelp(subcommand, depth+1, sb);
+                    }
                 }
+
+                return sb.ToString();
             }
 
-            return sb.ToString();
+            return string.Empty;
         }
-
-        return string.Empty;
     }
 }

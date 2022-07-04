@@ -1,8 +1,8 @@
-﻿using NUnit.Framework;
+﻿using Hex.UN.Runtime.Engine.Math.Interpolation;
 using HexCS.Core;
-using HexUN.Math;
+using NUnit.Framework;
 
-namespace HexCSTests.Mathematics
+namespace Hex.UN.Tests.Editor.Mathematics.Interpolation
 {
     [TestFixture]
     public class InterpolationTests
@@ -11,7 +11,7 @@ namespace HexCSTests.Mathematics
         public void Works()
         {
             // Arrange
-            Interpolation interp = new Interpolation(1, 2, 2, EEasingFunction.Linear);
+            Runtime.Engine.Math.Interpolation.Interpolation interp = new Runtime.Engine.Math.Interpolation.Interpolation(1, 2, 2, EEasingFunction.Linear);
 
             // Act
             float t0 = interp.Interpolate(0);

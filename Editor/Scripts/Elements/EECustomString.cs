@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+using Hex.UN.Editor.Scripts.Elements._abstract;
+using Hex.UN.Editor.Scripts.Elements._struct;
 using UnityEditor;
 using UnityEngine;
 
-namespace HexUN.EditorElements
+namespace Hex.UN.Editor.Scripts.Elements
 {
     /// <summary>
     /// A string whos values is either a custom value or a generated value

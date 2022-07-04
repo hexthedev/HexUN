@@ -1,11 +1,8 @@
-﻿using HexCS.Core;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using HexCS.Core;
 
-namespace HexUN.Utilities 
+namespace Hex.UN.Runtime.Engine.Utilities.UsefulClasses.OnUpdate 
 {
     /// <summary>
     /// Invokes on update whenenver the list is modified. i.e. Add, remove, set, etc. 

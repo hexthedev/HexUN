@@ -1,9 +1,6 @@
-﻿using HexUN.App;
-using HexUN.Framework;
+﻿using Hex.UN.Runtime.Application.Lifecycle._abstract;
 
-using UnityEngine;
-
-namespace HexUN.Behaviour
+namespace Hex.UN.Runtime.Framework.Singletons
 {
     /// <summary>
     /// Implementation of Singleton for MonBehavious that insures only a single instance

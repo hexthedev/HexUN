@@ -2,7 +2,7 @@
 using UnityEngine;
 using Event = HexCS.Core.Event;
 
-namespace HexUN.Animation
+namespace Hex.UN.Runtime.SubSystem.Animation.Interpolation.TypeTokens
 {
     public class Vector3InterpolationToken : IInterpolationToken<Vector3>
     {

@@ -1,9 +1,7 @@
-using System;
-
-namespace HexUN.Events
+namespace Hex.UN.Runtime.Framework.Events.Generated.Int32.@event.Base.Generic
 {
    [System.Serializable]
-   public class Int32ReliableEvent : ReliableEvent<Int32, Int32UnityEvent>
+   public class Int32ReliableEvent : ReliableEvent<int, Int32UnityEvent>
    {
    }
 }

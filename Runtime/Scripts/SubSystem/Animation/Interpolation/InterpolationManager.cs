@@ -1,11 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-
-using HexUN.Math;
+using Hex.UN.Runtime.Framework.Singletons;
+using Hex.UN.Runtime.SubSystem.Animation.Interpolation.TypeTokens;
 using UnityEngine;
-using HexUN.Framework;
 
-namespace HexUN.Animation
+namespace Hex.UN.Runtime.SubSystem.Animation.Interpolation
 {
     /// <summary>
     /// Singleton that runs all interpolations that occur in the game. This class
@@ -66,11 +65,11 @@ namespace HexUN.Animation
             if (args.Interpolations.Length == 0) yield break;
 
             int interCount = args.Interpolations.Length;
-            Interpolation[] interpolations = new Interpolation[interCount];
+            Engine.Math.Interpolation.Interpolation[] interpolations = new Engine.Math.Interpolation.Interpolation[interCount];
 
             for(int i = 0; i< interCount; i++)
             {
-                interpolations[i] = new Interpolation(
+                interpolations[i] = new Engine.Math.Interpolation.Interpolation(
                     args.Interpolations[i].Start,
                     args.Interpolations[i].End,
                     args.Duration,

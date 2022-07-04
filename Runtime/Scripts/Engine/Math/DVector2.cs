@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using HexCS.Core;
-using UnityEngine;
 
-namespace HexUN.Math
+namespace Hex.UN.Runtime.Engine.Math
 {
     /// <summary>
     /// Serializable version of a DVector2

@@ -1,11 +1,9 @@
-using UnityEngine;
 using UnityEngine.Events;
-using System;
 
-namespace HexUN.Events
+namespace Hex.UN.Runtime.Framework.Events.Generated.Int32.@event.Base.Generic
 {
    [System.Serializable]
-   public class Int32UnityEvent : UnityEvent<Int32>
+   public class Int32UnityEvent : UnityEvent<int>
    {
    }
 }

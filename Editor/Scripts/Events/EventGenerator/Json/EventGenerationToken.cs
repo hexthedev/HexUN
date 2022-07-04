@@ -1,7 +1,6 @@
 ﻿using System;
-using UnityEngine;
 
-namespace HexUN.Events
+namespace Hex.UN.Editor.Scripts.Events.EventGenerator.Json
 {
     /// <summary>
     /// Represents a single event being generated

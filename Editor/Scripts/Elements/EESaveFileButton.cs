@@ -1,11 +1,12 @@
 ﻿using System;
-using UnityEngine;
-using UnityEditor;
-using HexCS.Data.Persistence;
-using HexUN.Data;
+using Hex.UN.Editor.Scripts.Elements._abstract;
+using Hex.UN.Editor.Scripts.Elements._struct;
+using Hex.UN.Runtime.Framework.Data.Persistence;
 using HexCS.Core;
+using UnityEditor;
+using UnityEngine;
 
-namespace HexUN.EditorElements
+namespace Hex.UN.Editor.Scripts.Elements
 {
     /// <summary>
     /// Editor Element containing render functions for buttons

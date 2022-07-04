@@ -1,6 +1,6 @@
 ﻿using HexCS.Core;
 
-namespace HexUN.Utilities
+namespace Hex.UN.Runtime.Engine.Utilities.UsefulClasses.OnUpdate
 {
     public interface IUpdateable<T>
     {

@@ -1,9 +1,9 @@
 using UnityEngine;
 
-namespace HexUN.Events
+namespace Hex.UN.Runtime.Framework.Events.Generated.Texture3D.@event.Array.ScriptableObject
 {
    [CreateAssetMenu(fileName = "Texture3DArraySoEvent", menuName = "HexUN/Events/Texture3DArray")]
-   public class Texture3DArraySoEvent : ScriptableObjectEvent<Texture3D[]>
+   public class Texture3DArraySoEvent : ScriptableObjectEvent<UnityEngine.Texture3D[]>
    {
    }
 }

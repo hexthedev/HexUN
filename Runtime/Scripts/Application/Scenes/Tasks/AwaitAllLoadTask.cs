@@ -2,7 +2,7 @@
 using System.Linq;
 using UnityEngine;
 
-namespace HexUN.App
+namespace Hex.UN.Runtime.Application.Scenes.Tasks
 {
     /// <summary>
     /// Await all previous load and unload tasks before continuing

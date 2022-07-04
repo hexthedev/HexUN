@@ -1,11 +1,9 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-
 using UnityEngine;
 
-namespace HexUN.Engine.Utilities
+namespace Hex.UN.Runtime.Engine.Utilities.StaticHelperClasses
 {
     public static class UTGameObject
     {
@@ -64,7 +62,7 @@ namespace HexUN.Engine.Utilities
         public static void DestroyAllChildren_EditorSafe(this GameObject go, Predicate<GameObject> unless = null)
         {
 #if UNITY_EDITOR
-            if (Application.isPlaying) go.DestroyAllChildren(unless);
+            if (UnityEngine.Application.isPlaying) go.DestroyAllChildren(unless);
             else go.DestroyAllChildrenImmediate(unless);
 #else
             go.DestroyAllChildren();
@@ -74,7 +72,7 @@ namespace HexUN.Engine.Utilities
         public static void Destroy_EditorSafe(this GameObject go)
         {
 #if UNITY_EDITOR
-            if (Application.isPlaying) UnityEngine.Object.Destroy(go);
+            if (UnityEngine.Application.isPlaying) UnityEngine.Object.Destroy(go);
             else UnityEngine.Object.DestroyImmediate(go);
 #else
             UnityEngine.Object.Destroy(go);

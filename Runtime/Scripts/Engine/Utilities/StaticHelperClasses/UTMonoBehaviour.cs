@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace HexUN.Engine.Utilities 
+namespace Hex.UN.Runtime.Engine.Utilities.StaticHelperClasses 
 { 
     /// <summary>
     /// Utilities pertaining to mono behaviour type objects

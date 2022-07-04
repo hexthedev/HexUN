@@ -1,7 +1,7 @@
 ﻿using HexCS.Core;
 using HexCS.Data.Generation.CSharp;
 
-namespace HexUN.Utilities
+namespace Hex.UN.Runtime.Engine.Utilities.StaticHelperClasses.CodeGeneration
 {
     public static class UTStructGen
     {

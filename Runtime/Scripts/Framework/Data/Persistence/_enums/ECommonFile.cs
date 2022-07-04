@@ -1,4 +1,4 @@
-﻿namespace HexUN.Data
+﻿namespace Hex.UN.Runtime.Framework.Data.Persistence._enums
 {
     /// <summary>
     /// Used to organize files of various common types. 

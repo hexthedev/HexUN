@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace HexUN.EditorElements
+﻿namespace Hex.UN.Editor.Scripts.Elements._struct
 {
     /// <summary>
     /// Contains Readable Name and id. Used for named UI elements that also need

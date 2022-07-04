@@ -1,11 +1,11 @@
-using UnityEngine;
 using HexCS.Core;
+using UnityEngine;
 using Event = HexCS.Core.Event;
 
-namespace HexUN.Events
+namespace Hex.UN.Runtime.Framework.Events.Void.@event.ScriptableObject
 {
    [CreateAssetMenu(fileName = "VoidEvent", menuName = "HexUN/Events/Void")]
-   public class VoidSoEvent : ScriptableObject
+   public class VoidSoEvent : UnityEngine.ScriptableObject
     {
         private Event _event = new Event();
 

@@ -1,10 +1,8 @@
-﻿using HexUN.Framework.SharedResource;
-
-using System.Collections.Generic;
-
+﻿using System.Collections.Generic;
+using Hex.UN.Runtime.Framework.SharedResource;
 using UnityEngine;
 
-namespace HexUN.Framework.Debugging
+namespace Hex.UN.Runtime.Framework.Debugging.Logs
 {
     /// <summary>
     /// Shared resource for caching logs

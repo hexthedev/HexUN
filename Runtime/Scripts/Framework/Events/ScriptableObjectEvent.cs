@@ -1,8 +1,7 @@
-﻿using System;
-using HexCS.Core;
+﻿using HexCS.Core;
 using UnityEngine;
 
-namespace HexUN.Events
+namespace Hex.UN.Runtime.Framework.Events
 {
     /// <summary>
     /// An event defined by a scriptable object

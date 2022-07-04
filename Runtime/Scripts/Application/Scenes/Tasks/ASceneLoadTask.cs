@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace HexUN.App
+namespace Hex.UN.Runtime.Application.Scenes.Tasks
 {
     /// <summary>
     /// A task that can be provided to the scene tracker

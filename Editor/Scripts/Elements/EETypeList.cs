@@ -2,10 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using UnityEditor;
+using Hex.UN.Editor.Scripts.Elements._struct;
 using HexCS.Core;
+using UnityEditor;
 
-namespace HexUN.EditorElements
+namespace Hex.UN.Editor.Scripts.Elements
 {
     /// <summary>
     /// An interactable list where a type can be selected

@@ -1,11 +1,10 @@
 ﻿using System;
+using Hex.UN.Runtime.Framework.Data.Persistence._enums;
 using HexCS.Core;
-using HexCS.Data.Persistence;
-using HexUN.Data;
 using UnityEditor;
 using UnityEngine;
 
-namespace HexUN.Events
+namespace Hex.UN.Editor.Scripts.Events.EventGenerator.Json
 {
     public static class EMEventGeneratorJson
     {

@@ -1,10 +1,7 @@
 ﻿using System;
+using Hex.UN.Runtime.Framework.Services;
 
-using HexUN.Framework.Services;
-using HexUN.Behaviour;
-using HexUN.Framework;
-
-namespace HexUN.Parallel
+namespace Hex.UN.Runtime.Engine.Parallel.Actions
 {
     /// <summary>
     /// When perform is called, registers action to be performed ASAP on main thread

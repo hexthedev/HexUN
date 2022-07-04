@@ -1,13 +1,6 @@
-using HexUN.Behaviour;
-
-using UnityEngine.SceneManagement;
 using UnityEngine;
 
-#if UNITY_EDITOR
-using UnityEditor.SceneManagement;
-#endif
-
-namespace HexUN.Framework.Behaviour
+namespace Hex.UN.Runtime.Framework.HexBehaviour
 {
     [ExecuteAlways]
     public abstract class SceneBehaviour : HexBehaviour

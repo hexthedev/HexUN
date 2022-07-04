@@ -1,11 +1,10 @@
+using Hex.UN.Runtime.Framework.Events.Generated.Single.@event.Array.Generic;
 using UnityEngine;
-using UnityEngine.Events;
-using System;
 
-namespace HexUN.Events
+namespace Hex.UN.Runtime.Framework.Events.Generated.Single.@event.Array.ScriptableObject
 {
    [AddComponentMenu("HexUN/Events/SingleArray/SingleArraySoEventListener")]
-   public class SingleArraySoEventListener : ScriptableObjectEventListener<Single[], SingleArraySoEvent, SingleArrayUnityEvent>
+   public class SingleArraySoEventListener : ScriptableObjectEventListener<float[], SingleArraySoEvent, SingleArrayUnityEvent>
    {
    }
 }

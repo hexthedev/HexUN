@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEngine;
 
-namespace HexUN.Data
+namespace Hex.UN.Runtime.Framework.Data.Database
 {
     /// <summary>
     /// Datastructure used to identify object references with a Guid, then resolve those references later

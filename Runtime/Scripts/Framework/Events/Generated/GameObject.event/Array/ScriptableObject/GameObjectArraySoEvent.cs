@@ -1,9 +1,9 @@
 using UnityEngine;
 
-namespace HexUN.Events
+namespace Hex.UN.Runtime.Framework.Events.Generated.GameObject.@event.Array.ScriptableObject
 {
    [CreateAssetMenu(fileName = "GameObjectArraySoEvent", menuName = "HexUN/Events/GameObjectArray")]
-   public class GameObjectArraySoEvent : ScriptableObjectEvent<GameObject[]>
+   public class GameObjectArraySoEvent : ScriptableObjectEvent<UnityEngine.GameObject[]>
    {
    }
 }

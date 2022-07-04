@@ -1,9 +1,8 @@
-﻿using System.Collections;
-using HexUN.Behaviour;
+﻿using Hex.UN.Runtime.Application.Scenes.Tasks;
+using Hex.UN.Runtime.Framework.HexBehaviour;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-namespace HexUN.App
+namespace Hex.UN.Runtime.Application.Scenes
 {
     /// <summary>
     /// Loads scenes

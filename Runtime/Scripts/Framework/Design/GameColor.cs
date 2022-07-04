@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace HexUN.Design
+namespace Hex.UN.Runtime.Framework.Design
 {
     /// <summary>
     /// Provides game color infomation, which groups a color

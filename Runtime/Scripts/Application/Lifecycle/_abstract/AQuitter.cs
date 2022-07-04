@@ -1,6 +1,6 @@
-﻿using HexUN.Behaviour;
+﻿using Hex.UN.Runtime.Framework.HexBehaviour;
 
-namespace HexUN.App
+namespace Hex.UN.Runtime.Application.Lifecycle._abstract
 {
     /// <summary>
     /// Base class that handles tracking of the quitting event on a MonBehviour.

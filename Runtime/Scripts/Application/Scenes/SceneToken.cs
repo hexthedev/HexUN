@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HexUN.App
+namespace Hex.UN.Runtime.Application.Scenes
 {
     /// <summary>
     /// Represents a scene in the scene tracker

@@ -1,10 +1,8 @@
+using HexCS.Core;
 using UnityEngine;
 using UnityEngine.Events;
-using System;
-using HexUN.Behaviour;
-using HexCS.Core;
 
-namespace HexUN.Events
+namespace Hex.UN.Runtime.Framework.Events.Void.@event.ScriptableObject
 {
    [AddComponentMenu("HexUN/Events/Void/VoidSoEventListener")]
    public class VoidSoEventListener : MonoBehaviour

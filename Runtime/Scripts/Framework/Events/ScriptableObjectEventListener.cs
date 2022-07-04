@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace HexUN.Events
+namespace Hex.UN.Runtime.Framework.Events
 {
     /// <summary>
     /// Can be added as a component to any game object ot listen to events. 

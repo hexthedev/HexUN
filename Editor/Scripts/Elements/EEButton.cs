@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using Hex.UN.Editor.Scripts.Elements._abstract;
+using Hex.UN.Editor.Scripts.Elements._struct;
 using UnityEditor;
+using UnityEngine;
 
-namespace HexUN.EditorElements
+namespace Hex.UN.Editor.Scripts.Elements
 {
     /// <summary>
     /// Editor Element containing render functions for buttons

@@ -1,10 +1,9 @@
-using UnityEngine;
 using UnityEngine.Events;
 
-namespace HexUN.Events
+namespace Hex.UN.Runtime.Framework.Events.Generated.GameObject.@event.Array.Generic
 {
    [System.Serializable]
-   public class GameObjectArrayUnityEvent : UnityEvent<GameObject[]>
+   public class GameObjectArrayUnityEvent : UnityEvent<UnityEngine.GameObject[]>
    {
    }
 }

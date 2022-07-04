@@ -1,11 +1,9 @@
 using System;
 using System.Collections;
 using System.Threading.Tasks;
-using System.Timers;
-
 using UnityEngine;
 
-namespace HexUN.Framework.Request
+namespace Hex.UN.Runtime.Framework.Requests
 {
     /// <summary>
     /// Implements a request object that requires a reponder to populate

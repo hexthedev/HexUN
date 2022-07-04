@@ -1,9 +1,8 @@
-﻿
-using HexUN.Math;
+﻿using Hex.UN.Runtime.Engine.Math;
 using UnityEditor;
 using UnityEngine;
 
-namespace HexUN.Math
+namespace Hex.UN.Editor.Scripts.Math
 {
     [CustomPropertyDrawer(typeof(DVector2))]
     public class DVector2Property : PropertyDrawer

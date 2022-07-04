@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace HexUN.Framework.SharedResource
+namespace Hex.UN.Runtime.Framework.SharedResource
 {
     public class SharedResourceClearer : MonoBehaviour
     {

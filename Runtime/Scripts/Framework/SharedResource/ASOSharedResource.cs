@@ -1,11 +1,8 @@
-﻿using HexCS.Core;
-
-using HexUN.Framework.Services;
-using HexUN.Behaviour;
-
+﻿using Hex.UN.Runtime.Framework.Services;
+using HexCS.Core;
 using UnityEngine;
 
-namespace HexUN.Framework.SharedResource
+namespace Hex.UN.Runtime.Framework.SharedResource
 {
     /// <summary>
     /// This is a resource that is shared between multiple classes. Classes can

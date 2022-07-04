@@ -1,10 +1,6 @@
 ﻿using HexCS.Core;
 
-using HexUN.Framework.Behaviour;
-
-using UnityEngine;
-
-namespace HexUN.Behaviour
+namespace Hex.UN.Runtime.Framework.HexBehaviour
 {
     /// <summary>
     /// Adds useful functionality for managing interface dependencies of objects.

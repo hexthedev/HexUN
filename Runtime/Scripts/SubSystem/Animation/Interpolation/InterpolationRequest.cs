@@ -1,6 +1,7 @@
-﻿using HexCS.Core;
+﻿using Hex.UN.Runtime.SubSystem.Animation.Interpolation.TypeTokens;
+using HexCS.Core;
 
-namespace HexUN.Animation
+namespace Hex.UN.Runtime.SubSystem.Animation.Interpolation
 {
     /// <summary>
     /// Token used to track an instance of an interpolation

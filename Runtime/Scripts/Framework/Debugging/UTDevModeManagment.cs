@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace HexUN.Debugging
+namespace Hex.UN.Runtime.Framework.Debugging
 {
     public static class UTDevModeManagment
     {

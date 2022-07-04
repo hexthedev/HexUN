@@ -1,10 +1,10 @@
+using Hex.UN.Runtime.Framework.Events.Generated.Texture3D.@event.Array.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
-namespace HexUN.Events
+namespace Hex.UN.Runtime.Framework.Events.Generated.Texture3D.@event.Array.ScriptableObject
 {
    [AddComponentMenu("HexUN/Events/Texture3DArray/Texture3DArraySoEventListener")]
-   public class Texture3DArraySoEventListener : ScriptableObjectEventListener<Texture3D[], Texture3DArraySoEvent, Texture3DArrayUnityEvent>
+   public class Texture3DArraySoEventListener : ScriptableObjectEventListener<UnityEngine.Texture3D[], Texture3DArraySoEvent, Texture3DArrayUnityEvent>
    {
    }
 }

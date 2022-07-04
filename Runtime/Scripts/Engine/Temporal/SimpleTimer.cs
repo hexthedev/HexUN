@@ -1,11 +1,9 @@
-﻿using HexUN.Behaviour;
-using UnityEngine;
+﻿using Hex.UN.Runtime.Framework.Services;
 using HexCS.Core;
+using UnityEngine;
 using Event = HexCS.Core.Event;
-using HexUN.Framework.Services;
-using HexUN.Framework;
 
-namespace HexUN.Temporal
+namespace Hex.UN.Runtime.Engine.Temporal
 {
     /// <summary>
     /// Invokes an OnTickEvent on an interval.

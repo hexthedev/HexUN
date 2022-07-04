@@ -1,6 +1,6 @@
 ﻿using HexCS.Core;
 
-namespace HexUN.Animation
+namespace Hex.UN.Runtime.SubSystem.Animation.Interpolation.TypeTokens
 {
     public interface IInterpolationTracker
     {

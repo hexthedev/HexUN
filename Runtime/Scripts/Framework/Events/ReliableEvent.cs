@@ -3,7 +3,7 @@ using HexCS.Core;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace HexUN.Events
+namespace Hex.UN.Runtime.Framework.Events
 {
     [System.Serializable]
     public class ReliableEvent<TType, TUnityEvent> : IEvent<TType>

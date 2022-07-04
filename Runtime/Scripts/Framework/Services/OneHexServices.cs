@@ -1,14 +1,12 @@
-﻿using HexUN.Deps;
-using HexUN.Framework.Debugging;
-using HexUN.Framework.Services;
-using HexUN.Behaviour;
-
-using UnityEngine;
-using HexUN.App;
+﻿using Hex.UN.Runtime.Application.Lifecycle;
+using Hex.UN.Runtime.Framework.Debugging.Logs;
+using Hex.UN.Runtime.Framework.Dependencies;
+using Hex.UN.Runtime.Framework.Singletons;
 using HexCS.Core;
+using UnityEngine;
 using Event = HexCS.Core.Event;
 
-namespace HexUN.Framework
+namespace Hex.UN.Runtime.Framework.Services
 {
     /// <summary>
     /// For use in the Hex Framework. Provides application level dependencies

@@ -1,10 +1,9 @@
-﻿using HexUN.Math;
-using HexUN.Data;
-using System.Collections;
-using System.Collections.Generic;
+﻿using Hex.UN.Runtime.Engine.Math.Interpolation;
+using Hex.UN.Runtime.SubSystem.Animation.Interpolation.Path;
+using Hex.UN.Runtime.SubSystem.Animation.Interpolation.TypeTokens;
 using UnityEngine;
 
-namespace HexUN.Animation
+namespace Hex.UN.Runtime.SubSystem.Animation.Interpolation
 {
     public static class UTInterpolation
     {

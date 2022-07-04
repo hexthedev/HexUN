@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace HexUN.Data
+namespace Hex.UN.Runtime.Framework.Data.Database
 {
     /// <summary>
     /// Contains Guids and can have guids added

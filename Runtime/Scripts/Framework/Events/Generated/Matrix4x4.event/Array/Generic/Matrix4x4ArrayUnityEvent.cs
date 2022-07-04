@@ -1,10 +1,9 @@
-using UnityEngine;
 using UnityEngine.Events;
 
-namespace HexUN.Events
+namespace Hex.UN.Runtime.Framework.Events.Generated.Matrix4x4.@event.Array.Generic
 {
    [System.Serializable]
-   public class Matrix4x4ArrayUnityEvent : UnityEvent<Matrix4x4[]>
+   public class Matrix4x4ArrayUnityEvent : UnityEvent<UnityEngine.Matrix4x4[]>
    {
    }
 }

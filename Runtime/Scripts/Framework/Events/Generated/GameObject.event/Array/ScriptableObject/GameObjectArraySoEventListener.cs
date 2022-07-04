@@ -1,10 +1,10 @@
+using Hex.UN.Runtime.Framework.Events.Generated.GameObject.@event.Array.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
-namespace HexUN.Events
+namespace Hex.UN.Runtime.Framework.Events.Generated.GameObject.@event.Array.ScriptableObject
 {
    [AddComponentMenu("HexUN/Events/GameObjectArray/GameObjectArraySoEventListener")]
-   public class GameObjectArraySoEventListener : ScriptableObjectEventListener<GameObject[], GameObjectArraySoEvent, GameObjectArrayUnityEvent>
+   public class GameObjectArraySoEventListener : ScriptableObjectEventListener<UnityEngine.GameObject[], GameObjectArraySoEvent, GameObjectArrayUnityEvent>
    {
    }
 }

@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using HexUN.Events;
+using Hex.UN.Runtime.Application.Scenes.Tasks;
+using Hex.UN.Runtime.Framework.Events.Void.@event.Generic;
+using Hex.UN.Runtime.Framework.Singletons;
 using UnityEngine;
-using HexUN.Framework;
 
-namespace HexUN.App
+namespace Hex.UN.Runtime.Application.Scenes
 {
     /// <summary>
     /// Scene tracker is a singleton that tracks the loaded scenes and knows what needs unloading

@@ -1,4 +1,6 @@
-namespace HexUN.Data
+using Hex.UN.Runtime.Framework.Data.Persistence._enums;
+
+namespace Hex.UN.Runtime.Framework.Data.Persistence
 {
     /// <summary>
     /// Manages path to a central folder used to store configuration files.

@@ -1,11 +1,9 @@
+using Hex.UN.Runtime.Application.Lifecycle;
+using Hex.UN.Runtime.Framework.Debugging.Logs;
 using HexCS.Core;
-
-using HexUN.App;
-using HexUN.Framework.Debugging;
-
 using UnityEngine;
 
-namespace HexUN.Framework.Services
+namespace Hex.UN.Runtime.Framework.Services
 {
     [CreateAssetMenu(fileName = "HexServices", menuName = "HexUN/Services/HexServices")]
     public class SoHexServices : ScriptableObject, IHexServices

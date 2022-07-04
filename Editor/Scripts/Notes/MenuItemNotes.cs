@@ -1,7 +1,6 @@
-﻿using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace HexUN.Notes
+namespace Hex.UN.Editor.Scripts.Notes
 {
     public class MenuItemNotes : MonoBehaviour
     {

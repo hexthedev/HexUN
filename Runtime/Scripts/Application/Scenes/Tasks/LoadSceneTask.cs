@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace HexUN.App
+namespace Hex.UN.Runtime.Application.Scenes.Tasks
 {
     /// <summary>
     /// Task to load a scene async

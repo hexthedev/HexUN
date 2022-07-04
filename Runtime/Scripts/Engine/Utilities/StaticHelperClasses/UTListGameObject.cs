@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using UnityEngine;
-
 using Object = UnityEngine.Object;
 
-namespace HexUN.Utilities
+namespace Hex.UN.Runtime.Engine.Utilities.StaticHelperClasses
 {
     /// <summary>
     /// Utilities for lists of GameObjects

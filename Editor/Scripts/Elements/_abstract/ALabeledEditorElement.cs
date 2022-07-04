@@ -1,8 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Hex.UN.Editor.Scripts.Elements._struct;
 using UnityEngine;
 
-namespace HexUN.EditorElements
+namespace Hex.UN.Editor.Scripts.Elements._abstract
 {
     /// <summary>
     /// An editor element with a label that is rendered as a GUIContent

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace HexUN
+namespace Hex.UN.Runtime.Engine.Utilities.UsefulMonos
 {
     public class Rotator : MonoBehaviour
     {

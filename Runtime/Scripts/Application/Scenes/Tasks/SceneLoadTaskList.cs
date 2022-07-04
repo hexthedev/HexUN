@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace HexUN.App
+namespace Hex.UN.Runtime.Application.Scenes.Tasks
 {
     /// <summary>
     /// List of tasks executed in order by the SceneLoadManager

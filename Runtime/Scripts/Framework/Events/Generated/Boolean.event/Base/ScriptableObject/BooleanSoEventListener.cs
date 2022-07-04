@@ -1,11 +1,10 @@
+using Hex.UN.Runtime.Framework.Events.Generated.Boolean.@event.Base.Generic;
 using UnityEngine;
-using UnityEngine.Events;
-using System;
 
-namespace HexUN.Events
+namespace Hex.UN.Runtime.Framework.Events.Generated.Boolean.@event.Base.ScriptableObject
 {
    [AddComponentMenu("HexUN/Events/Boolean/BooleanSoEventListener")]
-   public class BooleanSoEventListener : ScriptableObjectEventListener<Boolean, BooleanSoEvent, BooleanUnityEvent>
+   public class BooleanSoEventListener : ScriptableObjectEventListener<bool, BooleanSoEvent, BooleanUnityEvent>
    {
    }
 }

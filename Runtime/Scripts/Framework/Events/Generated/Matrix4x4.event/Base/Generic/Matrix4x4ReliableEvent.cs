@@ -1,9 +1,7 @@
-using UnityEngine;
-
-namespace HexUN.Events
+namespace Hex.UN.Runtime.Framework.Events.Generated.Matrix4x4.@event.Base.Generic
 {
    [System.Serializable]
-   public class Matrix4x4ReliableEvent : ReliableEvent<Matrix4x4, Matrix4x4UnityEvent>
+   public class Matrix4x4ReliableEvent : ReliableEvent<UnityEngine.Matrix4x4, Matrix4x4UnityEvent>
    {
    }
 }

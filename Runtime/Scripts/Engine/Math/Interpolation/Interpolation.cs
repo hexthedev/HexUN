@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace HexUN.Math
+namespace Hex.UN.Runtime.Engine.Math.Interpolation
 {
     /// <summary>
     /// Interpolation is the act of using an easing function to find a value between y0 and y1

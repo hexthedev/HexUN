@@ -1,10 +1,12 @@
 using System.Security.Cryptography;
 using System.Text;
+using Hex.UN.Editor.Scripts.Elements;
+using Hex.UN.Editor.Scripts.Elements._struct;
+using Hex.UN.Runtime.Framework.Data.Persistence;
 using HexCS.Data.Generation.CSharp;
-using HexUN.EditorElements;
 using UnityEditor;
 
-namespace HexUN.Data
+namespace Hex.UN.Editor.Scripts.Data.Encryption
 {
     public class EWKeyProviderAesGenerator : EditorWindow
     {

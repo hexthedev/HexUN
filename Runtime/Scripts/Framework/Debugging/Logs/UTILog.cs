@@ -1,4 +1,4 @@
-﻿namespace HexUN.Framework.Debugging
+﻿namespace Hex.UN.Runtime.Framework.Debugging.Logs
 {
     /// <summary>
     /// Useful functions that operate on ILog

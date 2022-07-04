@@ -1,12 +1,9 @@
-﻿using UnityEngine;
-using HexUN.Data;
-using System;
-
-#if UNITY_EDITOR
+﻿using System;
+using Hex.UN.Runtime.Framework.Data.Persistence;
 using UnityEditor;
-#endif
+using UnityEngine;
 
-namespace HexUN.Utilities
+namespace Hex.UN.Runtime.Engine.Utilities.StaticHelperClasses
 {
     public static class UTScriptableObject
     {

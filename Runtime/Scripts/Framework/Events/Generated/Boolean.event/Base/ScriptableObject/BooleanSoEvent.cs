@@ -1,10 +1,9 @@
 using UnityEngine;
-using System;
 
-namespace HexUN.Events
+namespace Hex.UN.Runtime.Framework.Events.Generated.Boolean.@event.Base.ScriptableObject
 {
    [CreateAssetMenu(fileName = "BooleanSoEvent", menuName = "HexUN/Events/Boolean")]
-   public class BooleanSoEvent : ScriptableObjectEvent<Boolean>
+   public class BooleanSoEvent : ScriptableObjectEvent<bool>
    {
    }
 }

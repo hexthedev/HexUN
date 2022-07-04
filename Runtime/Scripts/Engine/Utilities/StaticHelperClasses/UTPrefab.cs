@@ -1,14 +1,9 @@
-using System.Collections;
 using System.Collections.Generic;
-
-#if UNITY_EDITOR
 using UnityEditor;
 using UnityEditor.SceneManagement;
-#endif
-
 using UnityEngine;
 
-namespace HexUN.Engine.Utilities
+namespace Hex.UN.Runtime.Engine.Utilities.StaticHelperClasses
 {
     public class UTPrefab
     {

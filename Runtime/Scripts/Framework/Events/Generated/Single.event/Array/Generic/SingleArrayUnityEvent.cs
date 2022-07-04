@@ -1,11 +1,9 @@
-using UnityEngine;
 using UnityEngine.Events;
-using System;
 
-namespace HexUN.Events
+namespace Hex.UN.Runtime.Framework.Events.Generated.Single.@event.Array.Generic
 {
    [System.Serializable]
-   public class SingleArrayUnityEvent : UnityEvent<Single[]>
+   public class SingleArrayUnityEvent : UnityEvent<float[]>
    {
    }
 }
