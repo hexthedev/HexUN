@@ -7,7 +7,12 @@ namespace Hex.UN.Runtime.SubSystem.Grid.Square
         public Cell<T>[,] Cells;
         public DiscreteVector2 Size => Cells.Size();
         public T this[int x, int y] => Cells[x, y].Data;
-        public T this[DiscreteVector2 coord] => Cells.At(coord).Data;
+
+        public T this[DiscreteVector2 coord]
+        {
+            get=> Cells.At(coord).Data;
+            set => Cells.At(coord).Data = value;
+        } 
 
         public Grid() : this(new DiscreteVector2()) { }
 
