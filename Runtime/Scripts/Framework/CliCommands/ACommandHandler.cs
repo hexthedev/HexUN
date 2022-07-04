@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using Vector2 = UnityEngine.Vector2;
 
-public abstract class CommandHandler : MonoBehaviour
+public abstract class ACommandHandler : MonoBehaviour
 {
     [SerializeField] TMP_InputField _input;
     private List<string> _history = new List<string>();
@@ -43,7 +43,10 @@ public abstract class CommandHandler : MonoBehaviour
     {
         string[] parts = command.Split(' ');
 
-        _rootCommand.Parse(parts);
+        string log = _rootCommand.Parse(parts);
+        
+        if(log != string.Empty)
+            LogAndPrint(log);
         
         if(_history.Count == 0 || _history[^1] != command)
             AddToHistory(command);
