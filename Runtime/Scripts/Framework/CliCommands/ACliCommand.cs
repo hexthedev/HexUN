@@ -22,6 +22,9 @@ namespace Hex.UN.Runtime.Framework.CliCommands
                 return DoCommand(command);
         }
 
-        public abstract string DoCommand(string[] args);
+        public virtual string DoCommand(string[] args)
+        {
+            return string.Empty;
+        }
     }
 }
