@@ -26,5 +26,13 @@ namespace Hex.UN.Runtime.Framework.CliCommands
         {
             return string.Empty;
         }
+
+        public void AddCommand(ACliCommand command)
+        {
+            if (Subcommands != null)
+                Subcommands = Subcommands.Add(command);
+            else
+                Subcommands = new[] {command};
+        } 
     }
 }
