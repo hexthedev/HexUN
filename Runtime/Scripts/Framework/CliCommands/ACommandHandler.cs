@@ -53,8 +53,12 @@ namespace Hex.UN.Runtime.Framework.CliCommands
                 AddToHistory(command);
         
             _input.SetTextWithoutNotify("");
-            EventSystem.current.SetSelectedGameObject(null);
-            EventSystem.current.SetSelectedGameObject(_input.gameObject);
+
+            if (!EventSystem.current.alreadySelecting)
+            {
+                EventSystem.current.SetSelectedGameObject(null);
+                EventSystem.current.SetSelectedGameObject(_input.gameObject);
+            }
         }
 
         public void LogAndPrint(string newLog)

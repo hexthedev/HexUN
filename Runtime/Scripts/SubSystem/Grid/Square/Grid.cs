@@ -1,7 +1,13 @@
-﻿using HexCS.Core;
+﻿using System;
+using System.Collections.Generic;
+using HexCS.Core;
 
 namespace Hex.UN.Runtime.SubSystem.Grid.Square
 {
+    /// <summary>
+    /// Gris follow [col, row] coordinates
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class Grid<T>
     {
         public Cell<T>[,] Cells;
@@ -33,17 +39,38 @@ namespace Hex.UN.Runtime.SubSystem.Grid.Square
             CreateGridOfSize(size);
             oldGrid.CopyWhatFits(Cells);
         }
-
+     
+        public IEnumerable<Cell<T>> EnumerateLine(DiscreteVector2 start, DiscreteVector2 step)
+        {
+            if (step.X == 0 && step.Y == 0)
+                yield return Cells.At(start);
+            else if (step.X == 0)
+            {
+                for (int y = start.Y; y < Cells.GetLength(1); y += step.Y)
+                    yield return Cells[start.X, y];
+            }
+            else if (step.Y == 0)
+            {
+                for (int x = start.X; x < Cells.GetLength(0); x += step.X)
+                    yield return Cells[x, start.Y];
+            }
+            else
+            {
+                for (int x = start.X; x < Cells.GetLength(0); x += step.X)
+                for (int y = start.Y; y < Cells.GetLength(1); y += step.Y)
+                        yield return Cells[x, y];
+            }
+        }
 
         private void CreateGridOfSize(DiscreteVector2 size)
         {
             Cells = new Cell<T>[size.X, size.Y];
             
-            for (int x = 0; x < Cells.GetLength(0); x++)
+            for (int col = 0; col < Cells.GetLength(0); col++)
             {
-                for (int y = 0; y < Cells.GetLength(1); y++)
+                for (int row = 0; row < Cells.GetLength(1); row++)
                 {
-                    Cells[x, y] = new Cell<T>(new DiscreteVector2(x, y), default);
+                    Cells[col, row] = new Cell<T>(new DiscreteVector2(col, row), default);
                 }
             }
 
