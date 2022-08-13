@@ -9,6 +9,7 @@ namespace Hex.UN.Runtime.SubSystem.Grid.Square
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public class Grid<T>
+        where T: new()
     {
         public Cell<T>[,] Cells;
         public DiscreteVector2 Size => Cells.Size();
@@ -44,21 +45,16 @@ namespace Hex.UN.Runtime.SubSystem.Grid.Square
         {
             if (step.X == 0 && step.Y == 0)
                 yield return Cells.At(start);
-            else if (step.X == 0)
+
+            DiscreteVector2 cur = start;
+
+            int lengthX = Cells.GetLength(0);
+            int lengthY = Cells.GetLength(1);
+
+            while (cur.X >= 0 && cur.X < lengthX && cur.Y >= 0 && cur.Y < lengthY)
             {
-                for (int y = start.Y; y < Cells.GetLength(1); y += step.Y)
-                    yield return Cells[start.X, y];
-            }
-            else if (step.Y == 0)
-            {
-                for (int x = start.X; x < Cells.GetLength(0); x += step.X)
-                    yield return Cells[x, start.Y];
-            }
-            else
-            {
-                for (int x = start.X; x < Cells.GetLength(0); x += step.X)
-                for (int y = start.Y; y < Cells.GetLength(1); y += step.Y)
-                        yield return Cells[x, y];
+                yield return Cells[cur.X, cur.Y];
+                cur += step;
             }
         }
 
@@ -70,7 +66,7 @@ namespace Hex.UN.Runtime.SubSystem.Grid.Square
             {
                 for (int row = 0; row < Cells.GetLength(1); row++)
                 {
-                    Cells[col, row] = new Cell<T>(new DiscreteVector2(col, row), default);
+                    Cells[col, row] = new Cell<T>(new DiscreteVector2(col, row), new T());
                 }
             }
 
