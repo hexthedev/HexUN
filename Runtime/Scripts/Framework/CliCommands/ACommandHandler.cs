@@ -1,11 +1,56 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
+using UniRx;
+using UniRx.Triggers;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 namespace Hex.UN.Runtime.Framework.CliCommands
 {
+    public class ObservableTMPInputFieldOnEndEditTrigger : ObservableTriggerBase
+    {
+        private TMP_InputField _input;
+        
+        Subject<string> OnEndEdit = new Subject<string>();
+
+        private void OnEnable()
+        {
+            _input = GetComponent<TMP_InputField>();
+
+            if (_input == null)
+                Debug.LogError($"Failed to observe TMP_InputField, no TMP_InputField present on the GameObject");
+
+            _input.onEndEdit.AddListener(s => OnEndEdit.OnNext(s));
+        }
+
+        public IObservable<string> OnEndEditAsObservable()
+        {
+            return OnEndEdit ??= new Subject<string>();
+        }
+
+        protected override void RaiseOnCompletedOnDestroy()
+        {
+            OnEndEdit.OnCompleted();
+        }
+    }
+
+    public static class ObservableTMPInputFieldOnEndEditExtensions
+    {
+        public static IObservable<string> ObserveOnEndEdit(this TMP_InputField target)
+        {
+            ObservableTMPInputFieldOnEndEditTrigger trigger =
+                target.gameObject.GetComponent<ObservableTMPInputFieldOnEndEditTrigger>();
+
+            if (trigger == null)
+                trigger = target.gameObject.AddComponent<ObservableTMPInputFieldOnEndEditTrigger>();
+
+            return trigger.OnEndEditAsObservable();
+        }
+    }
+    
+    
     public abstract class ACommandHandler : MonoBehaviour
     {
         [SerializeField] TMP_InputField _input;
@@ -18,6 +63,7 @@ namespace Hex.UN.Runtime.Framework.CliCommands
         [TextArea] public string _onStartCommands;
 
         private ACliCommand _rootCommand;
+
         public ACliCommand RootCommand
         {
             get => _rootCommand;
@@ -29,15 +75,18 @@ namespace Hex.UN.Runtime.Framework.CliCommands
                 _historyPointer = 0;
             }
         }
-
+        
         // Start is called before the first frame update
         void Start()
         {
-            EventSystem.current.SetSelectedGameObject(_input.gameObject); 
-            _input.onEndEdit.AddListener(HandleCommand);
+            EventSystem.current.SetSelectedGameObject(_input.gameObject);
 
             foreach (string s in _onStartCommands.Split("\n"))
                 HandleCommand(s);
+            
+            _input
+                .ObserveOnEndEdit()
+                .Subscribe(HandleCommand);
         }
 
         public void HandleCommand(string command)
