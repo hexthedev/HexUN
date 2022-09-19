@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
 
+
 namespace Hex.UN.Runtime.Engine.Utilities.StaticHelperClasses
 {
     public static class UTGameObject
@@ -23,18 +24,18 @@ namespace Hex.UN.Runtime.Engine.Utilities.StaticHelperClasses
         /// </summary>
         public static void DestroyAllChildren(this GameObject go, Predicate<GameObject> unless = null)
         {
-            if(unless == null)
+            if (unless == null)
             {
-                foreach (Transform child in UTTransform.GetAllChildren(go.transform)) UnityEngine.Object.Destroy(child.gameObject);
+                foreach (Transform child in UTTransform.GetAllChildren(go.transform))
+                    UnityEngine.Object.Destroy(child.gameObject);
             }
             else
             {
                 foreach (Transform child in UTTransform.GetAllChildren(go.transform))
                 {
-                    if(!unless(child.gameObject)) UnityEngine.Object.Destroy(child.gameObject);
+                    if (!unless(child.gameObject)) UnityEngine.Object.Destroy(child.gameObject);
                 }
             }
-
         }
 
         /// <summary>
@@ -44,7 +45,8 @@ namespace Hex.UN.Runtime.Engine.Utilities.StaticHelperClasses
         {
             if (unless == null)
             {
-                foreach (Transform child in UTTransform.GetAllChildren(go.transform)) UnityEngine.Object.DestroyImmediate(child.gameObject);
+                foreach (Transform child in UTTransform.GetAllChildren(go.transform))
+                    UnityEngine.Object.DestroyImmediate(child.gameObject);
             }
             else
             {
@@ -71,12 +73,15 @@ namespace Hex.UN.Runtime.Engine.Utilities.StaticHelperClasses
 
         public static void Destroy_EditorSafe(this GameObject go)
         {
+            if (go != null)
+            {
 #if UNITY_EDITOR
-            if (UnityEngine.Application.isPlaying) UnityEngine.Object.Destroy(go);
-            else UnityEngine.Object.DestroyImmediate(go);
+                if (UnityEngine.Application.isPlaying) UnityEngine.Object.Destroy(go);
+                else UnityEngine.Object.DestroyImmediate(go);
 #else
-            UnityEngine.Object.Destroy(go);
+                UnityEngine.Object.Destroy(go);
 #endif
+            }
         }
 
         /// <summary>
@@ -103,7 +108,7 @@ namespace Hex.UN.Runtime.Engine.Utilities.StaticHelperClasses
         /// Instantiates a gameobject that is a child of this game object 
         /// </summary>
         public static T AddChild<T>(this GameObject target, string name)
-            where T:MonoBehaviour
+            where T : MonoBehaviour
         {
             GameObject obj = new GameObject(name);
             obj.transform.SetParent(target.transform);
@@ -130,7 +135,7 @@ namespace Hex.UN.Runtime.Engine.Utilities.StaticHelperClasses
         {
             Queue<GameObject> hierarchy = new Queue<GameObject>(target);
 
-            while(hierarchy.Count > 0)
+            while (hierarchy.Count > 0)
             {
                 GameObject process = hierarchy.Dequeue();
 

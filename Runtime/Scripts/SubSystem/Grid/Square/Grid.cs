@@ -5,7 +5,7 @@ using HexCS.Core;
 namespace Hex.UN.Runtime.SubSystem.Grid.Square
 {
     /// <summary>
-    /// Gris follow [col, row] coordinates
+    /// Grids follow [col, row] coordinates
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public class Grid<T>
