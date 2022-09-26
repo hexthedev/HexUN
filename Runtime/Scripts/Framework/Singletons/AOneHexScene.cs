@@ -1,5 +1,9 @@
 ﻿using Hex.UN.Runtime.Application.Lifecycle._abstract;
 
+#if !UNITY_EDITOR
+using UnityEngine;
+#endif
+
 namespace Hex.UN.Runtime.Framework.Singletons
 {
     /// <summary>
